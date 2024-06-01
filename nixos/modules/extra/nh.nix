@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{...}: {
   #TODO: figure out how to do this
   # programs.nh = {
   #   enable = true;
