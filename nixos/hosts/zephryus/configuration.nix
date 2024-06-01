@@ -31,7 +31,7 @@
     backupFileExtension = "backup";
     users = {
       # Import your home-manager configuration
-      suri = import ../../../home-manager/suri/home.nix;
+      suri = import ../../../home-manager/users/suri/home.nix;
     };
   };
 
