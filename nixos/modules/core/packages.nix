@@ -1,4 +1,4 @@
-{ pkgs, user, inputs, ... }: {
+{ pkgs, inputs, ... }: {
   environment = {
     systemPackages = with pkgs; [
       btop
