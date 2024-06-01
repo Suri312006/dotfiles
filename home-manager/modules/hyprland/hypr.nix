@@ -160,6 +160,11 @@
             10)
         );
 
+        bindm = [
+        ", mouse:272, movewindow"
+        ", mouse:273, resizewindow"
+        ];
+
       workspace = [
         "1, monitor:DP-3"
         "2, monitor:DP-3"
