@@ -92,7 +92,7 @@
         "10, monitor:eDP-1"
       ];
 
-
+    loialta = "";
 
 
 
