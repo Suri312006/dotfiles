@@ -1,5 +1,5 @@
 { inputs, pkgs, ... }: {
-#TODO: figure out how to do this
+  #TODO: figure out how to do this
   # programs.nh = {
   #   enable = true;
   #   package = inputs.nh.packages.x86_64-linux.default;
