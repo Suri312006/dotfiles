@@ -42,7 +42,7 @@
         zephryus = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           # > Our main nixos configuration file <
-          modules = [ ./nixos/configuration.nix ];
+          modules = [ ./hosts/zephryus ];
         };
       };
 
