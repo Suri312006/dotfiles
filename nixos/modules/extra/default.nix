@@ -1,4 +1,4 @@
-{
+{...}:{
   imports = [
     ./sddm
     ./fonts.nix
