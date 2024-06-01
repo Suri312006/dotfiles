@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hyprconf.nix
+    ./hyprlock.nix
     ./neovim
     ./hyprland
 
