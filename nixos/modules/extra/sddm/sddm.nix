@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   services.displayManager = {
     sddm.enable = true;
-    sddm.theme = "${import ../pkgs/sddm-theme.nix {inherit pkgs; }}";
+    sddm.theme = "${import ./sddm-theme.nix {inherit pkgs; }}";
   };
 }
