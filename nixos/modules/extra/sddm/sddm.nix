@@ -1,8 +1,10 @@
 { pkgs, ... }: {
   
-  services.displayManager = {
-    sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "${import ./sddm-theme.nix {inherit pkgs; }}";
 
-    sddm.theme = "${import ./sddm-theme.nix {inherit pkgs; }}";
+  wayland.enable = true;
+
   };
 }
