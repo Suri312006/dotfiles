@@ -50,30 +50,30 @@
       ];
       windowrulev2 = [
         # windowrule v2
-        "workspace 4 silent = class:^([Gg]oogle-chrome)$"
-        "workspace 3 silent = class:^(firefox)$"
-        "workspace 6 silent = class:^(obsidian)$"
-        "workspace 7 silent = class:^(discord)$"
-        "workspace 8 silent = title:^(Spotify Free)$"
-        "workspace 9 silent = class:^(Slack)$"
+        "workspace 4 silent,  class:^([Gg]oogle-chrome)$"
+        "workspace 3 silent, class:^(firefox)$"
+        "workspace 6 silent, class:^(obsidian)$"
+        "workspace 7 silent, class:^(discord)$"
+        "workspace 8 silent, title:^(Spotify Free)$"
+        "workspace 9 silent, class:^(Slack)$"
 
         # opacity (transparent) #enable as desired
-        "opacity 0.9 0.9 = class:^([Rr]ofi)$"
-        "opacity 0.97 1 = class:^(firefox)$"
-        "opacity 0.97 0.99 = class:^([Gg]oogle-chrome)$"
-        "opacity 0.9 0.9 = class:^([Tt]hunar)$"
-        "opacity 0.8 0.9 = class:^(pcmanfm-qt)$"
-        "opacity 0.9 0.9 = class:^(gedit)$"
-        "opacity 0.93 0.9 = class:^(kitty)$"
-        "opacity 0.9 0.9 = class:^(mousepad)$"
-        "opacity 0.99 0.95 = class:^(codium-url-handler)$"
-        "opacity 0.95 0.9 = class:^(discord)$"
-        "opacity 0.9 0.6 = class:^(yad)$"
-        "opacity 0.9 0.9 = title:^(Spotify Free)$"
-        "opacity 0.9 0.9 = class:^([Ss]lack)$"
-        "opacity 0.95 0.95 = title:(.*)(Visual Studio Code)$"
-        "opacity 0.9 0.9 = class:^(obsidian)$"
-        "opacity 0.95 0.75 = title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
+        "opacity 0.9 0.9, class:^([Rr]ofi)$"
+        "opacity 0.97 1, class:^(firefox)$"
+        "opacity 0.97 0.99, class:^([Gg]oogle-chrome)$"
+        "opacity 0.9 0.9, class:^([Tt]hunar)$"
+        "opacity 0.8 0.9, class:^(pcmanfm-qt)$"
+        "opacity 0.9 0.9, class:^(gedit)$"
+        "opacity 0.93 0.9, class:^(kitty)$"
+        "opacity 0.9 0.9, class:^(mousepad)$"
+        "opacity 0.99 0.95, class:^(codium-url-handler)$"
+        "opacity 0.95 0.9, class:^(discord)$"
+        "opacity 0.9 0.6, class:^(yad)$"
+        "opacity 0.9 0.9, title:^(Spotify Free)$"
+        "opacity 0.9 0.9, class:^([Ss]lack)$"
+        "opacity 0.95 0.95, title:(.*)(Visual Studio Code)$"
+        "opacity 0.9 0.9, class:^(obsidian)$"
+        "opacity 0.95 0.75, title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
 
         # Interestingly, the opacity rule above doesn't need the reduplication?
         "pin, title:^(Picture-in-Picture)$"
@@ -161,8 +161,8 @@
         );
 
         bindm = [
-        ", mouse:272, movewindow"
-        ", mouse:273, resizewindow"
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
         ];
 
       workspace = [
