@@ -5,7 +5,7 @@
     font = {
       package = pkgs.fira-code;
       name = "Fira Code SemiBold";
-      size = 10.5;
+      size = 10;
     };
     settings = {
       enable_audio_bell = "no";

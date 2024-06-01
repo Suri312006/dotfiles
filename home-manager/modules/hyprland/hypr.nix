@@ -55,6 +55,7 @@
         "workspace 6 silent, class:^(obsidian)$"
         "workspace 7 silent, class:^(discord)$"
         "workspace 8 silent, title:^(Spotify Free)$"
+        "workspace 8 silent, class:^(Spotify)$"
         "workspace 9 silent, class:^(Slack)$"
 
         # opacity (transparent) #enable as desired
