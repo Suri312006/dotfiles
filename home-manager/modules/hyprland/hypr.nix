@@ -5,6 +5,88 @@
     systemd.enable = true;
     settings = {
       "$mod" = "SUPER";
+
+
+      exec-once = [
+        "swww query || swww-daemon --format xrgb"
+        "swww $HOME/Pictures/Wallpapers/test.png"
+
+        # Startup
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        # Polkit (Polkit Gnome / KDE)
+        "suri_polkit_init &"
+        "suri_eww &"
+        # starup apps
+        "waybar &"
+        "nm-applet --indicator &"
+        "swaync &"
+        #"blueman-applet & "
+        "discord &"
+        "firefox &"
+        "slack &"
+        "google-chrome-stable &"
+        "spotify &"
+
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
+      ];
+
+      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+
+      windowrule = [
+        "float = org.kde.polkit-kde-authentication-agent-1"
+        "float = nm-connection-editor|blueman-manager"
+        "float = pavucontrol"
+        "float = nwg-look|qt5ct|mpv"
+        "float = onedriver|onedriver-launcher"
+        "float = eog"
+        "float = zoom"
+        "float = rofi"
+        "float = gnome-system-monitor"
+        "float = yad"
+
+        "center = ^(pavucontrol)"
+      ];
+      windowrulev2 = [
+        # windowrule v2
+        "workspace 4 silent = class:^([Gg]oogle-chrome)$"
+        "workspace 3 silent = class:^(firefox)$"
+        "workspace 6 silent = class:^(obsidian)$"
+        "workspace 7 silent = class:^(discord)$"
+        "workspace 8 silent = title:^(Spotify Free)$"
+        "workspace 9 silent = class:^(Slack)$"
+
+        # opacity (transparent) #enable as desired
+        "opacity 0.9 0.9 = class:^([Rr]ofi)$"
+        "opacity 0.97 1 = class:^(firefox)$"
+        "opacity 0.97 0.99 = class:^([Gg]oogle-chrome)$"
+        "opacity 0.9 0.9 = class:^([Tt]hunar)$"
+        "opacity 0.8 0.9 = class:^(pcmanfm-qt)$"
+        "opacity 0.9 0.9 = class:^(gedit)$"
+        "opacity 0.93 0.9 = class:^(kitty)$"
+        "opacity 0.9 0.9 = class:^(mousepad)$"
+        "opacity 0.99 0.95 = class:^(codium-url-handler)$"
+        "opacity 0.95 0.9 = class:^(discord)$"
+        "opacity 0.9 0.6 = class:^(yad)$"
+        "opacity 0.9 0.9 = title:^(Spotify Free)$"
+        "opacity 0.9 0.9 = class:^([Ss]lack)$"
+        "opacity 0.95 0.95 = title:(.*)(Visual Studio Code)$"
+        "opacity 0.9 0.9 = class:^(obsidian)$"
+        "opacity 0.95 0.75 = title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
+
+        # Interestingly, the opacity rule above doesn't need the reduplication?
+        "pin = title:^(Picture-in-Picture)$"
+        # "pin = title:^(Firefox)$"
+        "float = title:^(Picture-in-Picture)$"
+        # "float = title:^(Firefox)$"
+        "size 25% 25% = title:^(Picture-in-Picture)$"
+        # "size 25% 25% = title:^(Firefox)$"
+        "move 72% 7% = title:^(Picture-in-Picture)$"
+        # "move 72% 7% = title:^(Firefox)$"
+      ];
+
+
       bind =
         [
           "$mod, Q, killactive"
@@ -92,8 +174,167 @@
         "10, monitor:eDP-1"
       ];
 
-    loialta = "";
+      dwindle = {
+        pseudotile = "yes";
+        preserve_spilt = "yes";
+        special_scale_factor = 0.8;
+      };
 
+      master = {
+        new_is_master = 1;
+        new_on_top = 1;
+        mfact = 0.5;
+      };
+
+      general = {
+        sensitivity = 1.00;
+        apply_sens_to_raw = 1;
+        gaps_in = 4;
+        gaps_out = 8;
+        border_size = 2;
+        resize_on_border = true;
+
+        #TODO: nix colors here
+        # col.active_border = $color0 $color2 $color4 $color6 $color8 90deg
+        # col.inactive_border = $backgroundCol
+
+        layout = "dwindle";
+      };
+
+      decoration = {
+        rounding = 3;
+
+        active_opacity = 1.0;
+        inactive_opacity = 0.9;
+        fullscreen_opacity = 1.0;
+
+        dim_inactive = true;
+        dim_strength = 0.1;
+
+        drop_shadow = true;
+        shadow_range = 6;
+        shadow_render_power = 1;
+        # col.shadow = $color2
+        col.shadow_inactive = "0 x50000000";
+
+        blur = {
+          enabled = true;
+          size = 5;
+          passes = 2;
+          ignore_opacity = true;
+          new_optimizations = true;
+        };
+      };
+
+      extraConfig = ''
+        decoration {
+          rounding = 3
+         
+          active_opacity = 1.0
+          inactive_opacity = 0.9
+          fullscreen_opacity = 1.0
+
+          dim_inactive = true
+          dim_strength = 0.1
+
+          drop_shadow=true
+          shadow_range=6
+          shadow_render_power = 1
+          # col.shadow = $color2
+          col.shadow_inactive = 0x50000000
+
+          blur {
+          enabled = true	
+          size = 5
+          passes = 2
+          ignore_opacity = true
+          new_optimizations = true
+          }
+        }
+    
+        animations {
+          enabled = yes
+
+          bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+          bezier = linear, 0.0, 0.0, 1.0, 1.0
+          bezier = wind, 0.05, 0.9, 0.1, 1.05
+          bezier = winIn, 0.1, 1.1, 0.1, 1.1
+          bezier = winOut, 0.3, -0.3, 0, 1
+          bezier = slow, 0, 0.85, 0.3, 1
+          bezier = overshot, 0.7, 0.6, 0.1, 1.1
+          bezier = bounce, 1.1, 1.6, 0.1, 0.85
+          bezier = sligshot, 1, -1, 0.15, 1.25
+          bezier = nice, 0, 6.9, 0.5, -4.20
+  
+          animation = windowsIn, 1, 3, slow, popin
+          animation = windowsOut, 1, 3, winOut, popin
+          animation = windowsMove, 1, 3, wind, slide
+          animation = border, 1, 10, linear
+          animation = borderangle, 1, 180, linear, loop #used by rainbow borders and rotating colors
+          animation = fade, 1, 5, overshot
+          animation = workspaces, 1, 5, wind
+          animation = windows, 1, 5, bounce, popin
+        }
+
+        input {
+          kb_layout=us
+          kb_variant=
+          kb_model=
+          # kb_options=grp:alt_shift_toggle, altwin:swap_lalt_lwin, caps:swapescape,
+          kb_options=grp:alt_shift_toggle
+          kb_rules=
+          repeat_rate=50
+          repeat_delay=300
+          numlock_by_default=1
+          left_handed=0
+          follow_mouse=1
+          float_switch_override_focus=0
+
+          touchpad {
+            disable_while_typing=1
+            natural_scroll=1 
+            clickfinger_behavior=0
+            middle_button_emulation=1
+            tap-to-click=1
+            drag_lock=0
+                  }
+        }
+
+        gestures {
+          workspace_swipe=1
+          workspace_swipe_fingers=3
+          workspace_swipe_distance=400
+          workspace_swipe_invert=1
+          workspace_swipe_min_speed_to_force=30
+          workspace_swipe_cancel_ratio=0.5
+          workspace_swipe_create_new=1 
+          workspace_swipe_forever=1
+        }
+
+        misc {
+          disable_hyprland_logo = true
+          disable_splash_rendering = true
+          mouse_move_enables_dpms = true
+          #vrr = 0
+          enable_swallow = true
+          no_direct_scanout = true #for fullscreen games
+          focus_on_activate = false
+          swallow_regex = ^(kitty)$
+          #disable_autoreload = true
+        }
+
+        binds {
+          workspace_back_and_forth=1
+          allow_workspace_cycles=1
+          pass_mouse_when_bound=0
+        }
+
+        #Could help when scaling and not pixelating
+        xwayland {
+            force_zero_scaling = true
+        }
+
+      '';
 
 
     };
