@@ -26,10 +26,10 @@
     shellAliases = {
       #TODO: needs to be like the user thing
       rebuild = "sudo nixos-rebuild switch --flake /home/suri/dotfiles#zephryus";
-      dots = "cd ~/dotfiles2/ && nvim .";
+      dots = "cd ~/dotfiles/ && nvim .";
     };
     dirHashes = {
-      dots = "$HOME/dotfiles2";
+      dots = "$HOME/dotfiles";
     };
     initExtra = ''
       eval `ssh-agent` &> /dev/null
