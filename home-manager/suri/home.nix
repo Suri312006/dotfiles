@@ -40,7 +40,6 @@
     };
   };
 
-backupFileExtension = "backup";
 
   # TODO: Set your username
   home = {
