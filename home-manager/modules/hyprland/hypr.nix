@@ -76,9 +76,9 @@
         "opacity 0.95 0.75 = title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
 
         # Interestingly, the opacity rule above doesn't need the reduplication?
-        "pin = title:^(Picture-in-Picture)$"
+        "pin, title:^(Picture-in-Picture)$"
         # "pin = title:^(Firefox)$"
-        "float = title:^(Picture-in-Picture)$"
+        "float, title:^(Picture-in-Picture)$"
         # "float = title:^(Firefox)$"
         "size 25% 25% = title:^(Picture-in-Picture)$"
         # "size 25% 25% = title:^(Firefox)$"
