@@ -3,6 +3,8 @@
     ./kitty
     ./zsh
     ./zellij
+
+    ./git.nix
   ];
 
   programs.git.enable = true;
