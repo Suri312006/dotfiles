@@ -26,7 +26,7 @@
     shellAliases = {
       #TODO: needs to be like the user thing
       rebuild = "sudo nixos-rebuild switch --flake /home/suri/dotfiles2#zephryus";
-      dots = "cd ~/dotfiles/ && nvim .";
+      dots = "cd ~/dotfiles2/ && nvim .";
     };
     dirHashes = {
       dots = "$HOME/dotfiles2";
