@@ -20,6 +20,9 @@
     ./hardware-configuration.nix
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager
+
+    # import all and enable all
+    ../../modules
   ];
 
 
@@ -27,7 +30,7 @@
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       # Import your home-manager configuration
-      suri = import ../../../home-manager/home.nix;
+      suri = import ../../../home-manager/suri/home.nix;
     };
   };
 
