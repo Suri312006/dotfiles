@@ -28,7 +28,7 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-backupFileExtention = "backup";
+backupFileExtension = "backup";
     users = {
       # Import your home-manager configuration
       suri = import ../../../home-manager/suri/home.nix;
