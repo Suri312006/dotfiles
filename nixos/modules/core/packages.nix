@@ -11,8 +11,6 @@
       vim
       kitty
 
-#TODO: make rust go into uhhh not here?
-      rustup # what do with this?
       gnupg
       dolphin
 
