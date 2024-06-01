@@ -13,5 +13,6 @@
     go
     bun
     nodejs
+    postman
   ];
 }
