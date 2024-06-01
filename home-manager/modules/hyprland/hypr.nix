@@ -35,16 +35,16 @@
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
       windowrule = [
-        "float = org.kde.polkit-kde-authentication-agent-1"
-        "float = nm-connection-editor|blueman-manager"
-        "float = pavucontrol"
-        "float = nwg-look|qt5ct|mpv"
-        "float = onedriver|onedriver-launcher"
-        "float = eog"
-        "float = zoom"
-        "float = rofi"
-        "float = gnome-system-monitor"
-        "float = yad"
+        "float, org.kde.polkit-kde-authentication-agent-1"
+        "float, nm-connection-editor|blueman-manager"
+        "float, pavucontrol"
+        "float, nwg-look|qt5ct|mpv"
+        "float, onedriver|onedriver-launcher"
+        "float, eog"
+        "float, zoom"
+        "float, rofi"
+        "float, gnome-system-monitor"
+        "float, yad"
 
         "center = ^(pavucontrol)"
       ];
@@ -176,7 +176,7 @@
 
       dwindle = {
         pseudotile = "yes";
-        preserve_spilt = "yes";
+        preserve_split = "yes";
         special_scale_factor = 0.8;
       };
 
@@ -215,7 +215,7 @@
         shadow_range = 6;
         shadow_render_power = 1;
         # col.shadow = $color2
-        "col.shadow_inactive" = "0 x50000000";
+        "col.shadow_inactive" = "0x50000000";
 
         blur = {
           enabled = true;
