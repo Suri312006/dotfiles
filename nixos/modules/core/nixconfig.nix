@@ -1,5 +1,5 @@
 # holds the core nixos configuration for the system
-{ inputs, pkgs, config, ... }: {
+{ inputs, pkgs, config, lib, ... }: {
   # nix = {
   #   settings = {
   #     auto-optimise-store = true;
