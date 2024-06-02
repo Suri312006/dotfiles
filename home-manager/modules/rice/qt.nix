@@ -4,5 +4,5 @@
   qt.style.name = "pkgs.dracula-theme";
   qt.style.package = pkgs.dracula-theme;
 
-  home.packages = [ pkgs.libsforQt5.qt5ct ];
+  home.packages = [ pkgs.libsForQt5.qt5ct ];
 }
