@@ -1,5 +1,6 @@
 (defpoll time :interval "1s" 
-`date + '{"hour":"%H","min":"%M", "sec":"%S"}'`)
+`date +%H:%M:%S`)
+
 
 (defpoll net :interval "100s"
 :initial `N/A`
@@ -12,7 +13,7 @@
 :width 20
 :visible true
 (label 
-:text "${time.hour} : ${time.min} : ${time.sec}")))
+:text time)))
 
 (defwidget battery_display []
 (box
