@@ -20,7 +20,7 @@
 )))
 
 (defwindow mon
-    :monitor 1
+    :monitor 0
     :geometry (geometry :x "0%"
                         :y "20px"
                         :width "90%"
