@@ -12,7 +12,7 @@
     };
 
     iconTheme = {
-      package = pkgs.dracula-icon-theme-unstable;
+      package = pkgs.dracula-icon-theme;
       name = "dracula-theme";
     };
   };
