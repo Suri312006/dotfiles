@@ -12,7 +12,7 @@
       kitty
 
       gnupg
-      dolphin
+      thunar
 
       #stuff for the thing
       libsForQt5.qt5.qtquickcontrols2
