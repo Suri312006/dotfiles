@@ -1,5 +1,5 @@
 (defpoll time :interval "1s" 
-`date +%H:%M:%S`)
+`date +%I:%M%p`)
 
 
 (defpoll net :interval "100s"
