@@ -27,7 +27,7 @@
 (box :orientation "h"
 (battery_display)
 (time_display)
-(battery_display)))
+))
 
 (defwindow mon
     :monitor 0
