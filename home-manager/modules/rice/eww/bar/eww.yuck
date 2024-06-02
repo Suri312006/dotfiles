@@ -1,4 +1,4 @@
-(defwindow example)
+(defwindow example
     :monitor 0
     :geometry (geometry :x "0%"
                         :y "20px"
@@ -9,5 +9,5 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-    "example content")
+"example content")
 
