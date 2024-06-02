@@ -4,7 +4,7 @@
     ./gtk.nix
     ./pywal.nix
     ./eww
-    ./dunst
+    ./mako.nix
   ];
 
   pywal.enable = true;
