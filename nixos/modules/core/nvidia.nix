@@ -1,9 +1,22 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 
   hardware = {
     opengl.enable = true;
-    nvidia.modesetting.enable = true;
+
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = true;
+      powerManagement.finegrained = true;
+
+      open = false;
+      nvidiaSettings = true;
+
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    };
   };
+
+
 
   #NOTE: not sure this is in the right spot
   xdg.portal = {

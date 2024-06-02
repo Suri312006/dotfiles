@@ -29,6 +29,8 @@
       playerctl
       pavucontrol
 
+      lshw
+
     ];
   };
 
