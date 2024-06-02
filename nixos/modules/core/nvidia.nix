@@ -1,4 +1,16 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+let
+  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
+    exec "$@"
+  '';
+
+
+in
+{
 
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -16,22 +28,25 @@
 
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
+
+      prime = {
+
+        # super power mode
+        sync.enable = true;
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
+        nvidiaBusId = "PCI:01:00:0"; # Found with lspci | grep VGA
+        amdgpuBusId = "PCI:07:00:0"; # Found with lspci | grep VGA
+      };
+
     };
   };
 
-  hardware.nvidia.prime.sync.enable = true;
-
-  hardware.nvidia.prime = {
-    nvidiaBusId = "PCI:01:00:0"; # Found with lspci | grep VGA
-    amdgpuBusId = "PCI:07:00:0"; # Found with lspci | grep VGA
-  };
-
+  environment.systemPackages = [ nvidia-offload ];
 
   #NOTE: not sure this is in the right spot
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
 
   # services.supergfxd = {
   #   enable = true;
@@ -45,5 +60,7 @@
   #     hotplug_type = "Asus";
   #   };
   # };
+
+
 
 }
