@@ -7,13 +7,13 @@
     };
 
     theme = {
-      package = pkgs.nordic;
-      name = "nordic";
+      package = pkgs.dracula-theme;
+      name = "dracula";
     };
 
     iconTheme = {
-      package = pkgs.nordzy-icon-theme;
-      name = "nordzy-icon-theme";
+      package = pkgs.dracula-icon-theme-unstable;
+      name = "dracula-theme";
     };
   };
 }
