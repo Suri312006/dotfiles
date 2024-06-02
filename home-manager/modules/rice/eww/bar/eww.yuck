@@ -2,7 +2,7 @@
     (box :orientation "horizontal"
          :haligh "center"
     text
-    (button :onclick "notify-send 'Hello' 'Hello, $(name)'"
+    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
     "Greet")))
 
 
