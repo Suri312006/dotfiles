@@ -8,6 +8,6 @@
     :stacking "fg"
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
-    :wm-ignore false
+    :exclusive true
     "example content")
 
