@@ -1,3 +1,4 @@
+# info here https://nixos.wiki/wiki/Nvidia
 { pkgs, config, ... }:
 let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
@@ -32,7 +33,9 @@ in
       prime = {
 
         # super power mode
-        sync.enable = true;
+        sync.enable = false;
+
+# cannot be enabled at the same time as sync
         offload = {
           enable = true;
           enableOffloadCmd = true;
