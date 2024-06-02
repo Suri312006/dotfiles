@@ -24,7 +24,7 @@
 )))
 
 (defwidget bar []
-(centerbox :orientation "h"
+(box :orientation "h"
 (battery_display)
 (time_display)
 (battery_display)))
