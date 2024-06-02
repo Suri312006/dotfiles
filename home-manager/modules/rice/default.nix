@@ -6,7 +6,7 @@
     ./eww
   ];
 
-  home.packages = [ pkgs.wofi ];
+  home.packages = [ pkgs.wofi pkgs.nwg-look ];
 
   home.file."Pictures/Wallpapers".source = ./wallpapers;
 }
