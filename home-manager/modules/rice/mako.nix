@@ -1,5 +1,5 @@
-{}: {
-# nix-colors
+{...}: {
+  # nix-colors
   services.mako = {
     enable = true;
   };
