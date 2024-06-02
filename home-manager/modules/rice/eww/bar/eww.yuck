@@ -8,7 +8,7 @@
 
 (defwidget time_display []
 (box
-:halign "end"
+:halign "center"
 :width 20
 :visible true
 (label 
