@@ -30,7 +30,6 @@
       pavucontrol
 
       lshw
-      nvidia-smi
 
     ];
   };
