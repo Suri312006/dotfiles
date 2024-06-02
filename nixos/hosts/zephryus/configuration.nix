@@ -25,6 +25,7 @@
     ../../modules
   ];
 
+programs.rog-control-center.enable = true;
 
 
   home-manager = {
