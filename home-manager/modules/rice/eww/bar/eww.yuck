@@ -3,11 +3,12 @@
 
 
 (defwidget time_display []
+(box:halign "end"
 :width 20
 :visible true
 
 (label 
-:text time))
+:text time)))
 
 (defwindow mon
     :monitor 0
