@@ -200,6 +200,7 @@
                        :height "30px"
                        :anchor "top center")
           :stacking "fg"
+          :monitor 0
           :windowtype "dock"
   (bar_1))
   
