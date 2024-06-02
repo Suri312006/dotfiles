@@ -32,5 +32,4 @@
 (labeled-container :name "foo"
   (button :onclick "notify-send hey ho"
     "click me"))
-)
 
