@@ -2,7 +2,7 @@
 `date +%H:%M:%S`)
 
 
-(defwidget time_display
+(defwidget time_display []
 :halign "end"
 :width 20
 :visible true
