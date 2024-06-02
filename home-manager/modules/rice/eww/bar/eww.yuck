@@ -19,6 +19,12 @@
 :text EWW_BATTERY.catacity
 )))
 
+(defwidget bar []
+(centerbox :orientation "h"
+(battery_display)
+(time_display)
+(battery_display)))
+
 (defwindow mon
     :monitor 0
     :geometry (geometry :x "0%"
@@ -30,8 +36,7 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-(time_display)
-(battery_display)
+(bar)
 )
 
 (defwindow lap
@@ -45,5 +50,5 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-(time_display)
+(bar)
 )
