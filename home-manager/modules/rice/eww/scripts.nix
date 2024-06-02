@@ -2,7 +2,7 @@
 let
   suri_eww = pkgs.writeShellScriptBin "suri_eww" ''
     eww d
-    eww open example
+    eww open-many mon lap
   '';
 
 in

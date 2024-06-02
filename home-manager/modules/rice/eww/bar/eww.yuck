@@ -1,21 +1,16 @@
-(defwidget labeled-container [name]
-  (box :class "container"
-    name
-    (children)))
+(defpoll time :interval "1s" 
+`date +%H:%M:%S`)
 
-(defwidget greeter [?text name]
-    (box :orientation "horizontal"
-         :haligh "center"
-    text
-    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
-    "Greet")))
 
-(defwidget two-boxes []
-  (box
-    (box :class "first" (children :nth 0))
-    (box :class "second" (children :nth 1))))
+(defwidget time_display
+:halign "end"
+:width 20
+:visible true
 
-(defwindow example
+(label 
+:text time))
+
+(defwindow mon
     :monitor 0
     :geometry (geometry :x "0%"
                         :y "20px"
@@ -26,6 +21,19 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-(greeter :text "Say Hello!"
-         :name "Suri")
+(time_display)
+)
+
+(defwindow lap
+    :monitor 0
+    :geometry (geometry :x "0%"
+                        :y "20px"
+                        :width "90%"
+                        :height "30px"
+                        :anchor "top center")
+    :stacking "fg"
+    :reserver (struts :distance "40px" :side "top")
+    :windowtype "dock"
+    :exclusive true
+(time_display)
 )
