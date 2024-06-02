@@ -16,7 +16,7 @@
 :width 20
 :visible true
 (label
-:text EWW_BATTERY.catacity
+:text EWW_BATTERY.capacity
 )))
 
 (defwidget bar []
