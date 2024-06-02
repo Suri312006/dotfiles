@@ -16,7 +16,7 @@
 :width 20
 :visible true
 (label
-:text EWW_BATTERY.capacity
+:text EWW_BATTERY["BAT0"].capacity
 )))
 
 (defwidget bar []
