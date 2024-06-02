@@ -14,6 +14,7 @@
     kdePackages.filelight
     zathura
     # texlive.combined.scheme-small
-    texliveMedium
+    # texliveMedium
+    texliveFull
   ];
 }
