@@ -9,8 +9,8 @@ in
   options.pywal.enable = mkEnableOption "Pywal";
   config = mkIf config.pywal.enable {
     home.packages = with pkgs;
-      [ pywal ] ++ (if config.firefox.enable then [ pywalfox-native ] else [ ]);
-    home.file = mkIf config.firefox.enable {
+      [ pywal pywalfox-native ];
+    home.file = {
       ".mozilla/native-messaging-hosts/pywalfox.json".text =
         builtins.replaceStrings [ "<path>" ]
           [ "${pywalfox_wrapper}/bin/pywalfox_wrapper" ]
