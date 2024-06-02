@@ -13,6 +13,6 @@
     slack
     kdePackages.filelight
     zathura
-    texlive.combined.scheme-full
+    texlive.combined.scheme-small
   ];
 }
