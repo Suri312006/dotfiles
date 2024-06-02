@@ -16,5 +16,6 @@
     # texlive.combined.scheme-small
     # texliveMedium
     texliveFull
+    texlivePackages.lastpage
   ];
 }
