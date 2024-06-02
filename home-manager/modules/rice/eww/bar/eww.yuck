@@ -1,6 +1,10 @@
 (defpoll time :interval "1s" 
-`date +%H:%M:%S`)
+`date + '{"hour":"%H","min":"%M", "sec":"%S"}'`)
 
+(defpoll net :interval "100s"
+:initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    | awk -F':' '{if($2=="yes")print$1}'`)
 
 (defwidget time_display []
 (box
@@ -8,7 +12,7 @@
 :width 20
 :visible true
 (label 
-:text time)))
+:text "${time.hour} : ${time.min} : ${time.sec}")))
 
 (defwidget battery_display []
 (box
