@@ -10,7 +10,7 @@
       git
       vim
       kitty
-
+      libnotify
       gnupg
       xfce.thunar
 
