@@ -7,12 +7,20 @@
 :halign "end"
 :width 20
 :visible true
-
 (label 
 :text time)))
 
+(defwidget battery_display []
+(box
+:haligh "end"
+:width 20
+:visible true
+(label
+:text EWW_BATTERY.catacity
+)))
+
 (defwindow mon
-    :monitor 0
+    :monitor 1
     :geometry (geometry :x "0%"
                         :y "20px"
                         :width "90%"
@@ -23,6 +31,7 @@
     :windowtype "dock"
     :exclusive true
 (time_display)
+(battery_display)
 )
 
 (defwindow lap
