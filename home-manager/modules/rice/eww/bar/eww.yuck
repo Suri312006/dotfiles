@@ -3,7 +3,6 @@
 
 
 (defwidget time_display []
-:halign "end"
 :width 20
 :visible true
 
