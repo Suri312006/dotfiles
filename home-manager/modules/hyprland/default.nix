@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./hypr.nix
     ./scripts.nix
@@ -10,4 +10,10 @@
     XDG_SESSION_TYPE = "wayland";
     QT_SCALE_FACTOR_ROUNDING_POLICY = "RoundPreferFloor";
   };
+
+  home.packages = with pkgs; [
+    grim
+    slurp
+    swappy
+  ];
 }

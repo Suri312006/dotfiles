@@ -121,6 +121,8 @@
           "$mod ALT, V, exec, suri_clipmanager"
           "CTRL ALT, B, exec, suri_tobble_battery_mode"
 
+          ''$mod SHIFT, S, exec, grim -g "''$(slurp)" - | swappy -f -''
+
           ", xf86audioraisevolume, exec, suri_volume --inc #volume up"
           ", xf86audiolowervolume, exec, suri_volume --dec #volume down"
           ", xf86AudioMicMute, exec, suri_volume --toggle-mic #mute mic"
@@ -162,10 +164,10 @@
             10)
         );
 
-        bindm = [
+      bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
-        ];
+      ];
 
       workspace = [
         "1, monitor:DP-3"
@@ -324,3 +326,4 @@
     };
   };
 }
+
