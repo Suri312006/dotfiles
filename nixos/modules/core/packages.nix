@@ -30,6 +30,7 @@
       pavucontrol
 
       lshw
+      asusctl
 
     ];
   };
