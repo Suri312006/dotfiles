@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-imports = [ ./scripts.nix ];
+  imports = [ ./scripts.nix ];
 
   home.packages = [ pkgs.eww ];
 
