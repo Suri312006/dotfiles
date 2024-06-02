@@ -12,5 +12,7 @@
     google-chrome
     slack
     kdePackages.filelight
+    zathura
+    tex
   ];
 }
