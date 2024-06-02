@@ -9,6 +9,7 @@
     ./nixconfig.nix
     ./time.nix
     ./programs.nix
+    ./nvidia.nix
 
   ];
 

@@ -11,7 +11,6 @@
     discord
     google-chrome
     slack
-
     kdePackages.filelight
   ];
 }
