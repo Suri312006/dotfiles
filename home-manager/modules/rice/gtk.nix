@@ -2,16 +2,18 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      package = pkgs.nordzy-cursor-theme;
+      name = "norzy-cursor-theme";
     };
 
     theme = {
-      package = pkgs.adw-gtk3;
-      name = "adw-gtk3";
+      package = pkgs.nordic;
+      name = "nordic";
     };
 
-    #NOTE: you can add a custom icons thing but im too lazy right now
-
+    iconTheme = {
+      package = pkgs.nordzy-icon-theme;
+      name = "nordzy-icon-theme";
+    };
   };
 }
