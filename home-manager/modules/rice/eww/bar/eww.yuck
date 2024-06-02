@@ -40,8 +40,7 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-(bar)
-)
+(bar))
 
 (defwindow lap
     :monitor 0
@@ -54,5 +53,4 @@
     :reserver (struts :distance "40px" :side "top")
     :windowtype "dock"
     :exclusive true
-(bar)
-)
+(bar))
