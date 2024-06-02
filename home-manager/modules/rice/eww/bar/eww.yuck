@@ -1,3 +1,8 @@
+(defwidget labeled-container [name]
+  (box :class "container"
+    name
+    (children)))
+
 (defwidget greeter [?text name]
     (box :orientation "horizontal"
          :haligh "center"
@@ -5,6 +10,10 @@
     (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
     "Greet")))
 
+(defwidget two-boxes []
+  (box
+    (box :class "first" (children :nth 0))
+    (box :class "second" (children :nth 1))))
 
 (defwindow example
     :monitor 0
@@ -18,5 +27,11 @@
     :windowtype "dock"
     :exclusive true
 (greeter :text "Say Hello!"
-         :name "Suri"))
+         :name "Suri")
+(labeled-container :name "foo"
+  (button :onclick "notify-send hey ho"
+    "click me"))
+(two-boxes)
+
+)
 
