@@ -14,6 +14,7 @@
     bun
     nodejs
     valgrind
+    gdb
     postman
   ];
 }
