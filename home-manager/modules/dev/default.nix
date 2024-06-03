@@ -16,5 +16,7 @@
     valgrind
     gdb
     postman
+
+    gnumake42
   ];
 }
