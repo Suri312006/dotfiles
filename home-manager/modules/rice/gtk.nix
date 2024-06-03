@@ -2,10 +2,11 @@
   home.sessionVariables = { GTK_THEME = "Nordic"; };
 
   home.pointerCursor = {
-    name = "Catppuccin-Mocha-Dark-Cursors";
-    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
     size = 16;
   };
+
 
   gtk = {
     enable = true;
@@ -14,9 +15,14 @@
       package = pkgs.nordic;
     };
 
+    # cursorTheme = {
+    #   name = "Catppuccin-Mocha-Dark-Cursors";
+    #   package = pkgs.catppuccin-cursors.mochaDark;
+    # };
+
     cursorTheme = {
-      name = "Catppuccin-Mocha-Dark-Cursors";
-      package = pkgs.catppuccin-cursors.mochaDark;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
     };
 
     iconTheme = {

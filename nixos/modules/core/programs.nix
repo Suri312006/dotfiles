@@ -7,6 +7,7 @@
       xwayland.enable = true;
     };
 
+    # allows normal binaries to run
     nix-ld = {
       enable = true;
       libraries = with pkgs; [
