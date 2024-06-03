@@ -101,7 +101,7 @@
           "$mod, Return, exec, kitty"
           "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
           # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
-          "$mod, T, exec, dolphin"
+          "$mod, T, exec, thunar"
 
           "$mod, tab, focusmonitor, +1"
           "$mod, right, workspace, m+1"
