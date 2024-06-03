@@ -13,6 +13,7 @@
     go
     bun
     nodejs
+    valgrind
     postman
   ];
 }
