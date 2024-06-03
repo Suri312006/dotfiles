@@ -28,6 +28,7 @@
 programs.rog-control-center.enable = true;
 
 
+
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     backupFileExtension = "backup";
