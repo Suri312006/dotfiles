@@ -40,7 +40,7 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-cursor-theme-name = "Catppuccin-Mocha-Green-Cursors";
+      gtk-cursor-theme-name = "Bibata-Modern-Ice";
     };
 
     gtk2.extraConfig = ''
@@ -54,7 +54,7 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-cursor-theme-name = "Catppuccin-Mocha-Green-Cursors";
+      gtk-cursor-theme-name = "Bibata-Modern-Ice";
     };
   };
 
