@@ -17,6 +17,8 @@
     gdb
     postman
 
+
     gnumake42
+    llvmPackages_18.libcxxClang
   ];
 }
