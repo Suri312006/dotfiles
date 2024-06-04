@@ -1,5 +1,5 @@
 (defpoll time :interval "1s" 
-`date +%I:%M%p`)
+`date +'{"hour":"%I","min":"%M","timeofday":"%p"}'`)
 
 
 (defpoll net :interval "100s"
@@ -23,6 +23,8 @@
 (label
 :text "${EWW_BATTERY.BAT0.capacity}"
 )))
+
+
 
 (defwidget bar []
 (box :orientation "h"
