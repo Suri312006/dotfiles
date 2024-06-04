@@ -13,7 +13,7 @@
 :width 20
 :visible true
 (label 
-:text time)))
+:text "$(time.hour) :: ${time.min} ${time.timeofday}")))
 
 (defwidget battery_display []
 (box
