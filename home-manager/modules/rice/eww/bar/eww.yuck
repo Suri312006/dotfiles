@@ -1,5 +1,5 @@
 (defpoll time :interval "1s" 
-`date +'{"hour":"%I","min":"%M","timeofday":"%p"}'`)
+`date +'{"hour":"%I","min":"%M","timeofday":"%p", "abbrDay":"%a", "fullDay":"%A", "abbrDay":"%a", "fullDay":"%A", "date":"%x"}'`)
 
 
 (defpoll net :interval "100s"
@@ -13,7 +13,7 @@
 :width 20
 :visible true
 (label 
-:text "$(time.hour) :: ${time.min} ${time.timeofday}")))
+:text " ${time.hour}:${time.min} ${time.timeofday} ${time.fullDay} ${time.date}")))
 
 (defwidget battery_display []
 (box
