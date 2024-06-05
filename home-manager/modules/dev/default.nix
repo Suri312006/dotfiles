@@ -18,7 +18,15 @@
     postman
 
 
-    gnumake42
-    llvmPackages_18.libcxxClang
+    # gnumake42
+    # llvmPackages_18.libcxxClang
+
+
+
+    # c stuff
+
+    cmake
+    ninja
+    clang13Stdenv
   ];
 }
