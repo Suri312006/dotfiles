@@ -30,6 +30,7 @@
 (box :orientation "h"
 (battery_display)
 (time_display)
+(systray :pack-direction "ltr")
 ))
 
 (defwindow mon
