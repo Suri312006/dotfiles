@@ -4,6 +4,8 @@
 -- See the kickstart.nvim README for more information
 return {
   "nvim-lua/plenary.nvim",
+
+  "Mofiqul/dracula.nvim",
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -122,12 +124,12 @@ return {
 
   "loctvl842/monokai-pro.nvim",
   -- init.lua
-  -- 
+  --
   require("lazy").setup {
     {
       "lukas-reineke/headlines.nvim",
       dependencies = "nvim-treesitter/nvim-treesitter",
-      config = true,   -- or `opts = {}`
+      config = true, -- or `opts = {}`
     },
   }
 
