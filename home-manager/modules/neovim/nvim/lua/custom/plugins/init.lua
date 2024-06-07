@@ -4,8 +4,8 @@
 -- See the kickstart.nvim README for more information
 return {
   "nvim-lua/plenary.nvim",
-
   "Mofiqul/dracula.nvim",
+
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
