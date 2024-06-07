@@ -16,7 +16,7 @@ in
     {
       enable = true;
       theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
+      colorScheme = "Frostify";
 
       enabledExtensions = with spicePkgs.extensions; [
         fullAppDisplay
