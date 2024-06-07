@@ -15,7 +15,7 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.nglaze;
+      theme = spicePkgs.themes.Glaze;
       colorScheme = "Glaze";
 
       enabledExtensions = with spicePkgs.extensions; [
