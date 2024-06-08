@@ -8,11 +8,11 @@ let
     if [ ! -e $NOTIF_TOGGLE ]; then 
       touch $NOTIF_TOGGLE
       makoctl set-mode dnd
-      $NOTIF_FILE < "true"
+      echo "true" >> $NOTIF_FILE
     else 
       rm $NOTIF_TOGGLE
       makoctl set-mode default
-      $NOTIF_FILE < "true"
+      echo "false" >> $NOTIF_FILE
     fi
   '';
 in
