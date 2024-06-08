@@ -60,6 +60,7 @@
 (defwidget bar []
 (box 
  :orientation "h"
+ :class "bar"
 
  (time_display)
  (workspaces)
