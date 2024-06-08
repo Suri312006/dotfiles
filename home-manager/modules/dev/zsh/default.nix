@@ -1,13 +1,11 @@
 { pkgs, ... }: {
 
-  imports = [
-    ./zoxide.nix
-  ];
 
 
+  programs.zoxide.enable = true;
 
-    home.packages = with pkgs;
-  [ fd eza ];
+  home.packages = with pkgs;
+    [ fd eza ];
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -53,6 +51,7 @@
       eval `ssh-agent` &> /dev/null
       ssh-add ~/.ssh/github_private &> /dev/null
       ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+      eval "$(zoxide init zsh)"     
     '';
 
   };
