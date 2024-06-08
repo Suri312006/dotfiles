@@ -72,7 +72,7 @@
         (label :text "${time.hour}  ${time.min}"))
       (_buttons :shutdown "poweroff" :reboot "reboot"
                 :logout "loginctl kill-session self"
-                :shutdown_icon "" :reboot_icon "" :logout_icon "")))
+                :shutdown_icon "" :reboot_icon "" :logout_icon ""))))
 
 
 
