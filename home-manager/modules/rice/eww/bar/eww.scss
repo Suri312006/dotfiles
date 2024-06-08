@@ -1,3 +1,6 @@
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
 .time_label {
   display:inline-block;
   font-size:14px;
