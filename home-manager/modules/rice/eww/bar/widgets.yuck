@@ -31,36 +31,28 @@
   :haligh "15%"
   :visible true
   :orientation "h"
+  :class "workspaces"
+
 
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 1" 1)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 2" 2)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 3" 3)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 4" 4)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 5" 5)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 6" 6)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 7" 7)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 8" 8)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 9" 9)
   (button 
-    :class "workspace-button"
     :onclick "hyprctl dispatch workspace 0" 0)))
 
 (defwidget bar []
