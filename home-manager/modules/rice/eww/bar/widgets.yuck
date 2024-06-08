@@ -18,15 +18,11 @@
       (label
       :text "${EWW_BATTERY.BAT0.capacity}")))
 
-;; (defwidget dnd_toggle []
-;;   (button 
-;;     :onclick "suri_toggle_dnd"
-;;     (label :text (matches(dnd_status, "false") ? "dndon" : "dndoff"))))
-
 (defwidget dnd_toggle []
   (button 
     :onclick "suri_toggle_dnd"
-    (label :text (if (= dnd_status "false") "dndon" "dndoff"))))
+    (label :text ( matches(dnd_status, "false") ? "dndon" : "dndoff" ))))
+
 
 
 ;TODO: whats going on
