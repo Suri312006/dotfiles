@@ -1,5 +1,13 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [ fd eza ];
+
+  imports = [
+    ./zoxide.nix
+  ];
+
+
+
+    home.packages = with pkgs;
+  [ fd eza ];
   programs.zsh = {
     enable = true;
     autocd = true;
