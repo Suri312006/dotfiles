@@ -3,7 +3,7 @@
 
 (defwidget time_display []
   (box
-    :halign "center"
+    :halign "start"
     :width 20
     :visible true
       (label 
@@ -20,6 +20,13 @@
 
 ;TODO: whats going on
 (defwidget workspaces []
+(box
+  :haligh "center"
+  :haligh 15%
+  :visible true
+  :orientation "h"
+
+
   (button :onclick "hyprctl dispatch workspace 1" 1)
   (button :onclick "hyprctl dispatch workspace 2" 2)
   (button :onclick "hyprctl dispatch workspace 3" 3)
@@ -29,7 +36,7 @@
   (button :onclick "hyprctl dispatch workspace 7" 7)
   (button :onclick "hyprctl dispatch workspace 8" 8)
   (button :onclick "hyprctl dispatch workspace 9" 9)
-  (button :onclick "hyprctl dispatch workspace 0" 0)
+  (button :onclick "hyprctl dispatch workspace 0" 0)))
 
 (defwidget bar []
 (box 
