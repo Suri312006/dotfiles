@@ -11,7 +11,7 @@ require("custom.configs.refactoring")
 require("custom.configs.dracula")
 require("custom.configs.vimtex")
 require("custom.configs.kanagawa")
-vim.cmd[[colorscheme nord]]
+vim.cmd.colorscheme 'nordic'
 -- require("custom.configs.monokai-pro")
 -- require("custom.configs.gruvbox")
 --

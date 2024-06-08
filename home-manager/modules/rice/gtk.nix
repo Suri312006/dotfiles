@@ -14,6 +14,10 @@
     #   name = "Dracula";
     #   package = pkgs.dracula-theme;
     # };
+    # theme = {
+    #   name = "Nordic";
+    #   package = pkgs.nordic;
+    # };
     theme = {
       name = "Nordic";
       package = pkgs.nordic;

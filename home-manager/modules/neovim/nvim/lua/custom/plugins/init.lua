@@ -5,7 +5,14 @@
 return {
   "nvim-lua/plenary.nvim",
   -- "suri312006/nord.nvim",
-  "shaunsingh/nord.nvim",
+{
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require 'nordic' .load()
+    end
+},
 
   {
     "ThePrimeagen/harpoon",
