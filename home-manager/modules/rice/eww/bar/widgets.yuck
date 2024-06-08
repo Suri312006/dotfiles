@@ -22,7 +22,7 @@
   :class "dnd_toggle"
   (button 
     :onclick "suri_toggle_dnd"
-    (label :text  {dnd_status == 🔔 ?  : 🔕 })))
+    (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
 
 
 
