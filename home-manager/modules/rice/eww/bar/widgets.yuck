@@ -64,12 +64,12 @@
 
  (time_display)
  (workspaces)
- (dnd_toggle)
 
   (box
     (box 
     :width "35%")
-  (battery_display)
+     (dnd_toggle)
+     (battery_display)
      (systray 
         :pack-direction "ltr"
         :width "10%"
