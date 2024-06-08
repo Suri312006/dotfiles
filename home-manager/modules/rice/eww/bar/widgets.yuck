@@ -1,82 +1,35 @@
 (include "./polls.yuck")
 
+(deflisten workspace )
+
 (defwidget time_display []
-(box
-:halign "center"
-:width 20
-:visible true
-(label 
-:text " ${time.hour}:${time.min} ${time.timeofday} ${time.fullDay} ${time.date}")))
+:class "time_display"
+  (box
+    :halign "center"
+    :width 20
+    :visible true
+      (label 
+      :text " ${time.hour}:${time.min} ${time.timeofday} ${time.fullDay} ${time.date}")))
 
 (defwidget battery_display []
-(box
-:haligh "end"
-:width 20
-:visible true
-(label
-:text "${EWW_BATTERY.BAT0.capacity}"
-)))
+  (box
+    :haligh "end"
+    :width 20
+    :visible true
+      (label
+      :text "${EWW_BATTERY.BAT0.capacity}")))
 
-(defwidget _buttons [shutdown shutdown_icon reboot reboot_icon logout logout_icon]
-(box :class "btns-box" :spacing 5
-     :vexpand true :hexpand true
-     :valign "end" :halign "end"
-     :space-evenly false
-     (button :onclick shutdown shutdown_icon)
-     (button :onclick reboot reboot_icon)
-     (button :onclick logout logout_icon)
-))
-
-(defwidget _network [strength offline excellent good okay slow]
-  (box :class "net-box"
-       :space-evenly false
-       :spacing 8
-       (label :text {strength == "" ? offline :
-        strength < 26 ? slow :
-          strength < 51 ? okay :
-            strength < 76 ? good : excellent})))
-
-(defwidget _battery [battery status one two three four five six seven charge]
-  (box :class "bat-box" :space-evenly false :spacing 8
-    (label :text {status == 'Charging' ? charge :
-    battery < 15 ? seven:
-      battery < 30 ? six:
-        battery < 45 ? five:
-          battery < 60 ? four:
-            battery < 75 ? three:
-              battery < 90 ? two: one})))
-
-
-
-(defwidget powermenu_layout []
-  (box :class "layout-box" :space-evenly false :orientation "vertical"
-       :style "background-image: url('~/Pictures/Wallpapers/nixos.png')"
-    (box :valign "start" :space-evenly false :spacing 25
-      (_battery :status {EWW_BATTERY.BAT0.status}
-                :battery {EWW_BATTERY.BAT0.capacity}
-                :charge "" :one "" :two "" :three "" :four ""
-                :five "" :six "" :seven "")
-      (_network :strength net :offline "" :excellent "" :good ""
-                :okay "" :slow "")
-      (label :text "|" :class "sep")
-      (button :onclick "eww close powermenu" :class "close-btn" ""))
-    (box :space-evenly false :hexpand true :vexpand true
-      (box :spacing 15 :class "tm-box" :space-evenly false :valign "end"
-           :halign "start"
-        (label :text "")
-        (label :text "${time.hour}  ${time.min}"))
-      (_buttons :shutdown "poweroff" :reboot "reboot"
-                :logout "loginctl kill-session self"
-                :shutdown_icon "" :reboot_icon "" :logout_icon ""))))
-
-
-
-
+(defwidget workspaces []
+  (button :onclick "idk"))
 
 (defwidget bar []
-(box :orientation "h"
-(battery_display)
-(time_display)
-(systray :pack-direction "ltr")
-))
+(box 
+  :orientation "h"
+  :space-evenly true
+      
+  (battery_display)
+  (time_display)
+  (systray 
+    :pack-direction "ltr"
+    :hexpand true)))
 
