@@ -10,9 +10,13 @@
 
   gtk = {
     enable = true;
+    # theme = {
+    #   name = "Dracula";
+    #   package = pkgs.dracula-theme;
+    # };
     theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
+      name = "Nordic";
+      package = pkgs.nordic;
     };
 
     # cursorTheme = {
