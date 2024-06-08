@@ -2,11 +2,11 @@
 
 
 (defwidget time_display []
-:class "time_display"
   (box
     :halign "center"
     :width 20
     :visible true
+    :class "time_display"
       (label 
       :text " ${time.hour}:${time.min} ${time.timeofday} ${time.fullDay} ${time.date}")))
 
