@@ -22,7 +22,7 @@
 (defwidget workspaces []
 (box
   :haligh "center"
-  :haligh 15%
+  :haligh "15%"
   :visible true
   :orientation "h"
 
