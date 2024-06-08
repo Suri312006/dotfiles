@@ -1,9 +1,18 @@
 
 .bar {
-    background-color: rgb(108, 112, 134, 0.35);
-    margin: 5px;
-	padding: 0px;
-    border-radius: 50px;
+    // background-color: rgb(108, 112, 134, 0.35);
+    margin: 1rem;
+    padding: 0px;
+    // border-radius: 50px;
+}
+
+.workspaces button {
+    width: 3rem;
+
+}
+
+.dnd_toggle button {
+    border-radius: 100rem;
 }
 // * {
 //   all: unset; //Unsets everything so you can style everything from scratch
