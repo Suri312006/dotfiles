@@ -38,5 +38,5 @@
     :space-evenly true;
     :icon-size 15
     ;; :spacing 3
-    ))
+    )))
 
