@@ -1,5 +1,7 @@
-* {
-  all: unset; //Unsets everything so you can style everything from scratch
+*{
+	all: unset;
+	font-family: Ubuntu;
+	font-family: Ubuntu Mono;
 }
 .time_label {
   display:inline-block;
