@@ -1,0 +1,7 @@
+(defpoll time :interval "1s" 
+`date +'{"hour":"%I","min":"%M","timeofday":"%p", "abbrDay":"%a", "fullDay":"%A", "abbrDay":"%a", "fullDay":"%A", "date":"%x"}'`)
+
+(defpoll net :interval "100s"
+:initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    | awk -F':' '{if($2=="yes")print$1}'`)
