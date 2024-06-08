@@ -18,24 +18,36 @@
       (label
       :text "${EWW_BATTERY.BAT0.capacity}")))
 
+;TODO: whats going on
 (defwidget workspaces []
-  (button :onclick "idk"))
+  (button :onclick "hyprctl dispatch workspace 1" 1))
+  (button :onclick "hyprctl dispatch workspace 2" 2))
+  (button :onclick "hyprctl dispatch workspace 3" 3))
+  (button :onclick "hyprctl dispatch workspace 4" 4))
+  (button :onclick "hyprctl dispatch workspace 5" 5))
+  (button :onclick "hyprctl dispatch workspace 6" 6))
+  (button :onclick "hyprctl dispatch workspace 7" 7))
+  (button :onclick "hyprctl dispatch workspace 8" 8))
+  (button :onclick "hyprctl dispatch workspace 9" 9))
+  (button :onclick "hyprctl dispatch workspace 0" 0))
 
 (defwidget bar []
 (box 
  :orientation "h"
 
-  (battery_display)
-  (time_display)
+ (time_display)
+ (workspaces)
+
   (box
     (box 
-    :width "30%")
+    :width "35%")
+  (battery_display)
      (systray 
         :pack-direction "ltr"
         :width "10%"
         :prepend-new true;
         :space-evenly true;
-        :icon-size 15
+        :icon-size 17
         ;; :spacing 3
         ))))
 
