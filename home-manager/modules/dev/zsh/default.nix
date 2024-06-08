@@ -19,6 +19,13 @@
         src = ./p10k-config;
         file = "p10k.zsh";
       }
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+
+
     ];
     oh-my-zsh = {
       enable = true;
