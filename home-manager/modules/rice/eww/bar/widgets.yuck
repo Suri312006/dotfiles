@@ -3,7 +3,7 @@
 
 (defwidget time_display []
   (box
-    :halign "start"
+    :halign "center"
     :width 20
     :visible true
       (label 
@@ -12,7 +12,7 @@
 
 (defwidget battery_display []
   (box
-    :haligh "end"
+    :haligh "center"
     :width 20
     :visible true
       (label
