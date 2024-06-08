@@ -6,8 +6,8 @@
     :halign "center"
     :width 20
     :visible true
-    :class "time_display"
       (label 
+      :class "time_label"
       :text " ${time.hour}:${time.min} ${time.timeofday} ${time.fullDay} ${time.date}")))
 
 (defwidget battery_display []
@@ -30,5 +30,7 @@
   (time_display)
   (systray 
     :pack-direction "ltr"
-    :hexpand true)))
+    :hexpand false
+    :width "15%"
+    )))
 
