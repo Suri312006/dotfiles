@@ -36,7 +36,7 @@
   :class "workspaces"
 
 
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 1" 1)
   (button 
     :onclick "hyprctl dispatch workspace 2" 2)
