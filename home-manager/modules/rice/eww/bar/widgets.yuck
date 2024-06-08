@@ -21,7 +21,8 @@
 (defwidget dnd_toggle []
   (button 
     :onclick "suri_toggle_dnd"
-    dnd))
+    (lable :text "dnd")))
+
 
 ;TODO: whats going on
 (defwidget workspaces []
