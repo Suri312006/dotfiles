@@ -5,6 +5,7 @@
 return {
   "nvim-lua/plenary.nvim",
   -- "suri312006/nord.nvim",
+  "shaunsingh/nord.nvim",
 
   {
     "ThePrimeagen/harpoon",
