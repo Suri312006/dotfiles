@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.kitty = {
     enable = true;
-    theme = "Dracula";
+    theme = "Nord";
     font = {
       package = pkgs.fira-code;
       name = "Fira Code SemiBold";
