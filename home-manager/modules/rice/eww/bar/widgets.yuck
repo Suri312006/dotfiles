@@ -19,8 +19,9 @@
       :text "${EWW_BATTERY.BAT0.capacity}")))
 
 (defwidget dnd_toggle []
-  :class "dnd_toggle"
+  
   (button 
+    :class "dnd_toggle"
     :onclick "suri_toggle_dnd"
     (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
 
