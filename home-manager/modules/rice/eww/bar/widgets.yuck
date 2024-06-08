@@ -31,6 +31,10 @@
   (systray 
     :pack-direction "ltr"
     :hexpand false
-    :width "15%"
+    :width "10%"
+    :prepend-new true;
+    :space-evenly true;
+    :icon-size 10
+    :spacing 3
     )))
 
