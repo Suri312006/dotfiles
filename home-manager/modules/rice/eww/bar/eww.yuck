@@ -38,7 +38,7 @@
   (box :class "net-box"
        :space-evenly false
        :spacing 8
-       (label :text {stregth == "" ? offline :
+       (label :text {strength == "" ? offline :
         strength < 26 ? slow :
           strength < 51 ? okay :
             strength < 76 ? good : excellent})))
