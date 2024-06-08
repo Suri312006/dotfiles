@@ -23,14 +23,12 @@
 
 (defwidget bar []
 (box 
-  :orientation "h"
-  ;; :space-evenly true
-      
+ :orientation "h"
+
   (battery_display)
   (time_display)
   (box
     :width "50%")
-
   (systray 
     :pack-direction "ltr"
     :width "10%"
