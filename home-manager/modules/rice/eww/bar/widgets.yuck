@@ -29,7 +29,7 @@
   (time_display)
   (box
     (box 
-    :width "20%")
+    :width "30%")
      (systray 
         :pack-direction "ltr"
         :width "10%"
