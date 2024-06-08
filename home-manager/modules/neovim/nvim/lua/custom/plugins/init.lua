@@ -4,7 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
   "nvim-lua/plenary.nvim",
-  "Mofiqul/dracula.nvim",
+  "shaunsigh/nord.nvim",
 
   {
     "ThePrimeagen/harpoon",
