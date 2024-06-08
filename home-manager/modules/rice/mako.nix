@@ -10,6 +10,7 @@ let
     else 
       rm $TOGGLE
       makoctl set-mode default
+    fi
   '';
 in
 {
