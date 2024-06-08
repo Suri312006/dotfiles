@@ -69,6 +69,7 @@
 
  (time_display)
  (workspaces)
+ (dnd_toggle)
 
   (box
     (box 
