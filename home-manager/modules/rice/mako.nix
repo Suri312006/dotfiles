@@ -28,7 +28,7 @@ in
 
   home.packages = [
     suri_toggle_dnd
-  ]
+  ];
 
 
 
