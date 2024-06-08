@@ -1,17 +1,17 @@
 { pkgs, ... }:
 
 let
-  suri_toggle_dnd = pkgs.writeShellScriptBin "suri_toggle_dnd" ''
-    NOTIF_TOGGLE=$HOME/.config/.notiftoggle
-
-    if [ ! -e $TOGGLE ]; then 
-      touch $TOGGLE
-      makoctl set-mode dnd
-    else 
-      rm $TOGGLE
-      makoctl set-mode default
-    fi
-  '';
+  # suri_toggle_dnd = pkgs.writeShellScriptBin "suri_toggle_dnd" ''
+  #   NOTIF_TOGGLE=$HOME/.config/.notiftoggle
+  #
+  #   if [ ! -e $TOGGLE ]; then 
+  #     touch $TOGGLE
+  #     makoctl set-mode dnd
+  #   else 
+  #     rm $TOGGLE
+  #     makoctl set-mode default
+  #   fi
+  # '';
 in
 {
   # nix-colors
@@ -27,9 +27,9 @@ in
 
   };
 
-  home.packages = [
-    suri_toggle_dnd
-  ];
+  # home.packages = [
+  #   suri_toggle_dnd
+  # ];
 
 
 
