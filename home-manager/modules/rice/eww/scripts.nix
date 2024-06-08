@@ -9,9 +9,8 @@ let
 
   suri_eww_list_ws = pkgs.writeShellScriptBin "suri_eww_list_ws" ''
   hyprctl 
-
-
   '';
+
 
 in
 {

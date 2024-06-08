@@ -18,6 +18,11 @@
       (label
       :text "${EWW_BATTERY.BAT0.capacity}")))
 
+(defwidget dnd_toggle []
+  (button 
+    :onclick suri_toggle_dnd
+    dnd))
+
 ;TODO: whats going on
 (defwidget workspaces []
 (box
@@ -25,7 +30,6 @@
   :haligh "15%"
   :visible true
   :orientation "h"
-
 
   (button 
     :class "workspace-button"

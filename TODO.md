@@ -4,3 +4,5 @@ wallpaper hosted in a diff git repo
 brightness script
 
 rewrite nvim config
+
+- rebuild command that auto does the git stuff
