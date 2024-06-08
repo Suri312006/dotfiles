@@ -1,6 +1,5 @@
 (include "./polls.yuck")
 
-(deflisten workspace )
 
 (defwidget time_display []
 :class "time_display"
