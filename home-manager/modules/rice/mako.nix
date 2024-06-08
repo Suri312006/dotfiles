@@ -3,13 +3,16 @@
 let
   suri_toggle_dnd = pkgs.writeShellScriptBin "suri_toggle_dnd" ''
     NOTIF_TOGGLE=$HOME/.config/.notiftoggle
+    NOTIF_FILE=/tmp/.dnd_status
 
     if [ ! -e $NOTIF_TOGGLE ]; then 
       touch $NOTIF_TOGGLE
       makoctl set-mode dnd
+      $NOTIF_FILE < "true"
     else 
       rm $NOTIF_TOGGLE
       makoctl set-mode default
+      $NOTIF_FILE < "true"
     fi
   '';
 in

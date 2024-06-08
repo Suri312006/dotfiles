@@ -5,3 +5,6 @@
 :initial `N/A`
   `nmcli -t -f SIGNAL,ACTIVE device wifi \
     | awk -F':' '{if($2=="yes")print$1}'`)
+
+(deflisten dnd_status :initial "false"
+`tail -F /tmp/.dnd_status`)
