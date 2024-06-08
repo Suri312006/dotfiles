@@ -20,7 +20,7 @@
 
 (defwidget dnd_toggle []
   (button 
-    :onclick suri_toggle_dnd
+    :onclick "suri_toggle_dnd"
     dnd))
 
 ;TODO: whats going on
