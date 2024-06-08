@@ -29,6 +29,7 @@
   (battery_display)
   (time_display)
   (systray 
+    :class "icons"
     :pack-direction "ltr"
     :hexpand false
     :width "10%"
