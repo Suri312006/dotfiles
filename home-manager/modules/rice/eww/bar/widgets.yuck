@@ -74,6 +74,7 @@
         :pack-direction "ltr"
         :width "10%"
         :prepend-new true;
+        :hexpand true;
         :space-evenly true;
         :icon-size 17
         ;; :spacing 3
