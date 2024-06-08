@@ -24,7 +24,7 @@
 (defwidget bar []
 (box 
   :orientation "h"
-  :space-evenly true
+  ;; :space-evenly true
       
   (battery_display)
   (time_display)
@@ -34,7 +34,7 @@
     :width "10%"
     :prepend-new true;
     :space-evenly true;
-    :icon-size 10
-    :spacing 3
+    :icon-size 15
+    ;; :spacing 3
     )))
 
