@@ -4,7 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   "nvim-lua/plenary.nvim",
-  -- "suri312006/nord.nvim",
 {
     "AlexvZyl/nordic.nvim",
     lazy = false,

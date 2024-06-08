@@ -8,7 +8,6 @@ require("custom.configs.prettier")
 require("custom.configs.flutter-tools")
 require("custom.configs.todo-comments")
 require("custom.configs.refactoring")
-require("custom.configs.dracula")
 require("custom.configs.vimtex")
 require("custom.configs.kanagawa")
 vim.cmd.colorscheme 'nordic'
