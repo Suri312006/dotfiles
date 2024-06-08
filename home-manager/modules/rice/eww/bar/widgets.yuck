@@ -28,13 +28,14 @@
   (battery_display)
   (time_display)
   (box
-    :width "50%")
-  (systray 
-    :pack-direction "ltr"
-    :width "10%"
-    :prepend-new true;
-    :space-evenly true;
-    :icon-size 15
-    ;; :spacing 3
-    )))
+    (box 
+    :width "20%")
+     (systray 
+        :pack-direction "ltr"
+        :width "10%"
+        :prepend-new true;
+        :space-evenly true;
+        :icon-size 15
+        ;; :spacing 3
+        ))))
 
