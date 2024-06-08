@@ -21,7 +21,7 @@
 (defwidget dnd_toggle []
   (button 
     :onclick "suri_toggle_dnd"
-    (label :text  {dnd_status == "false" ? "dndon" : "dndoff" })))
+    (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
 
 
 
