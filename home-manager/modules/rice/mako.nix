@@ -7,7 +7,7 @@
 
     extraConfig = ''
     [mode=dnd]
-    invisibe=1
+    invisible=1
     '';
 
 
