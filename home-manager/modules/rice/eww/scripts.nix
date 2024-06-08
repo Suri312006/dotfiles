@@ -6,7 +6,17 @@ let
     eww open bar --screen 1 --id mon
   '';
 
+
+  suri_eww_list_ws = pkgs.writeShellScriptBin "suri_eww_list_ws" ''
+  hyprctl 
+
+
+  '';
+
 in
 {
-  home.packages = [ suri_eww ];
+  home.packages = [ 
+  suri_eww 
+  suri_eww_list_ws
+  ];
 }
