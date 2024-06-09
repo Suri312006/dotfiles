@@ -1,93 +1,85 @@
-{}
-# { config, ... }:
-# let
-#   # variant = config.theme.name;
-#   # c = config.programs.matugen.theme.colors.colors.${variant};
-#
-#   font_family = "GeistMono Nerd Font";
-# in
-# {
-#   programs.hyprlock = {
-#     enable = true;
-#     settings = {
-#       general = {
-#         disable_loading_bar = true;
-#         hide_cursor = false;
-#         no_fade_in = true;
-#       };
-#
-#       background = [
-#         {
-#           monitor = "";
-#           path = "$HOME/Pictures/Wallpapers/lol.png";
-#           blur_passes = 3;
-#           # blur_size = 6;
-#           # noise = 0.1;
-#           contrast = 1.1;
-#           brightness = 0.8172;
-#           vibrancy = 0.1696;
-#           vibrancy_darkness = 0.0;
-#         }
-#       ];
-#
-#       input-fields = [
-#         {
-#           # monitor = "eDP-1";
-#
-#           size = {
-#             width = 250;
-#             height = 60;
-#           };
-#
-#           outline_thickness = 2;
-#
-#           # outer_color = "rgb(${c.primary})";
-#           # inner_color = "rgb(${c.on_primary_container})";
-#           # font_color = "rgb(${c.primary_container})";
-#
-#           fade_on_empty = false;
-#           # placeholder_text = ''<span font_family="${font_family}" foreground="##${c.primary_container}">Password...</span>'';
-#
-#           dots_spacing = 0.3;
-#           dots_center = true;
-#         }
-#       ];
-#
-#       # time
-#       labels = [
-#         {
-#           monitor = "";
-#           # text = "$TIME";
-#           text = ''cmd[update:1000] echo "$(date +"%-I:%M%p")"'';
-#           # inherit font_family;
-#           font_size = 120;
-#           font_family = "JetBrains Mono Nerd Font Mono";
-#           # color = "rgb(${c.primary})";
-#
-#           position = {
-#             x = 0;
-#             y = -300;
-#           };
-#
-#           valign = "top";
-#           halign = "center";
-#         }
-#         {
-#           # monitor =
-#           text = "Hi there, $USER";
-#           color = "$foreground ";
-#           #color = rgba(255, 255, 255, 0.6)
-#           font_size = 25;
-#           font_family = "JetBrains Mono Nerd Font Mono";
-#           position = {
-#             x = 0;
-#             y = -40;
-#           };
-#           halign = "center";
-#           valign = "center";
-#
-#         }
-#       ];
-#     };
-#   };
-# }
+{ pkgs, ... }: {
+  home.packages = [ pkgs.hyprlock ];
+  home.file.".config/hypr/hyprlock.conf" =
+    {
+      #TODO: configure wallpapers and nix-colors
+      text = ''
+        background {
+            monitor =
+            path = ~/Pictures/Wallpapers/nixos.png
+            blur_passes = 3
+            contrast = 0.8916
+            brightness = 0.8172
+            vibrancy = 0.1696
+            vibrancy_darkness = 0.0
+        }
+
+        # GENERAL
+        general {
+            no_fade_in = false
+            grace = 0
+            disable_loading_bar = true
+        }
+
+        # INPUT FIELD
+        input-field {
+            monitor =
+            size = 250, 60
+            outline_thickness = 2
+            dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
+            dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
+            dots_center = true
+            outer_color = rgba(0, 0, 0, 0)
+            inner_color = rgba(0, 0, 0, 0.5)
+            font_color = rgb(200, 200, 200)
+            fade_on_empty = false
+            font_family = JetBrains Mono Nerd Font Mono
+            placeholder_text = <i><span foreground="##cdd6f4">Input Password...</span></i>
+            hide_input = false
+            position = 0, -120
+            halign = center
+            valign = center
+        }
+
+        # TIME
+        label {
+            monitor =
+            text = cmd[update:1000] echo "$(date +"%-I:%M%p")"
+            color = $foreground
+            #color = rgba(255, 255, 255, 0.6)
+            font_size = 120
+            font_family = JetBrains Mono Nerd Font Mono ExtraBold
+            position = 0, -300
+            halign = center
+            valign = top
+        }
+
+        # USER
+        label {
+            monitor =
+            text = Hi there, $USER
+            color = $foreground
+            #color = rgba(255, 255, 255, 0.6)
+            font_size = 25
+            font_family = JetBrains Mono Nerd Font Mono
+            position = 0, -40
+            halign = center
+            valign = center
+        }
+
+        # CURRENT SONG
+        label {
+            monitor =
+            # text = cmd[update:1000] echo "$(~/Documents/Scripts/whatsong.sh)" 
+            text = "lol"
+            color = $foreground
+            #color = rgba(255, 255, 255, 0.6)
+            font_size = 18
+            font_family = JetBrainsMono, Font Awesome 6 Free Solid
+            position = 0, -50
+            halign = center
+            valign = bottom
+        }
+      '';
+    };
+}

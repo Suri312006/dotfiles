@@ -2,6 +2,7 @@
   imports = [
     ./kitty
     ./zsh
+    ./nvim.nix
     ./zellij
 
     ./git.nix

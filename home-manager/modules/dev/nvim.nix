@@ -1,3 +1,4 @@
+
 { pkgs, fetchFromGitHub, ... }: {
   programs = {
     zsh.shellAliases.n = "nvim .";
