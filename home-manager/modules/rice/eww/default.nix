@@ -8,7 +8,7 @@
 
 
   programs.eww = {
-    # configDir = ./config;
+    configDir = ./config;
     enable = true;
   };
 
