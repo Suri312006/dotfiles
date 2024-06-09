@@ -4,9 +4,6 @@ let
   suri_toggle_battery_mode = pkgs.writeShellScriptBin "suri_toggle_battery_mode" ''
       BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
       if [ "$BATTERYON" = "1" ] ; then
-    notif="$HOME/.config/swaync/images/bell.png"
-    SCRIPTSDIR="$HOME/.config/hypr/scripts"
-
     #figure out some way to give this script sudo permissions so i can turn off nvidia gpu :)
 
     # old version hat wouldnt work
@@ -26,17 +23,17 @@ let
     	"
 
         swww kill 
-        notify-send -e -u low -i "$notif" "Battery Mode Enabled"
+        notify-send -e -u low -i "Battery Mode Enabled"
         exit
     else
-    	swww-daemon --format xrgb && swww img "$HOME/.config/rofi/.current_wallpaper"
+    	swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png"
     	sleep 0.1
 
          # need to get pywall
             #{SCRIPTSDIR}/PywalSwww.sh
     	sleep 0.5
     	suri_refresh
-        notify-send -e -u normal -i "$notif" "Battery Mode Disabled."
+        notify-send -e -u normal -i  "Battery Mode Disabled."
         exit
     fi
     hyprctl reload
@@ -280,7 +277,7 @@ in
   home = {
     packages = [
       #TODO: write this script
-      # suri_toggle_battery_mode
+      suri_toggle_battery_mode
       suri_screenlock
       suri_polkit_init
       suri_volume
