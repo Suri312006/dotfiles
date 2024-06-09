@@ -20,7 +20,7 @@ let
             notify-send -e -u low -i "Battery Mode Enabled"
             exit
         else
-            swww-daemon --format xrgb && sudo swww img "$HOME/Pictures/Wallpapers/lol.png"
+            swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png" &
             sleep 0.1
 
             # need to get pywall
