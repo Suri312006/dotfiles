@@ -34,7 +34,7 @@ programs.rog-control-center.enable = true;
     backupFileExtension = "backup";
     users = {
       # Import your home-manager configuration
-      suri = import ../../../home-manager/users/suri/home.nix;
+      suri = import ../../users/suri/home.nix;
     };
   };
 
