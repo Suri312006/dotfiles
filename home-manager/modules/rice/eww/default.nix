@@ -1,6 +1,9 @@
 { pkgs, ... }: {
 
-  imports = [ ./scripts.nix ];
+  imports = [ 
+  ./scripts.nix 
+  ./icons.nix
+  ];
 
 
   programs.eww = {
