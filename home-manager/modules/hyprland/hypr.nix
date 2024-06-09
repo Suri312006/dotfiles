@@ -254,7 +254,7 @@
 
           "windowsIn, 1, 3, slow, popin"
           "windowsOut, 1, 3, winOut, popin"
-          "windowsMove, 1, 3, wind, slide"
+          "windowsMove, 1, 3, slingshot, popin"
           "border, 1, 10, linear"
           "borderangle, 1, 180, linear, loop" #used by rainbow borders and rotating colors
           "fade, 1, 5, overshot"
