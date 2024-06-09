@@ -1,3 +1,4 @@
+{}
 # { pkgs, ... }: {
 #   home.packages = [ pkgs.hyprlock ];
 #   home.file.".config/hypr/hyprlock.conf" =
