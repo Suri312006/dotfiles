@@ -11,5 +11,10 @@
 
   home.packages = [ pkgs.wofi pkgs.nwg-look ];
 
-  home.file."Pictures/Wallpapers".source = ./wallpapers;
+  home.file."Pictures/Wallpapers" = {
+    source = builtins.fetchGit {
+      url = "https://github.com/suri312006/wallpaperbank";
+      rev = "4ffd596b3ae720e0575152c00987e81ad0f7218e";
+    };
+  };
 }
