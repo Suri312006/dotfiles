@@ -2,41 +2,38 @@
 { pkgs, ... }:
 let
   suri_toggle_battery_mode = pkgs.writeShellScriptBin "suri_toggle_battery_mode" ''
-      BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
-      if [ "$BATTERYON" = "1" ] ; then
-    #figure out some way to give this script sudo permissions so i can turn off nvidia gpu :)
+    BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
+    if [ "$BATTERYON" = "1" ] ; then
 
-    # old version hat wouldnt work
-    # HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==2{print $2}')
-    HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
-    if [ "$HYPRGAMEMODE" = "1" ] ; then
-        hyprctl --batch "\
-            keyword animations:enabled 0;\
-            keyword decoration:drop_shadow 0;\
-            keyword decoration:blur:passes 0;\
-            keyword general:gaps_in 0;\
-            keyword general:gaps_out 0;\
-            keyword general:border_size 1;\
-            keyword decoration:rounding 0;\
-    	misc:vfr true;\
-            keyword monitor eDP-1, 2560x1440@60, 0x0, 1.33333333;
-    	"
+        HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
+        if [ "$HYPRGAMEMODE" = "1" ] ; then
+            sudo hyprctl --batch "\
+                keyword animations:enabled 0;\
+                keyword decoration:drop_shadow 0;\
+                keyword decoration:blur:passes 0;\
+                keyword general:gaps_in 0;\
+                keyword general:gaps_out 0;\
+                keyword general:border_size 1;\
+                keyword decoration:rounding 0;\
+                misc:vfr true;\
+                keyword monitor eDP-1, 2560x1440@60, 0x0, 1.33333333;"
 
-        swww kill 
-        notify-send -e -u low -i "Battery Mode Enabled"
-        exit
-    else
-    	swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png"
-    	sleep 0.1
+            sudo swww kill 
+            notify-send -e -u low -i "Battery Mode Enabled"
+            exit
+        else
+            sudo swww-daemon --format xrgb && sudo swww img "$HOME/Pictures/Wallpapers/lol.png"
+            sleep 0.1
 
-         # need to get pywall
+            # need to get pywall
             #{SCRIPTSDIR}/PywalSwww.sh
-    	sleep 0.5
-    	suri_refresh
-        notify-send -e -u normal -i  "Battery Mode Disabled."
-        exit
+            sleep 0.5
+            suri_refresh
+            notify-send -e -u normal -i  "Battery Mode Disabled."
+            exit
+        fi
+        sudo hyprctl reload
     fi
-    hyprctl reload
   '';
 
   suri_screenlock = pkgs.writeShellScriptBin "suri_screenlock" ''
