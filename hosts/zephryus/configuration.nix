@@ -22,7 +22,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     # import all and enable all
-    ../../modules
+    ../../modules/system
   ];
 
 programs.rog-control-center.enable = true;
