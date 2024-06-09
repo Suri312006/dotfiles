@@ -2,6 +2,7 @@
   imports = [
     ./hypr.nix
     ./scripts.nix
+    ./hyprlock.nix
   ];
   # make stuff work on wayland
   home.sessionVariables = {
