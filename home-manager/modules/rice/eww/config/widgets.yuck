@@ -22,7 +22,7 @@
   (eventbox 
     :class "dnd_toggle"
     :onclick "suri_toggle_dnd"
-    (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
+    (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
 
 
 
