@@ -23,13 +23,13 @@
 
 (defwidget dnd_toggle []
   (eventbox 
-    :class "dnd_toggle"
+    :class "notif_bell"
     :onclick "suri_toggle_dnd"
     (box
 
      ;; (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })
      (image
-      :class "bell"
+      :class "notif_bell"
       :path {dnd_status == "false" ? bell_icon : bell_silenced_icon }
       :icon-size "100"
       :icon "bell"
