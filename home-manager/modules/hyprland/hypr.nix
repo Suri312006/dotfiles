@@ -258,7 +258,7 @@
           "border, 1, 10, linear"
           "borderangle, 1, 180, linear, loop" #used by rainbow borders and rotating colors
           "fade, 1, 5, overshot"
-          "workspaces, 1, 2, myBezier, popin"
+          "workspaces, 1, 2, myBezier"
           "windows, 1, 5, bounce, popin"
 
         ];
