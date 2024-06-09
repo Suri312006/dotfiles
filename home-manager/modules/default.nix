@@ -5,7 +5,6 @@
     ./dev
     ./apps
     ./rice
-    ./neovim
     ./hyprland
   ];
 }
