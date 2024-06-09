@@ -2,7 +2,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "TTY";
+      color_theme = "Default";
     };
   };
 }
