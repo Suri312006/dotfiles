@@ -32,7 +32,7 @@ let
             notify-send -e -u normal -i  "Battery Mode Disabled."
             exit
         fi
-        sudo hyprctl reload
+        hyprctl reload
     fi
   '';
 
