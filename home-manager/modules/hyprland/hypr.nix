@@ -9,7 +9,7 @@
 
       exec-once = [
         "swww query || swww-daemon --format xrgb"
-        "swww $HOME/Pictures/Wallpapers/nixos.png"
+        "swww $HOME/Pictures/Wallpapers/lol.png"
 
         # Startup
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -60,17 +60,17 @@
 
         # opacity (transparent) #enable as desired
         "opacity 0.9 0.9, class:^([Rr]ofi)$"
-        "opacity 0.97 1, class:^(firefox)$"
-        "opacity 0.97 0.99, class:^([Gg]oogle-chrome)$"
+        "opacity 0.9 1, class:^(firefox)$"
+        "opacity 0.9 0.9, class:^([Gg]oogle-chrome)$"
         "opacity 0.9 0.9, class:^([Tt]hunar)$"
         "opacity 0.8 0.9, class:^(pcmanfm-qt)$"
         "opacity 0.9 0.9, class:^(gedit)$"
-        "opacity 0.93 0.9, class:^(kitty)$"
+        "opacity 0.85 0.9, class:^(kitty)$"
         "opacity 0.9 0.9, class:^(mousepad)$"
         "opacity 0.99 0.95, class:^(codium-url-handler)$"
-        "opacity 0.95 0.9, class:^(discord)$"
+        "opacity 0.9 0.9, class:^(discord)$"
         "opacity 0.9 0.6, class:^(yad)$"
-        "opacity 0.9 0.9, title:^(Spotify Free)$"
+        "opacity 0.8 0.8, title:^(Spotify Free)$"
         "opacity 0.9 0.9, class:^([Ss]lack)$"
         "opacity 0.95 0.95, title:(.*)(Visual Studio Code)$"
         "opacity 0.9 0.9, class:^(obsidian)$"
