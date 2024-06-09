@@ -48,9 +48,9 @@
     shellAliases = {
       #TODO: needs to be like the user thing
       # rebuild = " git add -A && git commit -m ""sudo nixos-rebuild switch --flake /home/suri/dotfiles#zephryus";
-      rebuild = ''
+      ree = ''
 VERSION=$(($(readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)) 
-git add -A && git commit -m "Generation: '$VERSION'" && sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus'';
+z ~/dots/nixdots && git add -A && git commit -m "Generation: '$VERSION'" && sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus'';
 
       dots = "z ~/dots";
       fcd = ''cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
