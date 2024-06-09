@@ -70,7 +70,7 @@
         "opacity 0.99 0.95, class:^(codium-url-handler)$"
         "opacity 0.9 0.9, class:^(discord)$"
         "opacity 0.9 0.6, class:^(yad)$"
-        "opacity 0.8 0.8, title:^(Spotify Free)$"
+        "opacity 0.8 0.8, title:^(Spotify)$"
         "opacity 0.9 0.9, class:^([Ss]lack)$"
         "opacity 0.95 0.95, title:(.*)(Visual Studio Code)$"
         "opacity 0.9 0.9, class:^(obsidian)$"

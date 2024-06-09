@@ -6,3 +6,13 @@ brightness script
 rewrite nvim config
 
 - rebuild command that auto does the git stuff
+
+- hosts
+- users
+- modules
+    - system
+    - home
+use lib mkif
+
+
+rework the rebuild command, auto git add anc commit
