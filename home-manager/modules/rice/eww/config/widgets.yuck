@@ -1,5 +1,8 @@
 (include "./polls.yuck")
 
+(defvar bell_icon "$HOME/.config/eww/icons/bell.png")
+(defvar bell_silenced_icon "$HOME/.config/eww/icons/bell-off.png")
+
 
 (defwidget time_display []
   (box
@@ -22,7 +25,13 @@
   (eventbox 
     :class "dnd_toggle"
     :onclick "suri_toggle_dnd"
-    (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
+    (box
+
+     (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })
+     (image
+      :path {dnd_status == "false" ? bell_icon : bell_silenced_icon })
+
+    )))
 
 
 
