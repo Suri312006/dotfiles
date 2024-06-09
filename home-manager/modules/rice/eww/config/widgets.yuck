@@ -29,6 +29,7 @@
 
      ;; (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })
      (image
+      :class "bell"
       :path {dnd_status == "false" ? bell_icon : bell_silenced_icon }
       :icon-size "100"
       :icon "bell"
