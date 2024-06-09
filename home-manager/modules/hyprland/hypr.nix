@@ -246,19 +246,19 @@
           "slow, 0, 0.85, 0.3, 1"
           "overshot, 0.7, 0.6, 0.1, 1.1"
           "bounce, 1.1, 1.6, 0.1, 0.85"
-          "sligshot, 1, -1, 0.15, 1.25"
+          "slingshot, 1, -1, 0.15, 1.25"
           "nice, 0, 6.9, 0.5, -4.20"
         ];
 
         animation = [
 
-          "windowsIn, 1, 3, slow, popin"
-          "windowsOut, 1, 3, winOut, popin"
-          "windowsMove, 1, 3, wind, popin"
+          "windowsIn, 1, 1, winIn, popin"
+          "windowsOut, 1, 1, winOut, popin"
+          "windowsMove, 1, 1, slingshot, popin"
           "border, 1, 10, linear"
           "borderangle, 1, 180, linear, loop" #used by rainbow borders and rotating colors
           "fade, 1, 5, overshot"
-          "workspaces, 1, 5, wind"
+          "workspaces, 1, 2, slingshot, popin"
           "windows, 1, 5, bounce, popin"
 
         ];
