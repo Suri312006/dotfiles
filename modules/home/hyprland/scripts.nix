@@ -7,7 +7,7 @@ let
 
         HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
         if [ "$HYPRGAMEMODE" = "1" ] ; then
-            sudo hyprctl --batch "\
+            hyprctl --batch "\
                 keyword animations:enabled 0;\
                 keyword decoration:drop_shadow 0;\
                 keyword decoration:blur:passes 0;\
@@ -18,11 +18,11 @@ let
                 misc:vfr true;\
                 keyword monitor eDP-1, 2560x1440@60, 0x0, 1.33333333;"
 
-            sudo swww kill 
+            swww kill 
             notify-send -e -u low -i "Battery Mode Enabled"
             exit
         else
-            sudo swww-daemon --format xrgb && sudo swww img "$HOME/Pictures/Wallpapers/lol.png"
+            swww-daemon --format xrgb && sudo swww img "$HOME/Pictures/Wallpapers/lol.png"
             sleep 0.1
 
             # need to get pywall
