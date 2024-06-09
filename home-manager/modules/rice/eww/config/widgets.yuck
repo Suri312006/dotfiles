@@ -19,7 +19,7 @@
       :text "${EWW_BATTERY.BAT0.capacity}")))
 
 (defwidget dnd_toggle []
-  (button 
+  (eventbox 
     :class "dnd_toggle"
     :onclick "suri_toggle_dnd"
     (label :text  {dnd_status == "false" ? "dndoff" : "dndon" })))
@@ -38,23 +38,23 @@
 
   (eventbox 
     :onclick "hyprctl dispatch workspace 1" 1)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 2" 2)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 3" 3)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 4" 4)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 5" 5)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 6" 6)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 7" 7)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 8" 8)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 9" 9)
-  (button 
+  (eventbox 
     :onclick "hyprctl dispatch workspace 0" 0)))
 
 (defwidget bar []
