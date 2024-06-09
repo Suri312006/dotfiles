@@ -5,8 +5,6 @@ let
     BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
     if [ "$BATTERYON" = "1" ] ; then
 
-        HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
-        if [ "$HYPRGAMEMODE" = "1" ] ; then
             hyprctl --batch "\
                 keyword animations:enabled 0;\
                 keyword decoration:drop_shadow 0;\
@@ -33,7 +31,6 @@ let
             exit
         fi
         hyprctl reload
-    fi
   '';
 
   suri_screenlock = pkgs.writeShellScriptBin "suri_screenlock" ''
