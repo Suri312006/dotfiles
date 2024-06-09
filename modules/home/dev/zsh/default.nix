@@ -20,11 +20,11 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
-      {
-        name = "powerlevel10k-config";
-        src = ./p10k-config;
-        file = "p10k.zsh";
-      }
+      # {
+      #   name = "powerlevel10k-config";
+      #   src = ./p10k-config;
+      #   file = "p10k.zsh";
+      # }
       {
         name = "vi-mode";
         src = pkgs.zsh-vi-mode;
@@ -33,6 +33,13 @@
 
 
     ];
+
+
+    home.file."p10k.zsh".source = builtins.fetchGit {
+      url = "https://github.com/Suri312006/powerlevel10k";
+      rev = "38893dd7b16c5bef8fe77d304b94f77f652b0f3e";
+    };
+
     oh-my-zsh = {
       enable = true;
     };
