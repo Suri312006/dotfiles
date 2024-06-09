@@ -31,6 +31,7 @@
 (box
   :haligh "center"
   :haligh "15%"
+  :hexpand false
   :visible true
   :orientation "h"
   :class "workspaces"
