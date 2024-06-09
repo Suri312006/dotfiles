@@ -1,6 +1,5 @@
 { pkgs, ... }: {
 
-  home.file.".config/eww".source = ./config;
 
   imports = [ 
   ./scripts.nix 
@@ -13,6 +12,7 @@
     enable = true;
   };
 
+  # home.file.".config/eww".source = ./config;
 
 
 }

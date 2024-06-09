@@ -1,7 +1,7 @@
 (include "./polls.yuck")
 
-(defvar bell_icon "/home/suri/.config/eww/icons/bell.svg")
-(defvar bell_silenced_icon "/home/suri/.config/eww/icons/bell-off.svg")
+(defvar bell_icon "/home/suri/Pictures/icons/bell.svg")
+(defvar bell_silenced_icon "/home/suri/Pictures/icons/bell-off.svg")
 
 
 (defwidget time_display []
