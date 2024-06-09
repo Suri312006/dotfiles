@@ -6,7 +6,7 @@
       text = ''
         background {
             monitor =
-            path = "$HOME/Pictures/Wallpapers/lol.png"
+            path = ~/Pictures/Wallpapers/nixos.png
             blur_passes = 3
             contrast = 0.8916
             brightness = 0.8172
