@@ -254,11 +254,11 @@
 
           "windowsIn, 1, 1, winIn, popin"
           "windowsOut, 1, 1, winOut, popin"
-          "windowsMove, 1, 1, slingshot, popin"
+          "windowsMove, 1, 1, myBezier, popin"
           "border, 1, 10, linear"
           "borderangle, 1, 180, linear, loop" #used by rainbow borders and rotating colors
           "fade, 1, 5, overshot"
-          "workspaces, 1, 2, slingshot, popin"
+          "workspaces, 1, 2, myBezier, popin"
           "windows, 1, 5, bounce, popin"
 
         ];
