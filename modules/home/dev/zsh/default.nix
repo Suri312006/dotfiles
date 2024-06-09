@@ -4,6 +4,12 @@
 
   programs.zoxide.enable = true;
 
+
+  home.file."p10k.zsh".source = builtins.fetchGit {
+    url = "https://github.com/Suri312006/powerlevel10k";
+    rev = "38893dd7b16c5bef8fe77d304b94f77f652b0f3e";
+  };
+
   home.packages = with pkgs;
     [ fd eza ];
   programs.zsh = {
@@ -35,10 +41,6 @@
     ];
 
 
-    home.file."p10k.zsh".source = builtins.fetchGit {
-      url = "https://github.com/Suri312006/powerlevel10k";
-      rev = "38893dd7b16c5bef8fe77d304b94f77f652b0f3e";
-    };
 
     oh-my-zsh = {
       enable = true;
