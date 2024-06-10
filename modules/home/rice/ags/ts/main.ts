@@ -7,6 +7,7 @@ const audio = await Service.import("audio")
 const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
 
+
 const date = Variable("", {
     poll: [1000, 'date "+%H:%M:%S %b %e."'],
 })
@@ -219,11 +220,22 @@ Utils.timeout(100, () => Utils.notify({
     },
 }))
 
+
+function returnBars() {
+    let bars: any[] = []
+    let monitor = hyprland.monitors
+
+    for (let index = 0; index < monitor.length; index++) {
+        bars.push(Bar(index))
+    }
+    return bars
+}
+
 App.config({
     style: "./style.css",
+
     windows: [
-        Bar(0),
-        Bar(1),
+        returnBars(),
 
         applauncher,
         NotificationPopups()
