@@ -98,6 +98,6 @@ window.notification-popups box.notifications {
 }
 
 
-@import url("./src/bar/style.css")
-@import url("./src/notifications/style.css")
-@import url("./src/launcher/style.css")
+/* @import url("./src/bar/style.css") */
+/* @import url("./src/notifications/style.css") */
+/* @import url("./src/launcher/style.css") */
