@@ -16,5 +16,7 @@
     grim
     slurp
     swappy
+
+    brightnessctl
   ];
 }
