@@ -225,8 +225,8 @@ App.config({
         Bar(0),
         Bar(1),
 
-        applauncher
-        NotificationPopups
+        applauncher,
+        NotificationPopups()
 
         // you can call it, for each monitor
         // Bar(0),
