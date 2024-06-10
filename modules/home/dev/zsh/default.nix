@@ -1,4 +1,22 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  resetScript = (pkgs.writeShellApplication {
+    name = "ns";
+    runtimeInputs = with pkgs;
+      [ git nh ];
+    text = ''
+      set -e #Exit immediately if a command exits with a non-zero status.
+      git diff HEAD -- . '*'
+      echo "NixOS Rebuilding ... "
+      nh os switch
+      gen=$(nixos-rebuild list-generations | grep current | awk '{print $1,$2}')
+      read -p "Enter a commit message: " message
+      git commit -am "$message ($gen)"
+    '';
+
+  });
+in
+{
 
 
 
@@ -7,7 +25,7 @@
 
 
   home.packages = with pkgs;
-    [ fd eza ];
+    [ fd eza resetScript ];
   programs.zsh = {
     enable = true;
     autocd = true;
