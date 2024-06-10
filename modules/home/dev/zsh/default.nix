@@ -5,7 +5,7 @@
 
 
   home.packages = with pkgs;
-    [ fd eza resetScript ];
+    [ fd eza ];
   programs.zsh = {
     enable = true;
     autocd = true;
