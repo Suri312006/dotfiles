@@ -177,6 +177,7 @@ function Center() {
         children: [
             Media(),
             Notification(),
+            SysTray(),
         ],
     })
 }
