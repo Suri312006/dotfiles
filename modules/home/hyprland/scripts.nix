@@ -22,6 +22,7 @@ let
         else
             swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png" &
             sleep 0.1
+            hyprctl reload
 
             # need to get pywall
             #{SCRIPTSDIR}/PywalSwww.sh
@@ -30,7 +31,13 @@ let
             notify-send -e -u normal -i  "Battery Mode Disabled."
             exit
         fi
-        hyprctl reload
+  '';
+
+  suri_refresh = pkgs.whiteShellScriptBin "suri_refresh" ''
+        
+
+
+
   '';
 
   suri_screenlock = pkgs.writeShellScriptBin "suri_screenlock" ''
