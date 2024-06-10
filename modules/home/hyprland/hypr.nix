@@ -119,7 +119,7 @@
           "$mod ALT, R, exec, suri_refresh"
           "$mod SHIFT, B, exec, suri_change_blur"
           "$mod ALT, V, exec, suri_clipmanager"
-          "CTRL ALT, B, exec, suri_tobble_battery_mode"
+          "CTRL ALT, B, exec, suri_toggle_battery_mode"
 
           ''$mod SHIFT, S, exec, grim -g "''$(slurp)" - | swappy -f -''
 
