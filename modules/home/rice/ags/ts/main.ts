@@ -131,7 +131,7 @@ function BatteryLabel() {
 
     return Widget.Box({
         class_name: "battery",
-        visible: battery.bind("available"),
+        visible: true,
         children: [
             // Widget.Icon({ icon }),
             Widget.LevelBar({
