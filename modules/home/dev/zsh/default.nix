@@ -10,7 +10,7 @@ let
       echo "NixOS Rebuilding ... "
       nh os switch
       gen=$(nixos-rebuild list-generations | grep current | awk '{print $1,$2}')
-      read -p "Enter a commit message: " message
+      read -pr "Enter a commit message: " message
       git commit -am "$message ($gen)"
     '';
 
