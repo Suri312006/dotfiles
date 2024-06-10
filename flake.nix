@@ -23,6 +23,8 @@
 
     swww.url = "github:LGFae/swww";
 
+    ags.url = "github:Aylur/ags";
+
   };
 
   outputs =

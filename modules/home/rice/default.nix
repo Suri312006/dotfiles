@@ -5,6 +5,7 @@
     ./pywal.nix
     ./eww
     ./mako.nix
+    ./ags
   ];
 
   pywal.enable = true;
