@@ -1,5 +1,3 @@
-import { applauncher } from "./applauncer"
-
 const hyprland = await Service.import("hyprland")
 const notifications = await Service.import("notifications")
 const mpris = await Service.import("mpris")
@@ -209,20 +207,8 @@ function Bar(monitor: number) {
     })
 }
 
-import { NotificationPopups } from "./notificationPopups.js"
 
-Utils.timeout(100, () => Utils.notify({
-    summary: "Notification Popup Example",
-    iconName: "info-symbolic",
-    body: "Lorem ipsum dolor sit amet, qui minim labore adipisicing "
-        + "minim sint cillum sint consectetur cupidatat.",
-    actions: {
-        "Cool": () => print("pressed Cool"),
-    },
-}))
-
-
-function returnBars() {
+export function returnBars() {
     let bars: any[] = []
     let monitor = hyprland.monitors
 
@@ -231,18 +217,3 @@ function returnBars() {
     }
     return bars
 }
-
-App.config({
-    style: "./style.css",
-
-    windows: [
-        returnBars(),
-        applauncher,
-        NotificationPopups()
-        // you can call it, for each monitor
-        // Bar(0),
-        // Bar(1)
-    ],
-})
-
-export { }
