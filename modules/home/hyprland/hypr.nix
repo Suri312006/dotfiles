@@ -10,18 +10,15 @@
       exec-once = [
         "swww query || swww-daemon --format xrgb"
         "swww $HOME/Pictures/Wallpapers/lol.png"
-
         # Startup
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         # Polkit (Polkit Gnome / KDE)
         "suri_polkit_init &"
-        "suri_eww &"
+        "ags &"
         # starup apps
-        "waybar &"
         "nm-applet --indicator &"
-        "swaync &"
-        #"blueman-applet & "
+        "blueman-applet & "
         "discord &"
         "firefox &"
         "slack &"
