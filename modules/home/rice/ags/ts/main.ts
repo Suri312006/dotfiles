@@ -184,7 +184,7 @@ function Center() {
 function Right() {
     return Widget.Box({
         hpack: "end",
-        spacing: 8,
+        spacing: 10,
         children: [
             Volume(),
             BatteryLabel(),
