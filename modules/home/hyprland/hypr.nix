@@ -15,6 +15,8 @@
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "ags &"
 
+        "sleep 1"
+
         # Polkit (Polkit Gnome / KDE)
         "suri_polkit_init &"
         # starup apps
@@ -25,7 +27,7 @@
         "google-chrome-stable &"
         "spotify &"
 
-        "sleep 1 && slack &" # time delay for slack
+        "slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
