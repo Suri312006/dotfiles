@@ -1,6 +1,6 @@
-import { applauncher } from "./applauncer"
-import { returnBars } from "./bar"
-import { NotificationPopups } from "./notificationPopups"
+import { applauncher } from "./launcher/applauncer"
+import { returnBars } from "./bar/bar"
+import { NotificationPopups } from "./notifications/notificationPopups"
 
 
 // Utils.timeout(100, () => Utils.notify({
