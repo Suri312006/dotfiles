@@ -1,6 +1,5 @@
 { pkgs, inputs, ... }: {
 
-  stdenv = pkgs.clangStdenv;
   environment = {
     systemPackages = with pkgs; [
       btop

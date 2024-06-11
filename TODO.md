@@ -16,3 +16,6 @@ use lib mkif
 
 
 rework the rebuild command, auto git add anc commit
+
+inspo 
+https://github.com/wochap/nix-config
