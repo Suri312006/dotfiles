@@ -1,8 +1,7 @@
-
 .window {
     &.bar {
-        background-color: $theme_bg_color;
-        color: $theme_fg_color;
+        background-color: var(--theme-bg-color);
+        color: var(--theme-fg-color);
     }
 }
 
@@ -13,11 +12,11 @@ button {
     background-color: transparent;
 
     &:active {
-        background-color: $theme_selected_bg_color;
+        background-color: var(--theme-selected-bg-color);
     }
 
     &:hover {
-        border-bottom: 3px solid $theme_fg_color;
+        border-bottom: 3px solid var(--theme-fg-color);
     }
 }
 
@@ -27,12 +26,12 @@ label {
 
 .workspaces {
     button.focused {
-        border-bottom: 3px solid $theme_selected_bg_color;
+        border-bottom: 3px solid var(--theme-selected-bg-color);
     }
 }
 
 .client-title {
-    color: $theme_selected_bg_color;
+    color: var(--theme-selected-bg-color);
 }
 
 .notification {
