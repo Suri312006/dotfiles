@@ -13,7 +13,7 @@
     #   sha256 = "sha256-bjmbSBEaQZgbu1dBGFqU5fClqrU2J2qMgJ4Ha67X7jw=";
     # };
 
-    image = /home/suri/Pictures/d2.jpg;
+    # image = /home/suri/Pictures/d2.jpg;
 
     fonts = {
       serif = {

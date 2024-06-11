@@ -6,6 +6,7 @@
     ./eww
     ./mako.nix
     ./ags.nix
+    ./stylix.nix
   ];
 
   pywal.enable = true;
