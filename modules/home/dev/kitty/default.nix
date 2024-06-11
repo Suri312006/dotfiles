@@ -19,6 +19,6 @@
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
 
   home.packages = [
-    pkgs.ranger
+    pkgs.yazi
   ];
 }
