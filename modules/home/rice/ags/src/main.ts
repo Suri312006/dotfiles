@@ -4,7 +4,7 @@ import { NotificationPopups } from "./notifications/notificationPopups"
 
 // const scss = `${App.configDir}/style.scss`
 // const css = `/tmp/my-style.css`
-const css = `style.css`
+const css = `./src/style.css`
 
 // Utils.timeout(100, () => Utils.notify({
 //     summary: "Notification Popup Example",
