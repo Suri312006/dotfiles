@@ -4,8 +4,8 @@
     enable = true;
     # image = ~/Pictures/Wallpapers/lol.png;
     image = pkgs.fetchurl {
-      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-      sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
+      url = "http://downloads.bungie.net/images/Wallpapers/S19/1920x1080/d2_S19_Community_Wallpapers_1920x1080_10.jpg";
+      sha256 = "";
     };
     polarity = "dark";
 
@@ -16,13 +16,13 @@
       };
 
       sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
+        package = pkgs.fira-code;
+        name = "Fira Code SemiBold";
       };
 
       monospace = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans Mono";
+        package = pkgs.fantasque-sans-mono;
+        name = "Regular";
       };
 
       emoji = {
