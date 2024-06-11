@@ -17,5 +17,4 @@
 
   #TODO: surely can make this better / inline
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
-
 }
