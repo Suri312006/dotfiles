@@ -2,8 +2,9 @@ import { applauncher } from "./launcher/applauncer"
 import { returnBars } from "./bar/bar"
 import { NotificationPopups } from "./notifications/notificationPopups"
 
-const scss = `${App.configDir}/style.scss`
-const css = `/tmp/my-style.css`
+// const scss = `${App.configDir}/style.scss`
+// const css = `/tmp/my-style.css`
+const css = `./style.css`
 
 // Utils.timeout(100, () => Utils.notify({
 //     summary: "Notification Popup Example",
@@ -14,7 +15,7 @@ const css = `/tmp/my-style.css`
 //         "Cool": () => print("pressed Cool"),
 //     },
 // }))
-Utils.exec(`sass ${scss} ${css}`)
+// Utils.exec(`sass ${scss} ${css}`)
 
 
 App.config({
