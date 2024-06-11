@@ -25,12 +25,15 @@
 
     ags.url = "github:Aylur/ags";
 
+    stylix.url = "github:danth/stylix";
+
   };
 
   outputs =
     { self
     , nixpkgs
     , home-manager
+    , stylix
     , ...
     } @ inputs:
     let
@@ -44,7 +47,7 @@
         zephryus = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           # > Our main nixos configuration file <
-          modules = [ ./hosts/zephryus ];
+          modules = [ stylix.nixosModules.stylix ./hosts/zephryus ];
         };
       };
 
