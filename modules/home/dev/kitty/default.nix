@@ -2,11 +2,11 @@
   programs.kitty = {
     enable = true;
     theme = "Monokai Pro (Filter Octagon)";
-    font = {
-      package = pkgs.fira-code;
-      name = "Fira Code SemiBold";
-      size = 9.5;
-    };
+    # font = {
+    #   package = pkgs.fira-code;
+    #   name = "Fira Code SemiBold";
+    #   size = 9.5;
+    # };
     settings = {
       enable_audio_bell = "no";
       confirm_os_window_close = 0;
