@@ -6,7 +6,7 @@ in
 {
 
   services.displayManager.sddm = {
-    enable = false;
+    enable = true;
     theme = "tokyo-night-sddm";
     wayland.enable = true;
   };
