@@ -14,7 +14,12 @@
       gtksourceview
       webkitgtk
       accountsservice
-      sass
     ];
   };
+
+  home.packages = [
+    pkgs.sass
+  ];
 }
+
+

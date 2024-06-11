@@ -1,21 +1,21 @@
-{...}:
+{ ... }:
 
-let 
-iconSize = "24";
-color = "#FFFFFF";
+let
+  iconSize = "24";
+  color = "#FFFFFF";
 in
 {
 
-home.file."Pictures/icons/batt_full.svg".text = ''
-<svg xmlns="http://www.w3.org/2000/svg" stroke="${color}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-battery-full"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/><line x1="14" x2="14" y1="11" y2="13"/></svg>
-'';
+  home.file."Pictures/icons/batt_full.svg".text = ''
+    <svg xmlns="http://www.w3.org/2000/svg" stroke="${color}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-battery-full"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/><line x1="14" x2="14" y1="11" y2="13"/></svg>
+  '';
 
-home.file."Pictures/icons/bell.svg".text = ''
-<svg xmlns="http://www.w3.org/2000/svg" stroke="${color}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-'';
-home.file."Pictures/icons/bell-off.svg".text = ''
-<svg xmlns="http://www.w3.org/2000/svg" width="${iconSize}" height="${iconSize}" stroke="${color}" viewBox="0 0 24 24" fill="none"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-off"><path d="M8.7 3A6 6 0 0 1 18 8a21.3 21.3 0 0 0 .6 5"/><path d="M17 17H3s3-2 3-9a4.67 4.67 0 0 1 .3-1.7"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="m2 2 20 20"/></svg>
-'';
+  home.file."Pictures/icons/bell.svg".text = ''
+    <svg xmlns="http://www.w3.org/2000/svg" stroke="${color}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+  '';
+  home.file."Pictures/icons/bell-off.svg".text = ''
+    <svg xmlns="http://www.w3.org/2000/svg" width="${iconSize}" height="${iconSize}" stroke="${color}" viewBox="0 0 24 24" fill="none"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-off"><path d="M8.7 3A6 6 0 0 1 18 8a21.3 21.3 0 0 0 .6 5"/><path d="M17 17H3s3-2 3-9a4.67 4.67 0 0 1 .3-1.7"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="m2 2 20 20"/></svg>
+  '';
 
 
-  }
+}
