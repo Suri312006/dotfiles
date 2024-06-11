@@ -1,4 +1,6 @@
 { pkgs, inputs, ... }: {
+
+  stdenv = pkgs.clangStdenv;
   environment = {
     systemPackages = with pkgs; [
       btop
@@ -33,6 +35,8 @@
 
 
       gnumake42
+
+      clang-tools
 
     ];
   };
