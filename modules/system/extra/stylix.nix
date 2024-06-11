@@ -9,7 +9,7 @@ in
 {
   # home.file."~/Pictures/Wallpaper.png" = wallpaper;
 
-  stylix.image = wallpaper;
+  stylix.image = ~/Pictures/Wallpapers/current_wall.png;
 
   stylix = {
     enable = true;
