@@ -9,18 +9,19 @@
     polarity = "dark";
 
     fonts = {
-      # serif = {
-      #   package = pkgs.dejavu_fonts;
-      #   name = "DejaVu Serif";
       serif = {
-        package = pkgs.fira-code;
-        name = "Fira Code Bold";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
+      # serif = {
+      #   package = pkgs.fira-code;
+      #   name = "Fira Code Bold";
+      # };
 
-      sansSerif = {
-        package = pkgs.fira-code;
-        name = "Fira Code Bold";
-      };
+      # sansSerif =/*   */{
+      #   package = pkgs.fira-code;
+      #   name = "Fira Code Bold";
+      # };
 
       # monospace = {
       #   package = pkgs.fantasque-sans-mono;
@@ -28,7 +29,7 @@
       # };
       monospace = {
         package = pkgs.fira-code;
-        name = "Fira Code Bold";
+        name = "Fira Code SemiBold";
       };
 
       emoji = {
