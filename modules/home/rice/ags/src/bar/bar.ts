@@ -45,6 +45,13 @@ function Clock() {
     })
 }
 
+function DndButton(){
+    return Widget.Button({
+        class_name: "dnd",
+        label: ( )
+    })
+}
+
 
 // we don't need dunst or any other notification daemon
 // because the Notifications module is a notification daemon itself
