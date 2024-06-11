@@ -21,7 +21,7 @@
 
 // Workspaces
 .workspaces .widget {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .workspaces .widget:hover {
@@ -32,15 +32,15 @@
 // Client title
 .client-title {
   padding-left: 10px;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* text-align: left; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
 }
 
 // Clock
 .clock {
-  text-align: right;
+  /* text-align: right; */
   padding-right: 10px;
 }
 
@@ -55,7 +55,7 @@
 
 // Media control
 .media {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .media .label {
@@ -74,7 +74,7 @@
   }
 
   .slider {
-    width: 100px;
+    /* width: 100px; */
   }
 }
 
@@ -85,7 +85,7 @@
 
 // System tray
 .systemtray .widget {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .systemtray .widget:hover {
@@ -99,13 +99,13 @@
 }
 
 .Left {
-  float: left;
+  /* float: left; */
 }
 
 .Center {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .Right {
-  float: right;
+  /* float: right; */
 }
