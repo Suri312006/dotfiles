@@ -2,6 +2,8 @@ import { applauncher } from "./launcher/applauncer"
 import { returnBars } from "./bar/bar"
 import { NotificationPopups } from "./notifications/notificationPopups"
 
+const scss = `${App.configDir}/style.scss`
+const css = `/tmp/my-style.css`
 
 // Utils.timeout(100, () => Utils.notify({
 //     summary: "Notification Popup Example",
@@ -12,10 +14,11 @@ import { NotificationPopups } from "./notifications/notificationPopups"
 //         "Cool": () => print("pressed Cool"),
 //     },
 // }))
+Utils.exec(`sassc ${scss} ${css}`)
 
 
 App.config({
-    style: "./style.css",
+    style: css,
 
     windows: [
         returnBars(),

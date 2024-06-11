@@ -32,6 +32,8 @@
       lshw
 
 
+      gnumake42
+
     ];
   };
 
