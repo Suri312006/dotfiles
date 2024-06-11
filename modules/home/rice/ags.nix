@@ -17,6 +17,8 @@
     ];
   };
 
+  services.gvfs.enable = true;
+
   home.packages = [
     pkgs.sass
   ];
