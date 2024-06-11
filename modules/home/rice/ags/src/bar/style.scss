@@ -1,94 +1,44 @@
 
-/* Base styles for the bar */
-.bar {
-  background-color: #1c1c1c;
-  color: #ffffff;
-  font-family: "Nerd Font", Arial, sans-serif;
-  min-height: 24px;
-  padding: 0 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+.window {
+    &.bar {
+        background-color: $theme_bg_color;
+        color: $theme_fg_color;
+    }
 }
 
-/* Common styles for widgets */
-.widget {
-  padding: 0 10px;
+button {
+    min-width: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+
+    &:active {
+        background-color: $theme_selected_bg_color;
+    }
+
+    &:hover {
+        border-bottom: 3px solid $theme_fg_color;
+    }
 }
 
-.widget:hover,
-.widget:focused {
-  background-color: #535353;
-  border-radius: 4px;
+label {
+    font-weight: bold;
 }
 
-/* Workspaces */
-.workspaces .widget {
-  /* Placeholder for properties specific to workspace widgets */
+.workspaces {
+    button.focused {
+        border-bottom: 3px solid $theme_selected_bg_color;
+    }
 }
 
-/* Client title */
 .client-title {
-  padding-left: 10px;
-  /* Simplified layout properties */
+    color: $theme_selected_bg_color;
 }
 
-/* Clock */
-.clock {
-  padding-right: 10px;
+.notification {
+    color: yellow;
 }
 
-/* Notifications */
-.notification .icon {
-  margin-right: 5px;
-}
-
-/* Media control */
-.media .label {
-  margin-left: 5px;
-}
-
-.media:hover,
-.volume .slider:hover,
-.systemtray .widget:hover {
-  background-color: #535353;
-  border-radius: 4px;
-}
-
-/* Volume control */
-.volume .icon {
-  margin-right: 5px;
-}
-
-.volume .slider {
-  -webkit-appearance: none;
-  background: #ddd;
-  outline: none;
-}
-
-/* Battery indicator */
-.battery .icon {
-  margin-right: 5px;
-}
-
-/* System tray */
-.systemtray .widget {
-  /* Removed cursor property */
-}
-
-/* Layout of the bar */
-.Left,
-.Center,
-.Right {
-  padding: 5px;
-}
-
-.Left {
-  /* Simplified layout properties */
-}
-
-.Center {
-  /* Simplified layout properties */
-}
-
-.Right {
-  /* Simplified layout properties */
+.levelbar, .highlight {
+    min-height: 10px;
 }
