@@ -1,4 +1,3 @@
-
 { pkgs, ... }: {
   stylix = {
     enable = true;
@@ -10,19 +9,26 @@
     polarity = "dark";
 
     fonts = {
+      # serif = {
+      #   package = pkgs.dejavu_fonts;
+      #   name = "DejaVu Serif";
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.fira-code;
+        name = "Fira Code Bold";
       };
 
       sansSerif = {
         package = pkgs.fira-code;
-        name = "Fira Code SemiBold";
+        name = "Fira Code Bold";
       };
 
+      # monospace = {
+      #   package = pkgs.fantasque-sans-mono;
+      #   name = "Regular";
+      # };
       monospace = {
-        package = pkgs.fantasque-sans-mono;
-        name = "Regular";
+        package = pkgs.fira-code;
+        name = "Fira Code Bold";
       };
 
       emoji = {
@@ -30,8 +36,6 @@
         name = "Noto Color Emoji";
       };
     };
-    
-      targets.kitty = false;
   };
 
 
