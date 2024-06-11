@@ -9,5 +9,5 @@ in
   {
     home.file."~/Pictures/d2.jpg" = wallpaper;
 
-  stylix.image = wallpaper;
+  # stylix.image = wallpaper;
   }
