@@ -5,7 +5,7 @@
     font = {
     #   package = pkgs.fira-code;
     #   name = "Fira Code SemiBold";
-     lib.mkForce size = 9.5; 
+     size = lib.mkForce 9.5; 
     };
     settings = {
       enable_audio_bell = "no";
