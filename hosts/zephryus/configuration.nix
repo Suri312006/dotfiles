@@ -25,18 +25,19 @@
     ../../modules/system
   ];
 
-programs.rog-control-center.enable = true;
+  programs.rog-control-center.enable = true;
 
 
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-    backupFileExtension = "backup";
+    # backupFileExtension = "backup";
     users = {
       # Import your home-manager configuration
       suri = import ../../users/suri/home.nix;
     };
   };
+  home-manager.backupFileExtension = "backup";
 
   # nixpkgs = {
   #   # You can add overlays here
