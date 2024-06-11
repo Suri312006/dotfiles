@@ -1,128 +1,110 @@
-
 // Base styles for the bar
 .bar {
   background-color: #1c1c1c;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  height: 24px;
-  display: flex;
-  align-items: center;
+  min-height: 24px;
   padding: 0 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 // Common styles for widgets
 .widget {
-  display: flex;
-  align-items: center;
   padding: 0 5px;
+}
 
-  &.focused {
-    background-color: #535353;
-    border-radius: 4px;
-  }
+.widget.focused {
+  background-color: #535353;
+  border-radius: 4px;
 }
 
 // Workspaces
-.workspaces {
-  .widget {
-    cursor: pointer;
-    &:hover {
-      background-color: #535353;
-      border-radius: 4px;
-    }
-  }
+.workspaces .widget {
+  /* cursor: pointer; */
+}
+
+.workspaces .widget:hover {
+  background-color: #535353;
+  border-radius: 4px;
 }
 
 // Client title
 .client-title {
-  flex-grow: 1;
-  text-align: left;
   padding-left: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* text-align: left; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
 }
 
 // Clock
 .clock {
-  text-align: right;
+  /* text-align: right; */
   padding-right: 10px;
 }
 
 // Notifications
 .notification {
-  display: flex;
-  align-items: center;
   padding: 0 5px;
-  .icon {
-    margin-right: 5px;
-  }
+}
+
+.notification .icon {
+  margin-right: 5px;
 }
 
 // Media control
 .media {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  .label {
-    margin-left: 5px;
-  }
+  /* cursor: pointer; */
+}
 
-  &:hover {
-    background-color: #535353;
-    border-radius: 4px;
-  }
+.media .label {
+  margin-left: 5px;
+}
+
+.media:hover {
+  background-color: #535353;
+  border-radius: 4px;
 }
 
 // Volume control
 .volume {
-  display: flex;
-  align-items: center;
   .icon {
     margin-right: 5px;
   }
+
   .slider {
-    flex-grow: 1;
+    /* width: 100px; */
   }
 }
 
 // Battery indicator
-.battery {
-  display: flex;
-  align-items: center;
-  .icon {
-    margin-right: 5px;
-  }
+.battery .icon {
+  margin-right: 5px;
 }
 
 // System tray
-.systemtray {
-  display: flex;
-  align-items: center;
-  .widget {
-    cursor: pointer;
-    &:hover {
-      background-color: #535353;
-      border-radius: 4px;
-    }
-  }
+.systemtray .widget {
+  /* cursor: pointer; */
+}
+
+.systemtray .widget:hover {
+  background-color: #535353;
+  border-radius: 4px;
 }
 
 // Layout of the bar
 .Left, .Center, .Right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  padding: 5px;
 }
 
-// Specific positions
 .Left {
-  flex-grow: 1;
+  /* float: left; */
 }
+
 .Center {
-  justify-content: center;
+  /* text-align: center; */
 }
+
 .Right {
-  justify-content: flex-end;
+  /* float: right; */
 }
