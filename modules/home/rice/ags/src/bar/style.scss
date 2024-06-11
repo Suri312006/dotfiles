@@ -1,3 +1,4 @@
+
 // Base styles for the bar
 .bar {
   background-color: #1c1c1c;
@@ -6,15 +7,11 @@
   min-height: 24px;
   padding: 0 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 // Common styles for widgets
 .widget {
   padding: 0 10px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .widget:hover {
@@ -25,12 +22,11 @@
 .widget.focused {
   background-color: #535353;
   border-radius: 4px;
-  transform: scale(1.05);
 }
 
 // Workspaces
 .workspaces .widget {
-  cursor: pointer;
+  // Placeholder for properties specific to workspace widgets
 }
 
 // Client title
@@ -40,7 +36,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-grow: 1;
 }
 
 // Clock
@@ -51,25 +46,18 @@
 
 // Notifications
 .notification {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   padding: 0 10px;
 }
 
 .notification .icon {
   margin-right: 5px;
-  transition: transform 0.3s;
-}
-
-.notification:hover .icon {
-  transform: rotate(20deg);
 }
 
 // Media control
 .media {
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .media .label {
@@ -83,8 +71,7 @@
 
 // Volume control
 .volume {
-  display: flex;
-  align-items: center;
+  display: inline-block;
 
   .icon {
     margin-right: 5px;
@@ -95,19 +82,12 @@
     -webkit-appearance: none;
     background: #ddd;
     outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
-
-  .slider:hover {
-    opacity: 1;
   }
 }
 
 // Battery indicator
 .battery {
-  display: flex;
-  align-items: center;
+  display: inline-block;
 
   .icon {
     margin-right: 5px;
@@ -117,8 +97,7 @@
 // System tray
 .systemtray .widget {
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .systemtray .widget:hover {
@@ -128,20 +107,19 @@
 
 // Layout of the bar
 .Left, .Center, .Right {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  vertical-align: middle;
   padding: 5px;
 }
 
 .Left {
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .Center {
-  justify-content: center;
-  flex-grow: 1;
+  text-align: center;
 }
 
 .Right {
-  justify-content: flex-end;
+  text-align: right;
 }
