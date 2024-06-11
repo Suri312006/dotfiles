@@ -1,3 +1,4 @@
+{}
 # { pkgs, ... }: {
 #   home.sessionVariables = { GTK_THEME = "Nordic"; };
 #
