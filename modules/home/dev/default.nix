@@ -11,6 +11,7 @@
   programs.git.enable = true;
   home.packages = with pkgs; [
     rustup
+    go
     bun
     nodejs
     valgrind
