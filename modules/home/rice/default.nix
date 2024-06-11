@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   imports = [
     ./qt.nix
     ./gtk.nix
@@ -18,4 +18,7 @@
       rev = "4ffd596b3ae720e0575152c00987e81ad0f7218e";
     };
   };
+
+
+  home.file."~/Pictures/Wallpaper.png" = inputs.wallpaper;
 }
