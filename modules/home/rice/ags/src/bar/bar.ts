@@ -45,12 +45,13 @@ function Clock() {
     })
 }
 
-function DndButton(){
-    return Widget.Button({
-        class_name: "dnd",
-        label: ( )
-    })
-}
+// TODO: need to make the dnd work
+// function DndButton() {
+//     return Widget.Button({
+//         class_name: "dnd",
+//         label: ( )
+//     })
+// }
 
 
 // we don't need dunst or any other notification daemon
