@@ -27,7 +27,7 @@
 
     stylix.url = "github:danth/stylix";
 
-
+    wallpaper = /home/suri/Pictures/Wallpapers/currentwallpaper.png;
 
   };
 

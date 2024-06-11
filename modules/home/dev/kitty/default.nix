@@ -3,9 +3,9 @@
     enable = true;
     theme = "Monokai Pro (Filter Octagon)";
     font = {
-    #   package = pkgs.fira-code;
-    #   name = "Fira Code SemiBold";
-     size = lib.mkForce 9.5; 
+      #   package = pkgs.fira-code;
+      #   name = "Fira Code SemiBold";
+      size = lib.mkForce 9.5;
     };
     settings = {
       enable_audio_bell = "no";
@@ -17,4 +17,8 @@
 
   #TODO: surely can make this better / inline
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
+
+  home.packags = [
+    pkgs.ranger
+  ];
 }
