@@ -7,7 +7,7 @@ let
 
 in
   {
-    home.file."~/Pictures/d2.jpg" = wallpaper;
+    home.file."~/Pictures/d2.jpg".source = wallpaper;
 
   # stylix.image = wallpaper;
   }
