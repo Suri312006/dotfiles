@@ -14,7 +14,7 @@ const css = `/tmp/my-style.css`
 //         "Cool": () => print("pressed Cool"),
 //     },
 // }))
-Utils.exec(`sassc ${scss} ${css}`)
+Utils.exec(`sass ${scss} ${css}`)
 
 
 App.config({
