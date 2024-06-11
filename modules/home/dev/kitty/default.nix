@@ -18,7 +18,7 @@
   #TODO: surely can make this better / inline
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
 
-  home.packags = [
+  home.packages = [
     pkgs.ranger
   ];
 }
