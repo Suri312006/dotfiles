@@ -5,4 +5,5 @@
 
   ];
 
+  services.gvfs.enable = true;
 }
