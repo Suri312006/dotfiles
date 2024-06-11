@@ -16,7 +16,7 @@
   home.file."Pictures/Wallpapers" = {
     source = builtins.fetchGit {
       url = "https://github.com/suri312006/wallpaperbank";
-      rev = "4ffd596b3ae720e0575152c00987e81ad0f7218e";
+      rev = "5c549a4d63e4d15506c2648c3bdc07a8360bbeaa";
     };
   };
 
