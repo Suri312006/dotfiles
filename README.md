@@ -14,11 +14,14 @@
 
 ### Stylix 
 - [ ] clean wallpaper plus theming for everything
-- [ ] gruvboxify everything
+- [x] gruvboxify everything
 
 ## Scripts
 - [ ] optimized battery script
 - [ ] rebuild script
+
+## nixvim
+- [ ] longterm, could consider moving over
 
 # Inspirations
 - https://github.com/wochap/nix-config/tree/main
