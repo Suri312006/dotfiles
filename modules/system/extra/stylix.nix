@@ -16,7 +16,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
 
     cursor = {
-      package = pkgs.bibata-cursosr;
+      package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 16;
     };
