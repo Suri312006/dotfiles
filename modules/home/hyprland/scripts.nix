@@ -20,6 +20,7 @@ let
             notify-send -e -u low -i "Battery Mode Enabled"
             exit
         else
+            # FIXME: need to make wallpapers a global var
             swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png" &
             sleep 0.1
             hyprctl reload
