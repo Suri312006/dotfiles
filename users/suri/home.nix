@@ -15,6 +15,7 @@
     # ./nvim.nix
 
     ../../modules/home
+    ../../modules/wallpapers
 
   ];
 
