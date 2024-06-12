@@ -15,8 +15,8 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.Ziro;
-      colorScheme = "Ziro";
+      theme = spicePkgs.themes.Onepunch;
+      colorScheme = "Onepunch";
 
       enabledExtensions = with spicePkgs.extensions; [
         fullAppDisplay
