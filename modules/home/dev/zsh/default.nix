@@ -52,15 +52,25 @@
 
       dots = "z ~/dots";
       fcd = ''cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
-      y = "yazi";
 
 
     };
     initExtra = ''
-      eval `ssh-agent` &> /dev/null
-      ssh-add ~/.ssh/github_private &> /dev/null
-      ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
-      eval "$(zoxide init zsh)"     
+            eval `ssh-agent` &> /dev/null
+            ssh-add ~/.ssh/github_private &> /dev/null
+            ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+            eval "$(zoxide init zsh)"     
+
+
+
+      function yy() {
+      	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+      	yazi "$@" --cwd-file="$tmp"
+      	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+      		cd -- "$cwd"
+      	fi
+      	rm -f -- "$tmp"
+      }
     '';
 
   };
