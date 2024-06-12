@@ -45,8 +45,13 @@
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
       };
+
     };
+
+    targets.zellij.enable = true;
   };
+
+
 
 
 }
