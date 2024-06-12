@@ -32,7 +32,7 @@
       ];
 
       monitor = [
-        "eDP-1, 2560x1080@165, 0x0, 1.6"
+        "eDP-1, 2560x1440@165, 0x0, 1.6"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
