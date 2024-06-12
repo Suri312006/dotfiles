@@ -17,6 +17,9 @@
 
     # image = /home/suri/Pictures/d2.jpg;
 
+
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+
     fonts = {
       serif = {
         package = pkgs.dejavu_fonts;
