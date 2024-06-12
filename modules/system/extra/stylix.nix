@@ -48,7 +48,6 @@
 
     };
 
-    targets.zellij.enable = true;
   };
 
 
