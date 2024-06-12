@@ -9,7 +9,7 @@
 
       exec-once = [
         "swww query || swww-daemon --format xrgb"
-        "swww /home/suri/dots/nixdots/modules/wallpapers/curr_wall.png"
+        "swww ${../../wallpapers/curr_wall.png}"
         # Startup
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
