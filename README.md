@@ -5,6 +5,8 @@
 - [ ] use lib.mkif to really optionalize everything
 - [ ] organize things cleaner
 - [ ] cachix?
+- [ ] set up nh clean as a service
+
 
 ## Ricing
 
@@ -15,6 +17,7 @@
 ### Stylix 
 - [ ] clean wallpaper plus theming for everything
 - [x] gruvboxify everything
+    - [ ] sddm
 
 ## Scripts
 - [ ] optimized battery script

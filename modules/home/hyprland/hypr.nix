@@ -31,9 +31,9 @@
         "wl-paste --type image --watch cliphist store"
       ];
 
-      # monitor = [
-      #   "DP-3, 2560x1080@165, 0x0. 1.6"
-      # ];
+      monitor = [
+        "DP-3, 2560x1080@165, 0x0. 1.5"
+      ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
