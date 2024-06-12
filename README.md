@@ -14,6 +14,7 @@
 
 ### Stylix 
 - [ ] clean wallpaper plus theming for everything
+- [ ] gruvboxify everything
 
 ## Scripts
 - [ ] optimized battery script
