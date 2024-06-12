@@ -3,6 +3,7 @@
   # home.file."~/Pictures/Wallpaper.png" = wallpaper;
 
   # stylix.image = ../../wallpapers/curr_wall.png;
+  stylix.image = null;
   # https://stylix.danth.me/
   stylix = {
     enable = true;
