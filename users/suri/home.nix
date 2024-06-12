@@ -60,8 +60,6 @@
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
-  home.file."~/Pictures/curr_wall.png".source = ../../modules/wallpapers/curr_wall.png;
-
   # home.pointerCursor = {
   #   gtk.enable = true;
   #   # x11.enable = true;
