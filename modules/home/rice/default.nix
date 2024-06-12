@@ -10,7 +10,11 @@
 
   pywal.enable = true;
 
-  home.packages = [ pkgs.wofi pkgs.nwg-look ];
+  home.packages = with pkgs; [
+    wofi
+    nwg-look
+    fastfetch
+  ];
 
   home.file."Pictures/Wallpapers" = {
     source = builtins.fetchGit {
