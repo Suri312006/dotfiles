@@ -20,6 +20,8 @@
   };
 
 
+  stylix.autoEnable = true;
+  stylix.targets.zellij.enable = true;
 
   # home.file."~/Pictures/Wallpaper.png" = 
 }

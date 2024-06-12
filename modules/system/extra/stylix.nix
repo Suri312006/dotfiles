@@ -6,8 +6,6 @@
 
   stylix = {
     enable = true;
-    # image = ~/Pictures/Wallpapers/lol.png;
-    # image = inputs.wallpaper;
     polarity = "dark";
 
     # image = pkgs.fetchurl {
@@ -15,10 +13,9 @@
     #   sha256 = "sha256-bjmbSBEaQZgbu1dBGFqU5fClqrU2J2qMgJ4Ha67X7jw=";
     # };
 
-    # image = /home/suri/Pictures/d2.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
-
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    targets.zellij.enabe = true;
 
     fonts = {
       serif = {
