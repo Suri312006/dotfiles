@@ -52,6 +52,8 @@
 
       sizes = {
         terminal = 9.3;
+        desktop = 12;
+        applicatons = 12;
       };
 
     };
