@@ -16,8 +16,10 @@
 
 ### Stylix 
 - [ ] clean wallpaper plus theming for everything
+
 - [x] gruvboxify everything
-    - [ ] sddm
+
+- [ ] swtich over to greetd and tuigreet with gruvbox theme
 
 ## Scripts
 - [ ] optimized battery script
