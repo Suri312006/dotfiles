@@ -57,5 +57,8 @@
     # libs
     gpp # c++ module?, decrypt
     gecode # c++ module
+
+
+    vscode
   ];
 }
