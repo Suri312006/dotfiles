@@ -18,6 +18,6 @@
     texliveFull
     texlivePackages.lastpage
 
-    notion-app-enhancer
+    notion-app-enhanced
   ];
 }
