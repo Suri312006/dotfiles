@@ -17,5 +17,7 @@
     # texliveMedium
     texliveFull
     texlivePackages.lastpage
+
+    notion-app-enhancer
   ];
 }
