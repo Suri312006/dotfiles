@@ -39,8 +39,8 @@
 
   # Add firewall exception for libvirt provider when using NFSv4 
   networking.firewall.interfaces."virbr1" = {
-    allowedTCPPorts = [ 2049 ];
-    allowedUDPPorts = [ 2049 ];
+    allowedTCPPorts = [ 0080 8080 ];
+    allowedUDPPorts = [ 8080 0080 ];
   };
 
   environment.systemPackages = with pkgs; [
