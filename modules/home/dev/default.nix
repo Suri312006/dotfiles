@@ -61,7 +61,7 @@
 
     vscode
 
-    rust-analyzer
+    # rust-analyzer
   ];
 
 
