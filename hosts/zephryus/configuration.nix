@@ -43,6 +43,10 @@
     allowedUDPPorts = [ 2049 ];                                               
   };     
 
+  environment.systemPackages = with pkgs; [
+    vagrant
+  ];
+
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     # backupFileExtension = "backup";
