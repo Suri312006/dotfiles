@@ -3,6 +3,7 @@
 
 ## General 
 - [ ] use lib.mkif to really optionalize everything
+    - [ ] even for system modules
 - [ ] organize things cleaner
 - [ ] cachix?
 - [ ] set up nh clean as a service
