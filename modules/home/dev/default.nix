@@ -61,6 +61,9 @@
 
     vscode
 
+
+    tshark
+
     # rust-analyzer
   ];
 
