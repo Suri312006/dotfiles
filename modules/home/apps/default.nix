@@ -17,9 +17,7 @@
     # texliveMedium
     texliveFull
     texlivePackages.lastpage
-
-    notion-app-enhanced
-
+    speedtest-cli
 
   ];
 }
