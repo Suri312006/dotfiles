@@ -64,8 +64,6 @@
 
     tshark
 
-    openssl_3_3
-
     # rust-analyzer
   ];
 
