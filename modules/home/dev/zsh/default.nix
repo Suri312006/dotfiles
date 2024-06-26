@@ -16,7 +16,7 @@ in
 
 
   home.packages = with pkgs;
-    [ fd eza ];
+    [ fd eza zsh_history_fix ];
   programs.zsh = {
     enable = true;
     autocd = true;
