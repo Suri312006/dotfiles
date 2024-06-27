@@ -47,12 +47,14 @@
     vagrant
   ];
 
+  environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
-virtualisation.docker.enable = true;
-virtualisation.docker.rootless = {
-  enable = true;
-  setSocketVariable = true;
-};
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
