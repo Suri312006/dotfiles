@@ -64,6 +64,8 @@
 
     tshark
 
+
+    air
     # rust-analyzer
   ];
 
