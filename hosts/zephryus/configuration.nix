@@ -47,6 +47,8 @@
     vagrant
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   
   
   environment.sessionVariables = { 
