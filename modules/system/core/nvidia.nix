@@ -33,13 +33,13 @@ in
       prime = {
 
         # super power mode
-        sync.enable = false;
+        sync.enable = true;
 
 # cannot be enabled at the same time as sync
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
+        # offload = {
+          # enable = true;
+          # enableOffloadCmd = true;
+        # };
         nvidiaBusId = "PCI:01:00:0"; # Found with lspci | grep VGA
         amdgpuBusId = "PCI:07:00:0"; # Found with lspci | grep VGA
       };
