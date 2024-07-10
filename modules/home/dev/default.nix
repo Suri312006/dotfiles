@@ -18,8 +18,6 @@
     gdb
     postman
 
-    wezterm
-
 
     # gnumake42
     # llvmPackages_18.libcxxClang

@@ -85,7 +85,12 @@
   #     size = 11;
   #   };
   # };
-
+  programs.wezterm = {
+    enable = true;
+    enableZshIntegration = true;
+    # enableBashIntegration = true;
+    # extraConfig = builtins.readFile ./dotfiles/wezterm/wezterm.lua;
+  };
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.05";
 }
