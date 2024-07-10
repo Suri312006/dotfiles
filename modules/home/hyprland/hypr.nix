@@ -176,17 +176,17 @@
       ];
 
       workspace = [
-        "1, monitor:DP-4"
-        "2, monitor:DP-4"
-        "3, monitor:DP-4"
-        "4, monitor:DP-4"
-        "5, monitor:DP-4"
+        "1, monitor:DP-3"
+        "2, monitor:DP-3"
+        "3, monitor:DP-3"
+        "4, monitor:DP-3"
+        "5, monitor:DP-3"
 
         "6, monitor:eDP-1"
         "7, monitor:eDP-1"
         "8, monitor:eDP-1"
         "9, monitor:eDP-1"
-        "10, monitor:DP-3"
+        "10, monitor:eDP-1"
       ];
 
       dwindle = {
