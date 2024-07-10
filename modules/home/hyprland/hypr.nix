@@ -33,8 +33,8 @@
 
       monitor = [
         "eDP-1, 2560x1440@165.00, 0x0, 1.6"
-        "DP-4, 1920x1080@74.97, 1600x0, 1"
-        "DP-3, preferred, auto, 1, transform, 1"
+        "DP-3, 1920x1080@74.97, 1600x0, 1"
+        # "DP-3, preferred, auto, 1, transform, 1"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
