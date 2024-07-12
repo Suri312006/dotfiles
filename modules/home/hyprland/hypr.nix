@@ -310,7 +310,7 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         mouse_move_enables_dpms = false;
-        vrr = 0
+        vrr = 0;
         enable_swallow = true;
         # no_direct_scanout = true; #for fullscreen games
         focus_on_activate = false;
