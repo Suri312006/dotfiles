@@ -309,10 +309,10 @@
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        mouse_move_enables_dpms = true;
-        #vrr = 0
+        mouse_move_enables_dpms = false;
+        vrr = 0
         enable_swallow = true;
-        no_direct_scanout = true; #for fullscreen games
+        # no_direct_scanout = true; #for fullscreen games
         focus_on_activate = false;
         swallow_regex = "^(kitty)$";
         #disable_autoreload = true
@@ -328,6 +328,12 @@
       xwayland = {
         force_zero_scaling = true;
       };
+
+      cursor = {
+        no_break_fs_vrr = true;
+        min_refresh_rate = 165;
+      };
+
 
     };
   };
