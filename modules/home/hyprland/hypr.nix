@@ -329,10 +329,6 @@
         force_zero_scaling = true;
       };
 
-      cursor = {
-        no_break_fs_vrr = true;
-        min_refresh_rate = 165;
-      };
 
 
     };
