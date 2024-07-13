@@ -24,18 +24,18 @@
     };
 
     fonts = {
-      serif = {
-        package = pkgs.monaspace;
-        name = "Krypton";
-      };
+      # serif = {
+      #   package = pkgs.monaspace;
+      #   name = "Krypton";
+      # };
       # serif = {
       #   package = pkgs.dejavu_fonts;
       #   name = "DejaVu Serif";
       # };
-      # serif = {
-      #   package = pkgs.fira-code;
-      #   name = "Fira Code Bold";
-      # };
+      serif = {
+        package = pkgs.fira-code;
+        name = "Fira Code Bold";
+      };
 
       sansSerif =/*   */{
         package = pkgs.monaspace;
@@ -50,14 +50,14 @@
       #   package = pkgs.fantasque-sans-mono;
       #   name = "Regular";
       # };
-      # monospace = {
-      #   package = pkgs.fira-code;
-      #   name = "Fira Code SemiBold";
-      # };
       monospace = {
-        package = pkgs.monaspace;
-        name = "Krypton";
+        package = pkgs.fira-code;
+        name = "Fira Code SemiBold";
       };
+      # monospace = {
+      #   package = pkgs.monaspace;
+      #   name = "Krypton";
+      # };
 
       emoji = {
         package = pkgs.noto-fonts-emoji;
