@@ -32,9 +32,9 @@
       ];
 
       monitor = [
-        "eDP-1, 2560x1440@165.00, 0x0, 1.6"
-        "DP-4, 1920x1080@74.97, 1600x0, 1"
-        "DP-3, preferred, auto, 1, transform, 1"
+        "eDP-1, 2560x1440@165.00, 0x0, 1.5"
+        "DP-3, 1920x1080@74.97, 1600x0, 1"
+        # "DP-3, preferred, auto, 1, transform, 1"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
@@ -176,11 +176,11 @@
       ];
 
       workspace = [
-        "1, monitor:DP-4"
-        "2, monitor:DP-4"
-        "3, monitor:DP-4"
-        "4, monitor:DP-4"
-        "5, monitor:DP-4"
+        "1, monitor:DP-3"
+        "2, monitor:DP-3"
+        "3, monitor:DP-3"
+        "4, monitor:DP-3"
+        "5, monitor:DP-3"
 
         "6, monitor:eDP-1"
         "7, monitor:eDP-1"
