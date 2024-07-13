@@ -25,14 +25,22 @@
 
     fonts = {
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.monaspace;
+        name = "Krypton";
       };
+      # serif = {
+      #   package = pkgs.dejavu_fonts;
+      #   name = "DejaVu Serif";
+      # };
       # serif = {
       #   package = pkgs.fira-code;
       #   name = "Fira Code Bold";
       # };
 
+      sansSerif =/*   */{
+        package = pkgs.monaspace;
+        name = "Krypton";
+      };
       # sansSerif =/*   */{
       #   package = pkgs.fira-code;
       #   name = "Fira Code Bold";
@@ -42,9 +50,13 @@
       #   package = pkgs.fantasque-sans-mono;
       #   name = "Regular";
       # };
+      # monospace = {
+      #   package = pkgs.fira-code;
+      #   name = "Fira Code SemiBold";
+      # };
       monospace = {
         package = pkgs.monaspace;
-        name = "krypton";
+        name = "Krypton";
       };
 
       emoji = {
