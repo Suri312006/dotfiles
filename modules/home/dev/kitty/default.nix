@@ -1,11 +1,11 @@
 { pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    # theme = "Monokai Pro (Filter Octagon)";
+    theme = "Monokai Pro (Filter Octagon)";
     font = {
       #   package = pkgs.fira-code;
       #   name = "Fira Code SemiBold";
-      size = lib.mkForce 9.7;
+      size = lib.mkForce 9.5;
     };
     settings = {
       enable_audio_bell = "no";
