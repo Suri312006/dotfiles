@@ -43,8 +43,8 @@
       #   name = "Regular";
       # };
       monospace = {
-        package = pkgs.fira-code;
-        name = "Fira Code SemiBold";
+        package = pkgs.monaspace;
+        name = "krypton";
       };
 
       emoji = {
