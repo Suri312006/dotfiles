@@ -27,7 +27,9 @@
 
     stylix.url = "github:danth/stylix";
 
-    # wallpaper.dir = "/home/suri/Pictures/Wallpapers/currentwallpaper.png";
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+    };
 
   };
 
