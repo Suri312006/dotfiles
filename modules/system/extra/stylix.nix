@@ -6,7 +6,6 @@
   stylix.image = ../../wallpapers/samurai.png;
   # https://stylix.danth.me/
   stylix = {
-    targets.wezterm.enable = false;
     enable = true;
     polarity = "dark";
 
@@ -23,6 +22,8 @@
       name = "Bibata-Modern-Ice";
       size = 16;
     };
+
+    targets.wezterm.enable = false;
 
     fonts = {
       serif = {
