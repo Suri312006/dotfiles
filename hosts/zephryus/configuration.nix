@@ -23,6 +23,7 @@
 
     # import all and enable all
     ../../modules/system
+    ../../modules/system/boot
   ];
 
   programs.rog-control-center.enable = true;
