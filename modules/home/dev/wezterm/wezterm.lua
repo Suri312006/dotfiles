@@ -13,7 +13,8 @@ config.color_scheme = 'Gruvbox dark, hard (base16)';
 
 config.font_size = 10.5;
 config.warn_about_missing_glyphs = true
-config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
+config.freetype_load_target =
+'HorizontalLcd'                               -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
 config.hide_tab_bar_if_only_one_tab = true;
 
@@ -70,18 +71,18 @@ config.keys = {
     {
         key = 'V',
         mods = 'ALT',
-    action = act.SplitHorizontal { domain = 'CurrentPaneDomain'}
+        action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
 
     },
     {
         key = 'X',
         mods = 'ALT',
-    action = act.SplitVertical { domain = 'CurrentPaneDomain'}
+        action = act.SplitVertical { domain = 'CurrentPaneDomain' }
     },
     {
         key = 'S',
         mods = 'ALT',
-    action = act.SplitVertical { domain = 'CurrentPaneDomain'}
+        action = act.ShowLauncher,
     }
 }
 -- and finally, return the configuration to wezterm
