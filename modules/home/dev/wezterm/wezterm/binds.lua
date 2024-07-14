@@ -70,7 +70,7 @@ function module.apply_to_config(config)
         {
             key = 'v',
             mods = 'ALT',
-            action = act.SplitVertical { domain = 'CurrentPaneDomain' }
+            action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
         },
         {
             key = 'x',
