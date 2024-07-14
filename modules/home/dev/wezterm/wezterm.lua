@@ -64,25 +64,24 @@ config.font_rules = {
 }
 
 
-local act = wezterm.action;
 
 -- keybinds
 config.keys = {
     {
         key = 'V',
         mods = 'ALT',
-        action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
+        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
 
     },
     {
         key = 'X',
         mods = 'ALT',
-        action = act.SplitVertical { domain = 'CurrentPaneDomain' }
+        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
     },
     {
         key = 'S',
         mods = 'ALT',
-        action = act.ShowLauncher,
+        action = wezterm.action.ShowLauncher,
     }
 }
 -- and finally, return the configuration to wezterm
