@@ -6,7 +6,7 @@
       #   package = pkgs.fira-code;
       # name = "Fira Code SemiBold";
       package = lib.mkForce pkgs.monaspace;
-      name = lib.mkForce "MonaspaceKryptonVar_700wght";
+      name = lib.mkForce "Monaspace Krypton Var";
       size = lib.mkForce 10.5;
     };
     settings = {
@@ -16,7 +16,7 @@
       startup_session = "launch.conf";
     };
     extraConfig = ''
-      font_features     MonaspaceKryptonVar_700wght +calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09
+      font_features     Monaspace Krypton Var +calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09
     '';
   };
 
