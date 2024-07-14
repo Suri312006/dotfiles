@@ -61,5 +61,17 @@ config.font_rules = {
         )
     },
 }
+
+
+
+-- keybinds
+config.keys = {
+    {
+        key = 'p',
+        mods = 'ALT',
+        ection = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain'}
+
+    }
+}
 -- and finally, return the configuration to wezterm
 return config
