@@ -69,5 +69,5 @@ require('school')
 --     mux.set_active_workspace 'default'
 -- end)
 --     
-end
+-- end
 
