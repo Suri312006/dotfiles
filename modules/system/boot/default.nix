@@ -25,6 +25,6 @@ with lib;
   config = mkIf cfg.grub.enable {
     imports = [ ./grub.nix ];
   } // mkIf cfg.systemd.enable {
-    imports = [ ./sysd.nix ];
+    imports = [ ./systemd.nix];
   };
 }
