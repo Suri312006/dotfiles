@@ -7,11 +7,11 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'AdventureTime'
+config.color_scheme = 'Gruvbox dark, hard (base16)';
 
 config.enable_wayland = false;
 
-config.font_size = 13.8
+config.font_size = 10;
 config.warn_about_missing_glyphs = true
 config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
@@ -19,9 +19,9 @@ config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/
 -- Based upon, contributed to:  https://gist.github.com/ErebusBat/9744f25f3735c1e0491f6ef7f3a9ddc3
 config.font = wezterm.font(
     { -- Normal text
-        family = 'Monaspace Neon',
+        family = 'Monaspace Krypton',
         harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
-        -- stretch = 'UltraCondensed', -- This doesn't seem to do anything
+        stretch = 'UltraCondensed', -- This doesn't seem to do anything
     })
 
 config.font_rules = {
@@ -30,7 +30,7 @@ config.font_rules = {
         italic = true,
         font = wezterm.font({
             -- family="Monaspace Radon",  -- script style
-            family = 'Monaspace Xenon', -- courier-like
+            family = 'Monaspace Argon', -- courier-like
             style = 'Italic',
         })
     },
@@ -40,7 +40,7 @@ config.font_rules = {
         italic = false,
         font = wezterm.font({
             -- family = 'Monaspace Krypton',
-            family = 'Monaspace Krypton',
+            family = 'Monaspace Neon',
             -- weight='ExtraBold',
             weight = 'Bold',
         })
