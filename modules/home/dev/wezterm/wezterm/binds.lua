@@ -17,7 +17,7 @@ function module.apply_to_config(config)
 
 
     config.keys = {
-        
+
         --Pane Table
         {
             key = 'p',
@@ -64,6 +64,8 @@ function module.apply_to_config(config)
 
         },
 
+
+
         -- easy splits
         {
             key = 'v',
@@ -89,8 +91,19 @@ function module.apply_to_config(config)
             mods = 'ALT',
             action = act.QuitApplication
         },
+
+
     }
 
+    -- easy tab switching
+    for i = 1, 8 do
+        -- CTRL+ALT + number to activate that tab
+        table.insert(config.keys, {
+            key = tostring(i),
+            mods = 'ALT',
+            action = act.ActivateTab(i - 1),
+        })
+    end
     config.key_tables = {
         pane = {
             {
