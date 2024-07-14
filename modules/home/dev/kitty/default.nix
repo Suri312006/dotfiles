@@ -7,7 +7,7 @@
         # name = "Fira Code SemiBold";
         package = lib.mkForce pkgs.monaspace;
         name = lib.mkForce "Monaspace Krypton Var Bold";
-        size = lib.mkForce 10;
+        size = lib.mkForce 10.5;
     };
     settings = {
       enable_audio_bell = "no";
