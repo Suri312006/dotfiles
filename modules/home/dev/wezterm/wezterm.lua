@@ -11,7 +11,7 @@ config.color_scheme = 'Gruvbox dark, hard (base16)';
 
 config.enable_wayland = false;
 
-config.font_size = 11;
+config.font_size = 12;
 config.warn_about_missing_glyphs = true
 config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
@@ -22,7 +22,7 @@ config.font = wezterm.font(
         family = 'Monaspace Krypton',
         harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
         stretch = 'UltraCondensed', -- This doesn't seem to do anything
-        weight = 'SemiBold'
+        style = 'Bold'
     })
 
 config.font_rules = {
