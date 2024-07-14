@@ -6,7 +6,6 @@
   stylix.image = ../../wallpapers/samurai.png;
   # https://stylix.danth.me/
 
-  stylix.targets.wezterm.enable = false;
   stylix = {
     enable = true;
     polarity = "dark";
