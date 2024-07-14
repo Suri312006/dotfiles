@@ -25,7 +25,6 @@ config.font = wezterm.font(
         harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
         stretch = 'UltraCondensed', -- This doesn't seem to do anything
         weight = 'Bold',
-        intensity = 'Bold'
     })
 
 config.font_rules = {

@@ -4,7 +4,9 @@
     theme = "Monokai Pro (Filter Octagon)";
     font = {
       #   package = pkgs.fira-code;
-      #   name = "Fira Code SemiBold";
+        # name = "Fira Code SemiBold";
+        package = lib.mkForce pkgs.monaspace;
+        name = lib.mkForce "Monaspace Krypton";
       size = lib.mkForce 9.5;
     };
     settings = {
