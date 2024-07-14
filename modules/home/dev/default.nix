@@ -6,6 +6,7 @@
     ./zellij
 
     ./git.nix
+    ./wezterm
   ];
 
   programs.git.enable = true;
