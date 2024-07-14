@@ -1,0 +1,73 @@
+require('school')
+-- function module.apply_to_config(config)
+
+-- local mux = wezterm.mux
+--
+-- wezterm.on('gui-startup', function(cmd)
+--     -- allow `wezterm start -- something` to affect what we spawn
+--     -- in our initial window
+--     local args = {}
+--     if cmd then
+--         args = cmd.args
+--     end
+--
+--     -- Set a workspace for coding on a current project
+--     -- Top pane is for the editor, bottom pane is for the build tool
+--     -- local project_dir = wezterm.home_dir .. '/wezterm'
+--     -- local tab, build_pane, window = mux.spawn_window {
+--     --     workspace = 'coding',
+--     --     cwd = project_dir,
+--     --     args = args,
+--     -- }
+--     -- local editor_pane = build_pane:split {
+--     --     direction = 'Top',
+--     --     size = 0.6,
+--     --     cwd = project_dir,
+--     -- }
+--     -- -- may as well kick off a build in that pane
+--     -- build_pane:send_text 'cargo build\n'
+--     --
+--     -- -- A workspace for interacting with a local machine that
+--     -- -- runs some docker containners for home automation
+--     -- local tab, pane, window = mux.spawn_window {
+--     --     workspace = 'automation',
+--     --     args = { 'ssh', 'vault' },
+--     -- }
+--
+--
+--
+--
+--     local default_dir = wezterm.home_dir .. '/dev'
+--     local tab, pane, window = mux.spawn_window {
+--         workspace = 'default',
+--         cwd = default_dir,
+--         args = args
+--     }
+--
+--     local connectify_dir = wezterm.home_dir .. '/dev/work/ConnectifyAI'
+--     local tab, pane, window = mux.spawn_window {
+--         workspace = 'connectify',
+--         cwd = connectify_dir,
+--         args = args
+--     }
+--
+--     local build_tab, build_pane, build_window = window:spawn_tab {}
+--     local dev_server = build_pane:split {
+--         direction = 'Left',
+--         size = 0.5,
+--         cwd = connectify_dir .. '/connectifyai/backend/cmd/connserver'
+--     }
+--
+--     build_tab:set_title 'build'
+--
+--     dev_server:send_text 'go run .\n'
+--
+--     tab:activate()
+--
+--
+--     -- We want to startup in the coding workspace
+--     mux.set_active_workspace 'default'
+-- end)
+--     
+end
+

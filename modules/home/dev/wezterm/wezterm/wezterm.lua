@@ -6,64 +6,23 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 local binds = require 'binds'
+local fonts = require 'fonts'
 binds.apply_to_config(config)
+fonts.apply_to_config(config)
+require('workspaces')
+
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox dark, hard (base16)';
 
+
 -- config.enable_wayland = false;
 
-config.font_size = 10.5;
-config.warn_about_missing_glyphs = true
-config.freetype_load_target =
-'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
 config.hide_tab_bar_if_only_one_tab = true;
 
 -- Monaspace:  https://monaspace.githubnext.com/
 -- Based upon, contributed to:  https://gist.github.com/ErebusBat/9744f25f3735c1e0491f6ef7f3a9ddc3
-config.font = wezterm.font(
-    { -- Normal text
-        family = 'Monaspace Krypton',
-        harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
-        stretch = 'UltraCondensed', -- This doesn't seem to do anything
-        weight = 'Bold',
-    })
-
-config.font_rules = {
-    { -- Italic
-        intensity = 'Bold',
-        italic = true,
-        font = wezterm.font({
-            -- family="Monaspace Radon",  -- script style
-            family = 'Monaspace Argon', -- courier-like
-            style = 'Italic',
-            weight = 'Bold'
-        })
-    },
-
-    { -- Bold
-        intensity = 'Bold',
-        italic = false,
-        font = wezterm.font({
-            -- family = 'Monaspace Krypton',
-            family = 'Monaspace Neon',
-            -- weight='ExtraBold',
-            weight = 'Bold',
-        })
-    },
-
-    { -- Bold Italic
-        intensity = 'Bold',
-        italic = true,
-        font = wezterm.font({
-            family = 'Monaspace Xenon',
-            style = 'Italic',
-            weight = 'Bold',
-        }
-        )
-    },
-}
 
 
 
@@ -122,12 +81,12 @@ wezterm.on('gui-startup', function(cmd)
 
 
 
-    local school_dir = wezterm.home_dir .. '/dev/school'
-    local tab, pane, window = mux.spawn_window {
-        workspace = 'school',
-        cwd = school_dir,
-        args = args
-    }
+    -- local school_dir = wezterm.home_dir .. '/dev/school'
+    -- local tab, pane, window = mux.spawn_window {
+    --     workspace = 'school',
+    --     cwd = school_dir,
+    --     args = args
+    -- }
 
     local default_dir = wezterm.home_dir .. '/dev'
     local tab, pane, window = mux.spawn_window {
