@@ -21,7 +21,8 @@ function module.apply_to_config(config)
             key = 's',
             mods = 'ALT',
             action = wezterm.action.ShowLauncherArgs { flags = "WORKSPACES|DOMAINS|FUZZY" },
-        }
+        },
+        { key = 'q', mods = 'ALT', action = wezterm.action.QuitApplication },
     }
 end
 
