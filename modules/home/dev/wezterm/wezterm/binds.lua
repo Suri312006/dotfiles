@@ -22,7 +22,8 @@ function module.apply_to_config(config)
             mods = 'ALT',
             action = act.ActivateKeyTable {
                 name = 'pane',
-                timeout_milliseconds = 1000
+                -- timeout_milliseconds = 1000
+                oneshot = false
             }
         },
         {
@@ -30,7 +31,8 @@ function module.apply_to_config(config)
             mods = 'ALT',
             action = act.ActivateKeyTable {
                 name = 'tab',
-                timeout_milliseconds = 1000
+                -- timeout_milliseconds = 1000
+                oneshot = false
             },
         },
 
@@ -75,25 +77,56 @@ function module.apply_to_config(config)
     }
 
     config.key_tables = {
+        pane_resize = {
+            { key = 'LeftArrow',  action = act.AdjustPaneSize { 'Left', 1 } },
+            { key = 'h',          action = act.AdjustPaneSize { 'Left', 1 } },
+
+            { key = 'RightArrow', action = act.AdjustPaneSize { 'Right', 1 } },
+            { key = 'l',          action = act.AdjustPaneSize { 'Right', 1 } },
+
+            { key = 'UpArrow',    action = act.AdjustPaneSize { 'Up', 1 } },
+            { key = 'k',          action = act.AdjustPaneSize { 'Up', 1 } },
+
+            { key = 'DownArrow',  action = act.AdjustPaneSize { 'Down', 1 } },
+            { key = 'j',          action = act.AdjustPaneSize { 'Down', 1 } },
+
+            -- Cancel the mode by pressing escape
+            { key = 'Escape',     action = 'PopKeyTable' },
+
+        },
         pane = {
             {
                 key = 'n',
                 action = act.SplitPane {
-                    direction = 'Next',
+                    direction = 'Right',
                     size = { Percent = 50 },
-                }
+                    replace_current = true
+                },
             },
             {
                 key = 'q',
-                action = act.CloseCurrentPane { confirm = true }
+                action = act.CloseCurrentPane {
+                    confirm = true,
+                    replace_current = true
+                },
             },
             {
 
                 key = 's',
                 action = act.PaneSelect {
-                    alphabet = 'arstgmneio'
+                    alphabet = 'arstgmneio',
+                    replace_current = true
                 },
+            },
+            {
+                key = 'r',
+                action = act.ActivateKeyTable {
+                    name = 'pane_resize',
+                    oneshot = false,
+                },
+
             }
+
             -- TODO:maybe add a way to resize pane? nested key tables
         },
         tab = {
