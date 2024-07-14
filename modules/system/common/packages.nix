@@ -12,11 +12,9 @@
       kitty
       libnotify
       gnupg
+
       xfce.thunar
 
-      #stuff for the thing
-      libsForQt5.qt5.qtquickcontrols2
-      libsForQt5.qt5.qtgraphicaleffects
 
       #swww
       inputs.swww.packages.${pkgs.system}.swww
@@ -26,11 +24,12 @@
       networkmanagerapplet
 
       pamixer
+
       playerctl
+
       pavucontrol
 
       lshw
-
 
       gnumake42
 

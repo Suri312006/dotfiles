@@ -27,6 +27,8 @@
 
   programs.rog-control-center.enable = true;
 
+  boot.grub.enable = true;
+
 
   # valgrant
   # Minimal configuration for NFS support with Vagrant.
@@ -36,6 +38,8 @@
   networking.firewall.extraCommands = ''
     ip46tables -I INPUT 1 -i vboxnet+ -p tcp -m tcp --dport 2049 -j ACCEPT
   '';
+
+  networking.hostName = "zephryus";
 
   # Add firewall exception for libvirt provider when using NFSv4 
   networking.firewall.interfaces."virbr1" = {
@@ -49,11 +53,11 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  
-  
-  environment.sessionVariables = { 
-    NIXOS_OZONE_WL = "1"; 
-    };
+
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
