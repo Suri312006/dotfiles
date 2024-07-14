@@ -15,6 +15,9 @@
       window_padding_width = 4;
       startup_session = "launch.conf";
     };
+    extraConfig = ''
+font_features     MonaspaceKryptonVar_700wght -calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09
+    '';
   };
 
   #TODO: surely can make this better / inline
