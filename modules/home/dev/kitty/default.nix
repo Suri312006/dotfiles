@@ -6,7 +6,7 @@
       #   package = pkgs.fira-code;
         # name = "Fira Code SemiBold";
         package = lib.mkForce pkgs.monaspace;
-        name = lib.mkForce "Monaspace Krypton Var Bold";
+        name = lib.mkForce "Monaspace Krypton Var ";
         size = lib.mkForce 10.5;
     };
     settings = {
