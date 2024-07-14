@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 let
-  cfg = config.boot;
+  cfg = config.me.boot;
 in
 
 with lib;
