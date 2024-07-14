@@ -21,7 +21,7 @@ function module.apply_to_config(config)
             key = 'p',
             mods = 'ALT',
             action = act.ActivateKeyTable {
-                name = 'pane_resize',
+                name = 'pane',
                 -- timeout_milliseconds = 1000
                 oneshot = false
             }
@@ -51,49 +51,14 @@ function module.apply_to_config(config)
             mods = 'ALT',
             action = act.ShowLauncherArgs { flags = "WORKSPACES|DOMAINS|FUZZY" },
         },
-        -- {
-        --     key = 'p',
-        --     mods = 'ALT',
-        --     action = act.PaneSelect {
-        --         alphabet = 'arstgmneio'
-        --     },
-        -- },
-
         {
             key = 'q',
             mods = 'ALT',
             action = act.QuitApplication
         },
-        -- {
-        --     key = 'q',
-        --     mods = 'ALT',
-        --     action = act.CloseCurrentPane { confirm = true }
-        -- },
-        -- {
-        --     key = 'q',
-        --     mods = 'CTRL',
-        --     action = act.CloseCurrentTab { confirm = true }
-        -- }
     }
 
     config.key_tables = {
-        pane_resize = {
-            { key = 'LeftArrow',  action = act.AdjustPaneSize { 'Left', 1 } },
-            { key = 'h',          action = act.AdjustPaneSize { 'Left', 1 } },
-
-            { key = 'RightArrow', action = act.AdjustPaneSize { 'Right', 1 } },
-            { key = 'l',          action = act.AdjustPaneSize { 'Right', 1 } },
-
-            { key = 'UpArrow',    action = act.AdjustPaneSize { 'Up', 1 } },
-            { key = 'k',          action = act.AdjustPaneSize { 'Up', 1 } },
-
-            { key = 'DownArrow',  action = act.AdjustPaneSize { 'Down', 1 } },
-            { key = 'j',          action = act.AdjustPaneSize { 'Down', 1 } },
-
-            -- Cancel the mode by pressing escape
-            { key = 'Escape',     action = 'PopKeyTable' },
-
-        },
         pane = {
             {
                 key = 'n',
@@ -123,8 +88,6 @@ function module.apply_to_config(config)
                 },
 
             }
-
-            -- TODO:maybe add a way to resize pane? nested key tables
         },
         tab = {
             {
@@ -135,10 +98,24 @@ function module.apply_to_config(config)
                 key = 'q',
                 action = act.CloseCurrentTab { confirm = true }
             },
+        },
 
+        pane_resize = {
+            { key = 'LeftArrow',  action = act.AdjustPaneSize { 'Left', 1 } },
+            { key = 'h',          action = act.AdjustPaneSize { 'Left', 1 } },
 
-        }
+            { key = 'RightArrow', action = act.AdjustPaneSize { 'Right', 1 } },
+            { key = 'l',          action = act.AdjustPaneSize { 'Right', 1 } },
 
+            { key = 'UpArrow',    action = act.AdjustPaneSize { 'Up', 1 } },
+            { key = 'k',          action = act.AdjustPaneSize { 'Up', 1 } },
+
+            { key = 'DownArrow',  action = act.AdjustPaneSize { 'Down', 1 } },
+            { key = 'j',          action = act.AdjustPaneSize { 'Down', 1 } },
+
+            -- Cancel the mode by pressing escape
+            { key = 'Escape',     action = 'PopKeyTable' },
+        },
 
     }
 end
