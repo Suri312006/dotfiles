@@ -2,7 +2,7 @@
   imports = [
     ./sddm
     ./fonts.nix
-    ./print.nix
+    ./printer.nix
     ./nh.nix
     ./stylix.nix
   ];

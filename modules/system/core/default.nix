@@ -12,6 +12,8 @@
     ./programs.nix
     ./nvidia.nix
 
+    ./vars.nix
+
   ];
 
 }
