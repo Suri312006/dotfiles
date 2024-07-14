@@ -8,18 +8,18 @@ function module.apply_to_config(config)
     config.keys = {
         {
             key = 'v',
-            mods = 'CTRL',
+            mods = 'ALT',
             action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
 
         },
         {
             key = 'x',
-            mods = 'CTRL',
+            mods = 'ALT',
             action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
         },
         {
             key = 's',
-            mods = 'CTRL',
+            mods = 'ALT',
             action = wezterm.action.ShowLauncherArgs { flags = "WORKSPACES|DOMAINS|FUZZY" },
         }
     }
