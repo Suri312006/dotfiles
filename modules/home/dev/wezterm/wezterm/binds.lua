@@ -21,7 +21,7 @@ function module.apply_to_config(config)
             key = 'p',
             mods = 'ALT',
             action = act.ActivateKeyTable {
-                name = 'pane',
+                name = 'pane_resize',
                 -- timeout_milliseconds = 1000
                 oneshot = false
             }
