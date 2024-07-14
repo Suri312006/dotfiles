@@ -8,7 +8,6 @@
         package = lib.mkForce pkgs.monaspace;
         name = lib.mkForce "Monaspace Krypton Var Bold";
         size = lib.mkForce 10;
-        weight = "Bold";
     };
     settings = {
       enable_audio_bell = "no";
