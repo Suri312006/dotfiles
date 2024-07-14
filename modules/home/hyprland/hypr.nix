@@ -104,7 +104,7 @@
 
           "$mod, S, exec, firefox"
           "$mod, D, exec, discord"
-          "$mod, Return, exec, wezterm-gui"
+          "$mod, Return, exec, wezterm-gui start --always-new-process"
           # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
           "$mod, escape, exec, ags --toggle-window applauncher"
           # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"

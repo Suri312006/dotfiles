@@ -69,18 +69,18 @@ config.font_rules = {
 config.keys = {
     {
         key = 'V',
-        mods = 'ALT',
+        mods = 'CTRL',
         action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
 
     },
     {
         key = 'X',
-        mods = 'ALT',
+        mods = 'CTRL',
         action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
     },
     {
         key = 'S',
-        mods = 'ALT',
+        mods = 'CTRL',
         action = wezterm.action.ShowLauncher,
     }
 }
