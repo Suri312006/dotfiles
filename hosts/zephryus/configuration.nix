@@ -27,7 +27,7 @@
 
   programs.rog-control-center.enable = true;
 
-  boot.grub.enable = true;
+  # boot.grub.enable = true;
 
 
   # valgrant
