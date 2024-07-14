@@ -30,11 +30,11 @@ config.font_rules = {
     { -- Italic
         intensity = 'Bold',
         italic = true,
-        weight = 'Bold',
         font = wezterm.font({
             -- family="Monaspace Radon",  -- script style
             family = 'Monaspace Argon', -- courier-like
             style = 'Italic',
+            weight = 'Bold'
         })
     },
 
