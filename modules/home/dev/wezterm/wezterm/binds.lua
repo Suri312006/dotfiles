@@ -79,7 +79,7 @@ function module.apply_to_config(config)
             {
                 key = 'n',
                 action = act.SplitPane {
-                    direction = 'right',
+                    direction = 'Right',
                     size = { Percent = 50 },
                 }
             },
