@@ -100,14 +100,12 @@ function module.apply_to_config(config)
                 action = act.SplitPane {
                     direction = 'Right',
                     size = { Percent = 50 },
-                    replace_current = true
                 },
             },
             {
                 key = 'q',
                 action = act.CloseCurrentPane {
                     confirm = true,
-                    replace_current = true
                 },
             },
             {
@@ -115,7 +113,6 @@ function module.apply_to_config(config)
                 key = 's',
                 action = act.PaneSelect {
                     alphabet = 'arstgmneio',
-                    replace_current = true
                 },
             },
             {
