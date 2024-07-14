@@ -17,6 +17,8 @@ function module.apply_to_config(config)
 
 
     config.keys = {
+        
+        --Pane Table
         {
             key = 'p',
             mods = 'ALT',
@@ -36,6 +38,33 @@ function module.apply_to_config(config)
             },
         },
 
+        -- Pane Movements
+        {
+            key = 'UpArrow',
+            mods = 'ALT',
+            action = act.ActivatePaneDirection 'Up',
+
+        },
+        {
+            key = 'RightArrow',
+            mods = 'ALT',
+            action = act.ActivatePaneDirection 'Right',
+
+        },
+        {
+            key = 'DownArrow',
+            mods = 'ALT',
+            action = act.ActivatePaneDirection 'Down',
+
+        },
+        {
+            key = 'LeftArrow',
+            mods = 'ALT',
+            action = act.ActivatePaneDirection 'Left',
+
+        },
+
+        -- easy splits
         {
             key = 'v',
             mods = 'ALT',
@@ -46,11 +75,15 @@ function module.apply_to_config(config)
             mods = 'ALT',
             action = act.SplitVertical { domain = 'CurrentPaneDomain' }
         },
+
+        -- launcher
         {
             key = 's',
             mods = 'ALT',
             action = act.ShowLauncherArgs { flags = "WORKSPACES|DOMAINS|FUZZY" },
         },
+
+        -- force quit
         {
             key = 'q',
             mods = 'ALT',
