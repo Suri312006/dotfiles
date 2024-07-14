@@ -82,7 +82,6 @@
     users = {
       # Import your home-manager configuration
       suri = import ../../users/suri/home.nix;
-      stylix.targets.wezterm.enable = false;
     };
   };
 
