@@ -6,8 +6,9 @@
       #   package = pkgs.fira-code;
         # name = "Fira Code SemiBold";
         package = lib.mkForce pkgs.monaspace;
-        name = lib.mkForce "Monaspace Krypton";
-      size = lib.mkForce 9.5;
+        name = lib.mkForce "Monaspace Krypton Var";
+        size = lib.mkForce 10;
+        weight = "Bold";
     };
     settings = {
       enable_audio_bell = "no";
@@ -19,6 +20,7 @@
 
   #TODO: surely can make this better / inline
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
+  home.file.".config/fontcongfig/fonts.conf".source = "./fonts.conf";
 
   home.packages = [
     pkgs.yazi
