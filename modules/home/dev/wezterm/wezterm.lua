@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox dark, hard (base16)';
 
-config.enable_wayland = false;
+-- config.enable_wayland = false;
 
 config.font_size = 10.5;
 config.warn_about_missing_glyphs = true
