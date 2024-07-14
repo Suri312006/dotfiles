@@ -15,7 +15,7 @@ config.font_size = 10.5;
 config.warn_about_missing_glyphs = true
 config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
-config.dpi = 100;
+config.hide_tab_bar_if_only_one_tab = true;
 
 -- Monaspace:  https://monaspace.githubnext.com/
 -- Based upon, contributed to:  https://gist.github.com/ErebusBat/9744f25f3735c1e0491f6ef7f3a9ddc3
