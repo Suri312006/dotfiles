@@ -19,7 +19,7 @@
 
   #TODO: surely can make this better / inline
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
-  home.file.".config/fontcongfig/fonts.conf".source = "./fonts.conf";
+  home.file.".config/fontcongfig/fonts.conf".source = ./fonts.conf;
 
   home.packages = [
     pkgs.yazi
