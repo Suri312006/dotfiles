@@ -19,7 +19,7 @@ config.font = wezterm.font(
     { -- Normal text
         family = 'Monaspace Neon',
         harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
-        stretch = 'UltraCondensed', -- This doesn't seem to do anything
+        -- stretch = 'UltraCondensed', -- This doesn't seem to do anything
     })
 
 config.font_rules = {
