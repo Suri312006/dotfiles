@@ -9,9 +9,7 @@
   };
 
   home.file.".config/wezterm".source = ./wezterm;
-  home-manager.users.suri = {
-    stylix.targets.wezterm.enable = false;
-  };
+  stylix.targets.wezterm.enable = false;
 
 
 }
