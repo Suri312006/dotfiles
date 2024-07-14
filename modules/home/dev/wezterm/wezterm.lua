@@ -11,7 +11,7 @@ config.color_scheme = 'Gruvbox dark, hard (base16)';
 
 config.enable_wayland = false;
 
-config.font_size = 12;
+config.font_size = 11;
 config.warn_about_missing_glyphs = true
 config.freetype_load_target = 'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 
