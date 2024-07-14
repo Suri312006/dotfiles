@@ -69,7 +69,7 @@ config.keys = {
     {
         key = 'p',
         mods = 'ALT',
-        ection = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain'}
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain'}
 
     }
 }
