@@ -5,5 +5,9 @@ require('workspaces.dots')
 
 local mux = wezterm.mux
 wezterm.on('gui-startup', function(cmd)
+    local tab, pane, window = mux:spawn_window {
+        workspace = 'default',
+        cwd = wezterm.home_dir
+    }
     mux.set_active_workspace 'default'
 end)
