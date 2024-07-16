@@ -27,7 +27,7 @@ wezterm.on('gui-startup', function(cmd)
     go_t:set_title 'go'
 
     local build_t, build_p, build_w = go_w:spawn_tab {
-        cwd = t2t_dir .. '/client/'
+        cwd = t2t_dir .. '/client'
     }
 
     local dev_server_p = build_p:split {
