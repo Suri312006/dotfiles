@@ -46,15 +46,15 @@ config.hide_tab_bar_if_only_one_tab = true;
 --     }
 -- }
 
-local mux = wezterm.mux
-
-wezterm.on('gui-startup', function(cmd)
-    -- allow `wezterm start -- something` to affect what we spawn
-    -- in our initial window
-    local args = {}
-    if cmd then
-        args = cmd.args
-    end
+-- local mux = wezterm.mux
+--
+-- wezterm.on('gui-startup', function(cmd)
+--     -- allow `wezterm start -- something` to affect what we spawn
+--     -- in our initial window
+--     local args = {}
+--     if cmd then
+--         args = cmd.args
+--     end
 
     -- Set a workspace for coding on a current project
     -- Top pane is for the editor, bottom pane is for the build tool
@@ -88,37 +88,37 @@ wezterm.on('gui-startup', function(cmd)
     --     args = args
     -- }
 
-    local default_dir = wezterm.home_dir .. '/dev'
-    local tab, pane, window = mux.spawn_window {
-        workspace = 'default',
-        cwd = default_dir,
-        args = args
-    }
-
-    local connectify_dir = wezterm.home_dir .. '/dev/work/ConnectifyAI'
-    local tab, pane, window = mux.spawn_window {
-        workspace = 'connectify',
-        cwd = connectify_dir,
-        args = args
-    }
-
-    local build_tab, build_pane, build_window = window:spawn_tab {}
-    local dev_server = build_pane:split {
-        direction = 'Left',
-        size = 0.5,
-        cwd = connectify_dir .. '/connectifyai/backend/cmd/connserver'
-    }
-
-    build_tab:set_title 'build'
-
-    dev_server:send_text 'go run .'
-
-    tab:activate()
+    -- local default_dir = wezterm.home_dir .. '/dev'
+    -- local tab, pane, window = mux.spawn_window {
+    --     workspace = 'default',
+    --     cwd = default_dir,
+    --     args = args
+    -- }
+    --
+    -- local connectify_dir = wezterm.home_dir .. '/dev/work/ConnectifyAI'
+    -- local tab, pane, window = mux.spawn_window {
+    --     workspace = 'connectify',
+    --     cwd = connectify_dir,
+    --     args = args
+    -- }
+    --
+    -- local build_tab, build_pane, build_window = window:spawn_tab {}
+    -- local dev_server = build_pane:split {
+    --     direction = 'Left',
+    --     size = 0.5,
+    --     cwd = connectify_dir .. '/connectifyai/backend/cmd/connserver'
+    -- }
+    --
+    -- build_tab:set_title 'build'
+    --
+    -- dev_server:send_text 'go run .'
+    --
+    -- tab:activate()
 
 
     -- We want to startup in the coding workspace
-    mux.set_active_workspace 'default'
-end)
+    -- mux.set_active_workspace 'default'
+-- end)
 
 
 -- config.disable_default_key_bindings = true;

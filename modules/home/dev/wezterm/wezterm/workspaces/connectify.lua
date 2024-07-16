@@ -20,7 +20,6 @@ wezterm.on('gui-startup', function(cmd)
 
     local notes_t, notes_p, notes_w = window:spawn_tab {
         cwd = connectify_dir .. '/notes',
-        args = args
     }
 
     notes_p:send_text 'nvim .\n'
