@@ -35,7 +35,7 @@ wezterm.on('gui-startup', function(cmd)
     local dev_server_p = build_p:split {
         direction = 'Left',
         size = 0.5,
-        cwd = t2t_dir .. '/client/backend/cmd/t2tServer'
+        cwd = t2t_dir .. '/server/cmd/t2tServer'
     }
 
 
