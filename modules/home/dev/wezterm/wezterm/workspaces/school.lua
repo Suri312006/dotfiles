@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 
 -- function module.apply_to_config(config)
 local mux = wezterm.mux
-wezterm.on('mux_startup', function(cmd)
+wezterm.on('gui', function(cmd)
     -- allow `wezterm start -- something` to affect what we spawn
     -- in our initial window
     local args = {}
