@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 
 require('workspaces.school')
 require('workspaces.dots')
+require('workspaces.connectify')
 
 local mux = wezterm.mux
 wezterm.on('gui-startup', function(cmd)
