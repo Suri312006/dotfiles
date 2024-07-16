@@ -37,11 +37,11 @@ wezterm.on('gui-startup', function(cmd)
     }
 
 
-    build_tab:set_title 'build'
+    build_t:set_title 'build'
 
     dev_server_p:send_text 'cargo run --'
 
     build_p:send_text 'go run .'
 
-    tab:activate()
+    rs_t:activate()
 end)
