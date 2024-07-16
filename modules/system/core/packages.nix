@@ -38,6 +38,8 @@
       clang-tools
 
       openssl
+      # test utilities
+      mesa-demos
     ];
     variables = {
       # for compiling openssl for nixos, should refactor into a diff file later
