@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local connectify_dir = wezterm.home_dir .. '/dev/work/ConnectifyAI'
     local tab, pane, window = mux.spawn_window {
         workspace = 'connectify',
-        cwd = connectify_dir,
+        cwd = connectify_dir .. '/connectifyai',
         args = args
     }
 
