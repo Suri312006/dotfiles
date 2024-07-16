@@ -111,7 +111,7 @@ wezterm.on('gui-startup', function(cmd)
 
     build_tab:set_title 'build'
 
-    dev_server:send_text 'go run .\n'
+    dev_server:send_text 'go run .'
 
     tab:activate()
 

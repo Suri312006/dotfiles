@@ -80,9 +80,15 @@ function module.apply_to_config(config)
 
         -- launcher
         {
-            key = 's',
+            key = 'w',
             mods = 'ALT',
-            action = act.ShowLauncherArgs { flags = "WORKSPACES|DOMAINS|FUZZY" },
+            action = act.ShowLauncherArgs { flags = "WORKSPACES|FUZZY" },
+        },
+
+        {
+            key = 'l',
+            mods = 'ALT',
+            action = act.ShowLauncherArgs { flags = "FUZZY" },
         },
 
         -- force quit
@@ -93,15 +99,44 @@ function module.apply_to_config(config)
         },
 
 
+        -- pane full screen
+        {
+            key = 'f',
+            mods = 'ALT',
+            action = act.TogglePaneZoomState,
+
+        }
+
+
+
+
+    }
+
+    config.mouse_bindings = {
+        -- Ctrl-click will open the link under the mouse cursor
+        {
+            event = { Up = { streak = 1, button = 'Left' } },
+            mods = 'SHIFT',
+            action = wezterm.action.OpenLinkAtMouseCursor,
+        },
     }
 
     -- easy tab switching
-    for i = 1, 8 do
+    for i = 1, 9 do
         -- CTRL+ALT + number to activate that tab
         table.insert(config.keys, {
             key = tostring(i),
             mods = 'ALT',
             action = act.ActivateTab(i - 1),
+        })
+    end
+
+    for i = 1, 9 do
+        -- CTRL+ALT + number to move to that position
+        table.insert(config.keys, {
+            key = tostring(i),
+            mods = 'CTRL|ALT',
+            action = act.MoveTab(i - 1),
         })
     end
     config.key_tables = {

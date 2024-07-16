@@ -1,4 +1,5 @@
 require('workspaces.school')
+require('workspaces.dots')
 -- function module.apply_to_config(config)
 
 -- local mux = wezterm.mux
