@@ -18,7 +18,7 @@ wezterm.on('gui-startup', function(cmd)
     }
     nix_dots_t:set_title 'nixdots'
 
-    local nvim_t, nvim_p, nvim_w = mux:spawn_tab {
+    local nvim_t, nvim_p, nvim_w = nix_dots_w:spawn_tab {
         cwd = dots_dir .. 'nvim'
     }
     nvim_t:set_title 'nvim'
