@@ -23,7 +23,8 @@ wezterm.on('gui-startup', function(cmd)
         cwd = dots_dir .. '/nvim'
     }
     nvim_t:set_title 'nvim'
-    -- nvim_p:send_text 'nvim .\n'
+
+    nvim_p:send_text 'nvim .\n'
 
     local build_t, build_p, build_w = nvim_w:spawn_tab {
         cwd = dots_dir .. '/nvim'
