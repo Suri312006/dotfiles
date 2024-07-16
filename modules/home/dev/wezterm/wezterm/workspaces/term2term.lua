@@ -16,14 +16,16 @@ wezterm.on('gui-startup', function(cmd)
         args = args
     }
 
-    rs_p:send_text 'nvim .\n'
+    -- rs_p:send_text 'nvim .\n'
+    rs_p:send_text 'nvim .'
     rs_t:set_title 'rs'
 
     local go_t, go_p, go_w = rs_w:spawn_tab {
         cwd = t2t_dir .. '/server',
     }
 
-    go_p:send_text 'nvim .\n'
+    -- go_p:send_text 'nvim .\n'
+    go_p:send_text 'nvim .'
     go_t:set_title 'go'
 
     local build_t, build_p, build_w = go_w:spawn_tab {
