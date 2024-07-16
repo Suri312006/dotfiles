@@ -13,7 +13,7 @@ wezterm.on('gui-startup', function(cmd)
     local home = wezterm.home_dir
 
     local tab, pane, window = mux.spawn_window {
-        workspace = 'school',
+        workspace = 'default',
         cwd = home,
         args = args
     }
