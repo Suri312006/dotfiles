@@ -13,13 +13,17 @@ wezterm.on('gui-startup', function(cmd)
     local tab, pane, window = mux.spawn_window {
         workspace = 'connectify',
         cwd = connectify_dir,
-        args = 'nvim .'
+        args = args
     }
 
+    pane:send_text 'nvim .\n'
+
     local notes_t, notes_p, notes_w = window:spawn_tab {
-        cwd = connectify_dir .. 'notes',
-        args = 'nvim .'
+        cwd = connectify_dir .. '/notes',
+        args = args
     }
+
+    notes_p:send_text 'nvim .\n'
 
     local build_tab, build_pane, build_window = notes_w:spawn_tab {
         cwd = connectify_dir .. '/connectifyai/frontend'
