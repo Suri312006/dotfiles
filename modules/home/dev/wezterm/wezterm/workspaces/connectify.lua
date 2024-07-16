@@ -17,12 +17,14 @@ wezterm.on('gui-startup', function(cmd)
     }
 
     pane:send_text 'nvim .\n'
+    tab:set_title 'dev'
 
     local notes_t, notes_p, notes_w = window:spawn_tab {
         cwd = connectify_dir .. '/notes',
     }
 
     notes_p:send_text 'nvim .\n'
+    notes_t:set_title 'notes'
 
     local build_tab, build_pane, build_window = notes_w:spawn_tab {
         cwd = connectify_dir .. '/connectifyai/frontend'

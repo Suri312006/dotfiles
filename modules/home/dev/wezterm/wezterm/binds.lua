@@ -88,7 +88,7 @@ function module.apply_to_config(config)
         {
             key = 'l',
             mods = 'ALT',
-            action = act.ShowLauncherArgs { flags = "FUZZY" },
+            action = act.ShowLauncherArgs { flags = "FUZZY|TABS|LAUNCH_MENU_ITEMS|DOMAINS|KEY_ASSIGNMENTS|WORKSPACES|COMMANDS" },
         },
 
         -- force quit
