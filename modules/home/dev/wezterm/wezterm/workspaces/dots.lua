@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 
 
 local mux = wezterm.mux
-wezterm.on('gui_startup', function(cmd)
+wezterm.on('gui-startup', function(cmd)
     local args = {}
     if cmd then
         args = cmd.args
