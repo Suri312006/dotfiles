@@ -25,7 +25,7 @@ wezterm.on('gui-startup', function(cmd)
     }
 
     notes_t:set_title 'notes'
-    notes_p:send_text 'git pull && nvim .\n'
+    notes_p:send_text 'nvim .\n'
 
     local ssh_t, ssh_p, ssh_w = notes_w:spawn_tab {
         cwd = ll_dir .. '/IWP/Prometheus/src'
