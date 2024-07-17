@@ -40,7 +40,7 @@
       openssl
       # test utilities
       mesa-demos
-      nvtop
+      nvtopPackages.full
     ];
     variables = {
       # for compiling openssl for nixos, should refactor into a diff file later
