@@ -110,8 +110,9 @@ in
         # cannot be enabled at the same time as sync
         offload = {
           # enable = true;
+          # enableOffloadCmd = true;
           enable = false;
-          enableOffloadCmd = true;
+          enableOffloadCmd = false;
         };
         nvidiaBusId = "PCI:01:00:0"; # Found with lspci | grep VGA
         amdgpuBusId = "PCI:07:00:0"; # Found with lspci | grep VGA
