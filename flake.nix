@@ -30,7 +30,7 @@
     wezterm = {
       url = "github:wez/wezterm?dir=nix";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
+ inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
   };
 
