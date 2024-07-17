@@ -183,6 +183,12 @@
         "4, monitor:DP-3"
         "5, monitor:DP-3"
 
+        "1, monitor:HDMI-A"
+        "2, monitor:HDMI-A"
+        "3, monitor:HDMI-A"
+        "4, monitor:HDMI-A"
+        "5, monitor:HDMI-A"
+
         "6, monitor:eDP-1"
         "7, monitor:eDP-1"
         "8, monitor:eDP-1"
