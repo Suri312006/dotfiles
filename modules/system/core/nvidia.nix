@@ -74,9 +74,10 @@ in
       open = false;
       nvidiaSettings = true;
 
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      # causes kernel panics lmao
+      # package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-      hardware.nvidia.package =
+      package =
         let
           rcu_patch = pkgs.fetchpatch {
             url = "https://github.com/gentoo/gentoo/raw/c64caf53/x11-drivers/nvidia-drivers/files/nvidia-drivers-470.223.02-gpl-pfn_valid.patch";
