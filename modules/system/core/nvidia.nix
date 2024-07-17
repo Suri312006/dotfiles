@@ -105,11 +105,12 @@ in
       prime = {
 
         # super power mode
-        sync.enable = false;
+        sync.enable = true;
 
         # cannot be enabled at the same time as sync
         offload = {
-          enable = true;
+          # enable = true;
+          enable = false;
           enableOffloadCmd = true;
         };
         nvidiaBusId = "PCI:01:00:0"; # Found with lspci | grep VGA
