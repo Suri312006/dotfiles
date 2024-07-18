@@ -43,5 +43,12 @@ wezterm.on('gui-startup', function(cmd)
 
     build_p:send_text 'go run .'
 
+
+    local notes_t, notes_p, notes_w = build_w:spawn_tab {
+        cwd = t2t_dir .. '/.notes'
+    }
+
+    notes_p:send_text 'nvim .\n'
+
     rs_t:activate()
 end)
