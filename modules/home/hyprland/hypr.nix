@@ -1,4 +1,9 @@
-{
+{ pkgs, ... }: {
+
+  home.packages = with pkgs; [
+    xwaylandvideobridge
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -91,6 +96,14 @@
         # "size 25% 25% = title:^(Firefox)$"
         "move 72% 7% = title:^(Picture-in-Picture)$"
         # "move 72% 7% = title:^(Firefox)$"
+
+
+        #screen sharing stuff
+        "opacity 0.0 override,class:^(xwaylandvideobridge)$"
+        "noanim,class:^(xwaylandvideobridge)$"
+        "noinitialfocus,class:^(xwaylandvideobridge)$"
+        "maxsize 1 1,class:^(xwaylandvideobridge)$"
+        "noblur,class:^(xwaylandvideobridge)$"
       ];
 
 
@@ -317,7 +330,7 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
-# chugs perf but butter smooth
+        # chugs perf but butter smooth
         vfr = 0;
         enable_swallow = true;
         no_direct_scanout = true; #for fullscreen games
