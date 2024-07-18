@@ -10,7 +10,7 @@ function module.apply_to_config(config)
     config.freetype_load_target =
     'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
     config.font = wezterm.font(
-        {       -- Normal text
+        {           -- Normal text
             family = 'Monaspace Krypton',
             harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
             stretch = 'UltraCondensed', -- This doesn't seem to do anything
@@ -25,6 +25,7 @@ function module.apply_to_config(config)
                 -- family="Monaspace Radon",  -- script style
                 family = 'Monaspace Argon', -- courier-like
                 style = 'Italic',
+                harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
                 weight = 'Bold'
             })
         },
@@ -36,6 +37,7 @@ function module.apply_to_config(config)
                 -- family = 'Monaspace Krypton',
                 family = 'Monaspace Neon',
                 -- weight='ExtraBold',
+                harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
                 weight = 'Bold',
             })
         },
@@ -47,6 +49,7 @@ function module.apply_to_config(config)
                 family = 'Monaspace Xenon',
                 style = 'Italic',
                 weight = 'Bold',
+                harfbuzz_features = { 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
             }
             )
         },

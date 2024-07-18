@@ -50,5 +50,7 @@ wezterm.on('gui-startup', function(cmd)
 
     notes_p:send_text 'nvim .\n'
 
+    notes_t:set_title 'notes'
+
     rs_t:activate()
 end)
