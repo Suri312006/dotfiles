@@ -39,9 +39,9 @@ wezterm.on('gui-startup', function(cmd)
 
     build_t:set_title 'build'
 
-    dev_server_p:send_text 'cargo run --'
+    dev_server_p:send_text 'go run .'
 
-    build_p:send_text 'go run .'
+    build_p:send_text 'cargo run --'
 
 
     local notes_t, notes_p, notes_w = build_w:spawn_tab {
