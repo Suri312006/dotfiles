@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     discord
+    webcord
     google-chrome
     slack
     kdePackages.filelight
