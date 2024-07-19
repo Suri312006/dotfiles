@@ -70,6 +70,7 @@ in
             eval `ssh-agent` &> /dev/null
             ssh-add ~/.ssh/github_private &> /dev/null
             ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+            ssh-add ~/.ssh/connectify &> /dev/null
             eval "$(zoxide init zsh)"     
 
 

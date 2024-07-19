@@ -19,6 +19,7 @@
     texliveFull
     texlivePackages.lastpage
     speedtest-cli
+    zed-editor
 
   ];
 }
