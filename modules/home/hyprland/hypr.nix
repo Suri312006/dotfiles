@@ -26,7 +26,8 @@
         # starup apps
         "nm-applet --indicator &"
         "blueman-applet & "
-        "discord &"
+        # "discord &"
+        "webcord &"
         "firefox &"
         "google-chrome-stable &"
         "spotify &"
