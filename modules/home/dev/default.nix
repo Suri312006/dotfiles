@@ -7,6 +7,8 @@
 
     ./git.nix
     ./wezterm
+
+    ./langs
   ];
 
   programs.git.enable = true;
