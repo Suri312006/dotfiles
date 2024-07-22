@@ -52,5 +52,12 @@ wezterm.on('gui-startup', function(cmd)
 
     notes_t:set_title 'notes'
 
+    local proto_t, proto_p, proto_w = notes_w:spawn_tab {
+        cwd = t2t_dir .. '/proto'
+    }
+
+    proto_p:send_text 'nvim .\n'
+    proto_t:set_title 'proto'
+
     rs_t:activate()
 end)
