@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local t2t_dir = wezterm.home_dir .. '/dev/personal/term2term'
     local rs_t, rs_p, rs_w = mux.spawn_window {
         workspace = 'term2term',
-        cwd = t2t_dir .. '/client',
+        cwd = t2t_dir .. '/rs',
         args = args
     }
 
@@ -20,15 +20,11 @@ wezterm.on('gui-startup', function(cmd)
     rs_t:set_title 'rs'
 
     local go_t, go_p, go_w = rs_w:spawn_tab {
-        cwd = t2t_dir .. '/server',
+        cwd = t2t_dir .. '/go',
     }
 
     go_p:send_text 'nvim .\n'
     go_t:set_title 'go'
-
-    local build_t, build_p, build_w = go_w:spawn_tab {
-        cwd = t2t_dir .. '/client'
-    }
 
     local proto_t, proto_p, proto_w = go_w:spawn_tab {
         cwd = t2t_dir .. '/proto'
@@ -37,10 +33,15 @@ wezterm.on('gui-startup', function(cmd)
     proto_p:send_text 'nvim .\n'
     proto_t:set_title 'proto'
 
+    local build_t, build_p, build_w = go_w:spawn_tab {
+        cwd = t2t_dir .. '/rs'
+    }
+
+
     local dev_server_p = build_p:split {
         direction = 'Left',
         size = 0.5,
-        cwd = t2t_dir .. '/server/cmd/t2tServer'
+        cwd = t2t_dir .. '/go/cmd/t2tServer'
     }
 
 
