@@ -21,6 +21,8 @@
     gdb
     postman
 
+    python3
+
 
     # gnumake42
     # llvmPackages_18.libcxxClang
