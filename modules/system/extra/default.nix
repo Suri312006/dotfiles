@@ -5,6 +5,7 @@
     ./print.nix
     ./nh.nix
     ./stylix.nix
+    ./bspwm.nix
   ];
 
 }

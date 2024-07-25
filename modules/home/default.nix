@@ -5,5 +5,6 @@
     ./apps
     ./rice
     ./hyprland
+    ./bspwm
   ];
 }
