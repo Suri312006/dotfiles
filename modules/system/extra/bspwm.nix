@@ -1,3 +1,3 @@
 {...}:{
-  services.xserver.windowManager.bspwm-unstable.enable = true;
+  services.xserver.windowManager.bspwm.enable = true;
   }
