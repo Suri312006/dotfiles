@@ -1,4 +1,4 @@
 { ... }: {
-  home.file."~/.config/bspwm/".source = ./bspwm;
+  home.file."~/.config/bspwm".source = ./bspwm;
 
 }
