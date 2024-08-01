@@ -34,6 +34,8 @@
 
 
       gnumake42
+#apparenly this is java support
+zulu8
 
       clang-tools
 
