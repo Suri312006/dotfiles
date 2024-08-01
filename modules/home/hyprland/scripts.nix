@@ -14,16 +14,18 @@ let
                 keyword general:border_size 1;\
                 keyword decoration:rounding 0;\
                 misc:vfr true;\
-                keyword monitor eDP-1, 1920x1080@60, 0x0, 1;"
+                keyword monitor eDP-1, 1920x1080@165.00, 0x0, 1;"
 
             swww kill 
             notify-send -e -u low -i "Battery Mode Enabled"
+            brightnessctl s 10%
             exit
         else
             # FIXME: need to make wallpapers a global var
             swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/lol.png" &
             sleep 0.1
             hyprctl reload
+            brightnessctl s 50%
 
             # need to get pywall
             #{SCRIPTSDIR}/PywalSwww.sh
