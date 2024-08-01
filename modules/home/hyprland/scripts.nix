@@ -14,7 +14,7 @@ let
                 keyword general:border_size 1;\
                 keyword decoration:rounding 0;\
                 misc:vfr true;\
-                keyword monitor eDP-1, 2560x1440@60, 0x0, 1.6;"
+                keyword monitor eDP-1, 1920x1080@60, 0x0, 1;"
 
             swww kill 
             notify-send -e -u low -i "Battery Mode Enabled"
