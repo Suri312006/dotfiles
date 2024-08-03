@@ -13,9 +13,14 @@ wezterm.on('gui-startup', function(cmd)
 
     local ll_t, ll_p, ll_w = mux.spawn_window {
         workspace = 'LightLinks',
-        cwd = ll_dir .. '/IWP',
+        cwd = ll_dir .. '/IWP/Prometheus/src',
         args = args
     }
+
+    ll_w:spawn_tab {}
+    ll_w:spawn_tab {}
+
+
 
     ll_t:set_title 'dev'
     ll_p:send_text 'nvim .\n'
