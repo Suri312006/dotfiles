@@ -9,39 +9,26 @@ wezterm.on('gui-startup', function(cmd)
     end
 
 
-    local t2t_dir = wezterm.home_dir .. '/dev/personal/term2term'
+    local cats_dir = wezterm.home_dir .. '/dev/personal/coupled-cats'
     local rs_t, rs_p, rs_w = mux.spawn_window {
-        workspace = 'term2term',
-        cwd = t2t_dir .. '/rs',
+        workspace = 'coupled-cats',
+        cwd = cats_dir .. '/rs',
         args = args
     }
 
     rs_p:send_text 'nvim .\n'
-    rs_t:set_title 'rs'
+    rs_t:set_title 'dev'
 
-    local go_t, go_p, go_w = rs_w:spawn_tab {
-        cwd = t2t_dir .. '/go',
-    }
 
-    go_p:send_text 'nvim .\n'
-    go_t:set_title 'go'
-
-    local proto_t, proto_p, proto_w = go_w:spawn_tab {
-        cwd = t2t_dir .. '/proto'
-    }
-
-    proto_p:send_text 'nvim .\n'
-    proto_t:set_title 'proto'
-
-    local build_t, build_p, build_w = go_w:spawn_tab {
-        cwd = t2t_dir .. '/rs'
+    local build_t, build_p, build_w = rs_w:spawn_tab {
+        cwd = cats_dir
     }
 
 
     local dev_server_p = build_p:split {
         direction = 'Left',
         size = 0.5,
-        cwd = t2t_dir .. '/go/cmd/t2tServer'
+        cwd = cats_dir
     }
 
 
@@ -53,7 +40,7 @@ wezterm.on('gui-startup', function(cmd)
 
 
     local notes_t, notes_p, notes_w = build_w:spawn_tab {
-        cwd = t2t_dir .. '/.notes'
+        cwd = cats_dir .. '/.notes'
     }
 
     notes_p:send_text 'nvim .\n'
