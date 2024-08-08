@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+  ];
 
   home.packages = with pkgs; [
     xwaylandvideobridge

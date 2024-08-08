@@ -21,5 +21,10 @@
     speedtest-cli
     zed-editor
 
+
+# rust stuff
+tokei
+dust
+exa 
   ];
 }
