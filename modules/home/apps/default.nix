@@ -25,6 +25,6 @@
 # rust stuff
 tokei
 dust
-exa 
+eza 
   ];
 }
