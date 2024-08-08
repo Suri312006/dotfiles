@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local cats_dir = wezterm.home_dir .. '/dev/personal/coupled-cats'
     local rs_t, rs_p, rs_w = mux.spawn_window {
         workspace = 'coupled-cats',
-        cwd = cats_dir .. '/rs',
+        cwd = cats_dir ,
         args = args
     }
 
