@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local cats_dir = wezterm.home_dir .. '/dev/personal/coupled-cats'
     local rs_t, rs_p, rs_w = mux.spawn_window {
         workspace = 'coupled-cats',
-        cwd = cats_dir ,
+        cwd = cats_dir,
         args = args
     }
 
@@ -34,10 +34,8 @@ wezterm.on('gui-startup', function(cmd)
 
     build_t:set_title 'build'
 
-    dev_server_p:send_text 'go run .'
-
-    build_p:send_text 'cargo run --'
-
+    dev_server_p:send_text 'nix develop\n'
+    dev_server_p:send_text 'just run'
 
     local notes_t, notes_p, notes_w = build_w:spawn_tab {
         cwd = cats_dir .. '/.notes'
