@@ -60,7 +60,7 @@
         "float, zoom"
         "float, rofi"
         "float, gnome-system-monitor"
-        "float, yad"
+        "float, coupled-cats"
 
         "center = ^(pavucontrol)"
       ];
