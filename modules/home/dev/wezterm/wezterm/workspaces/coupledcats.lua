@@ -34,7 +34,7 @@ wezterm.on('gui-startup', function(cmd)
 
     build_t:set_title 'build'
 
-    dev_server_p:send_text 'nix develop\n'
+    dev_server_p:send_text 'nix-shell\n'
     dev_server_p:send_text 'just run'
 
     local notes_t, notes_p, notes_w = build_w:spawn_tab {
