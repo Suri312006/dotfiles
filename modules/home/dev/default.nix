@@ -73,6 +73,8 @@
     air
 
     flyctl
+
+    just
     # rust-analyzer
   ];
 
