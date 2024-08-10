@@ -117,6 +117,7 @@
         # coupled cats window rules
         "noblur,class:^(coupled-cats)$"
         "noborder,class:^(coupled-cats)$"
+        "nodim,class:^(coupled-cats)$"
         "noinitialfocus,class:^(coupled-cats)$"
       ];
 
