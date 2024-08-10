@@ -113,7 +113,11 @@
         "noinitialfocus,class:^(xwaylandvideobridge)$"
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
+
+        # coupled cats window rules
         "noblur,class:^(coupled-cats)$"
+        "noborder,class:^(coupled-cats)$"
+        "noinitialfocus,class:^(coupled-cats)$"
       ];
 
 
