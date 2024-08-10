@@ -119,6 +119,7 @@
         "noborder,class:^(coupled-cats)$"
         "nodim,class:^(coupled-cats)$"
         "noinitialfocus,class:^(coupled-cats)$"
+        "noshadow,class:^(coupled-cats)$"
       ];
 
 
