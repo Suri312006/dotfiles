@@ -1,10 +1,10 @@
 { pkgs, ... }:
-let 
+let
   zsh_history_fix = pkgs.writeShellScriptBin "zsh_history_fix" ''
-  mv ~/.zsh_history ~/.zsh_history_bad
-  strings ~/.zsh_history_bad > ~/.zsh_history
-  fc -R ~/.zsh_history
-  rm ~/.zsh_history_bad
+    mv ~/.zsh_history ~/.zsh_history_bad
+    strings ~/.zsh_history_bad > ~/.zsh_history
+    fc -R ~/.zsh_history
+    rm ~/.zsh_history_bad
 
   '';
 
@@ -64,6 +64,7 @@ in
       dots = "z ~/dots";
       fcd = ''cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
 
+      l = ''exa'';
 
     };
     initExtra = ''

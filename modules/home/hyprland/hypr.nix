@@ -28,6 +28,7 @@
         "suri_polkit_init &"
         # starup apps
         "nm-applet --indicator &"
+        "rog-control-center &"
         "blueman-applet & "
         "discord &"
         # "webcord &"
