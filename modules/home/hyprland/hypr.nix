@@ -61,7 +61,7 @@
         "float, zoom"
         "float, rofi"
         "float, gnome-system-monitor"
-        "float, coupled-cats"
+        "float, CoupledCats"
 
         "center = ^(pavucontrol)"
       ];
@@ -115,11 +115,11 @@
         "noblur,class:^(xwaylandvideobridge)$"
 
         # coupled cats window rules
-        "noblur,class:^(coupled-cats)$"
-        "noborder,class:^(coupled-cats)$"
-        "nodim,class:^(coupled-cats)$"
-        "noinitialfocus,class:^(coupled-cats)$"
-        "noshadow,class:^(coupled-cats)$"
+        "noblur,class:^(CoupledCats)$"
+        "noborder,class:^(CoupledCats)$"
+        "nodim,class:^(CoupledCats)$"
+        "noinitialfocus,class:^(CoupledCats)$"
+        "noshadow,class:^(CoupledCats)$"
       ];
 
 
