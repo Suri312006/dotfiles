@@ -16,6 +16,7 @@ wezterm.on('gui-startup', function(cmd)
         args = args
     }
 
+    rs_p:send_text 'nix-shell'
     rs_p:send_text 'nvim .\n'
     rs_t:set_title 'dev'
 
