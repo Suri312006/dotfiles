@@ -14,6 +14,7 @@
     slack
     kdePackages.filelight
     zathura
+    gimp-with-plugins
     # texlive.combined.scheme-small
     # texliveMedium
     texliveFull
