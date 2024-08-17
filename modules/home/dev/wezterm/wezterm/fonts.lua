@@ -14,7 +14,7 @@ function module.apply_to_config(config)
             family = 'Monaspace Krypton',
                 harfbuzz_features = { 'calt', 'clig' ,'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
             stretch = 'UltraCondensed', -- This doesn't seem to do anything
-            weight = 'Bold',
+            weight = 'Regular',
         })
 
     config.font_rules = {
