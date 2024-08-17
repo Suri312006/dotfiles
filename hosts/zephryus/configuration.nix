@@ -27,9 +27,26 @@
 
   programs.rog-control-center.enable = true;
 
+  boot.kernelPatches = [
+    {
+      name = "fix-audio-1";
+      patch = builtins.fetchurl {
+        url = "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/patch/sound/soc/soc-topology.c?id=e0e7bc2cbee93778c4ad7d9a792d425ffb5af6f7";
+        sha256 = "sha256:1y5nv1vgk73aa9hkjjd94wyd4akf07jv2znhw8jw29rj25dbab0q";
+      };
+    }
+    {
+      name = "fix-audio-2";
+      patch = builtins.fetchurl {
+        url = "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/patch/sound/soc/soc-topology.c?id=0298f51652be47b79780833e0b63194e1231fa34";
+        sha256 = "sha256:14xb6nmsyxap899mg9ck65zlbkvhyi8xkq7h8bfrv4052vi414yb";
+      };
+    }
+  ];
+
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # valgrant
@@ -51,11 +68,11 @@
     vagrant
   ];
 
-  
-  
-  environment.sessionVariables = { 
-    NIXOS_OZONE_WL = "1"; 
-    };
+
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
