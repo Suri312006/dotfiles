@@ -12,6 +12,7 @@
     webcord
     google-chrome
     slack
+    zulip
     kdePackages.filelight
     zathura
     gimp-with-plugins
@@ -27,5 +28,8 @@
 tokei
 dust
 eza 
+
+
+
   ];
 }
