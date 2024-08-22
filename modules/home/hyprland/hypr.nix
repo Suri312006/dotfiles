@@ -35,7 +35,7 @@
         "firefox &"
         "google-chrome-stable &"
         "spotify &"
-        "zilup &"
+        "zulip &"
 
         "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
