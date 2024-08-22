@@ -1,4 +1,4 @@
 { ... }: {
 
-  home.users.suri.home.file."~/Pictures/curr_wall.png".source = ./a_cartoon_of_a_machine.jpg;
+  home.file."~/Pictures/curr_wall.png".source = ./a_cartoon_of_a_machine.jpg;
 }
