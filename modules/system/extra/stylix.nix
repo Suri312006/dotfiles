@@ -3,7 +3,7 @@
   # home.file."~/Pictures/Wallpaper.png" = wallpaper;
 
   # stylix.image = ../../wallpapers/curr_wall.png;
-  stylix.image = ../../wallpapers/Kojiro.png;
+  stylix.image = ../../wallpapers/a_cartoon_of_a_machine.jpg;
   # https://stylix.danth.me/
 
   stylix = {
