@@ -5,4 +5,5 @@ require('workspaces.connectify')
 require('workspaces.term2term')
 require('workspaces.default')
 require('workspaces.coupledcats')
+require('workspaces.twizzler')
 
