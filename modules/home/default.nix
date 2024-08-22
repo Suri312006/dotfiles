@@ -6,6 +6,5 @@
     ./rice
     ./hyprland
     ./bspwm
-    ../wallpapers
   ];
 }
