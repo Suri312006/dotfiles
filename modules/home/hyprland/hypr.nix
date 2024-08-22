@@ -35,6 +35,7 @@
         "firefox &"
         "google-chrome-stable &"
         "spotify &"
+        "zilup &"
 
         "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
@@ -75,6 +76,7 @@
         "workspace 8 silent, title:^(Spotify Free)$"
         "workspace 8 silent, class:^(Spotify)$"
         "workspace 9 silent, class:^(Slack)$"
+        "workspace 9 silent, class:^(Zulip)$"
 
         # opacity (transparent) #enable as desired
         "opacity 0.9 0.9, class:^([Rr]ofi)$"
@@ -92,6 +94,7 @@
         "opacity 0.9 0.6, class:^(yad)$"
         "opacity 0.8 0.8, title:^(Spotify)$"
         "opacity 0.9 0.9, class:^([Ss]lack)$"
+        "opacity 0.9 0.9, class:^(Zulip)$"
         "opacity 0.95 0.95, title:(.*)(Visual Studio Code)$"
         "opacity 0.9 0.9, class:^(obsidian)$"
         "opacity 0.95 0.75, title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
