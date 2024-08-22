@@ -23,7 +23,7 @@ let
         else
             # FIXME: need to make wallpapers a global var
             # swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/.png" &
-            swww-daemon --format xrgb && swww img "$HOME/Pictures/a_cartoon_of_a_machine.jpg" &
+            swww-daemon --format xrgb && swww img "$HOME/Pictures/curr_wal.png" &
             sleep 0.1
             hyprctl reload
             brightnessctl s 50%
