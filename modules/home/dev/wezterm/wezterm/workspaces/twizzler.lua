@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local twizzler_dir = wezterm.home_dir .. '/dev/work/Twizzler'
     local tab, pane, window = mux.spawn_window {
         workspace = 'Twizzler',
-        cwd = twizzler_dir .. '/',
+        cwd = twizzler_dir .. '/twizzler',
         args = args
     }
 
