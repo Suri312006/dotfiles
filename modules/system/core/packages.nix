@@ -34,8 +34,8 @@
 
 
       gnumake42
-#apparenly this is java support
-zulu
+      #apparenly this is java support
+      zulu
 
       clang-tools
 
@@ -43,10 +43,11 @@ zulu
       # test utilities
       mesa-demos
       nvtopPackages.full
+      inputs.zen-browser.packages."${system}".default
     ];
     variables = {
       # for compiling openssl for nixos, should refactor into a diff file later
-      PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
+      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     };
   };
 
