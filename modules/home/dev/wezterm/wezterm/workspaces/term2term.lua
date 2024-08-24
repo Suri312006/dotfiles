@@ -12,7 +12,7 @@ wezterm.on('gui-startup', function(cmd)
     local t2t_dir = wezterm.home_dir .. '/dev/personal/term2term'
     local rs_t, rs_p, rs_w = mux.spawn_window {
         workspace = 'term2term',
-        cwd = t2t_dir .. '/rs',
+        cwd = t2t_dir ,
         args = args
     }
 
