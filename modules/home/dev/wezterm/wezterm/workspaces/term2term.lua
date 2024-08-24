@@ -34,7 +34,7 @@ wezterm.on('gui-startup', function(cmd)
     proto_t:set_title 'proto'
 
     local build_t, build_p, build_w = rs_w:spawn_tab {
-        cwd = t2t_dir .. '/rs'
+        cwd = t2t_dir,
     }
 
 
