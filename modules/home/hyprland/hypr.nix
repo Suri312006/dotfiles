@@ -211,17 +211,17 @@
       ];
 
       workspace = [
-        # "1, monitor:DP-3"
-        # "2, monitor:DP-3"
-        # "3, monitor:DP-3"
-        # "4, monitor:DP-3"
-        # "5, monitor:DP-3"
+        "1, monitor:DP-3"
+        "2, monitor:DP-3"
+        "3, monitor:DP-3"
+        "4, monitor:DP-3"
+        "5, monitor:DP-3"
 
-        "1, monitor:HDMI-A-1"
-        "2, monitor:HDMI-A-1"
-        "3, monitor:HDMI-A-1"
-        "4, monitor:HDMI-A-1"
-        "5, monitor:HDMI-A-1"
+        # "1, monitor:HDMI-A-1"
+        # "2, monitor:HDMI-A-1"
+        # "3, monitor:HDMI-A-1"
+        # "4, monitor:HDMI-A-1"
+        # "5, monitor:HDMI-A-1"
 
         "6, monitor:eDP-1"
         "7, monitor:eDP-1"
