@@ -37,7 +37,7 @@
         "spotify &"
         "zulip &"
 
-        "sleep 1 && slack &" # time delay for slack
+        # "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
