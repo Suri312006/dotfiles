@@ -1,6 +1,6 @@
 { pkgs, fetchFromGitHub, ... }: {
   programs = {
-    zsh.shellAliases.n = "nvim .";
+    zsh.shellAliases.n = "y";
     zsh.shellAliases.nv = "nvim";
 
     neovim = {
