@@ -17,7 +17,7 @@
   home.file.".config/nvim" = {
     source = builtins.fetchGit {
       url = "https://github.com/suri312006/nvim";
-      rev = "0ec7586dc22d7f834006a0e09d3e97bf811e83a8";
+      rev = "7a4014b6e1c2506442aa849c393d54ebb257efdd";
     };
   };
 
