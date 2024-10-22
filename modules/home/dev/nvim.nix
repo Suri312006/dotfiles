@@ -1,6 +1,6 @@
 { pkgs, fetchFromGitHub, ... }: {
   programs = {
-    zsh.shellAliases.n = "y";
+    zsh.shellAliases.n = "nvim .";
     zsh.shellAliases.nv = "nvim";
 
     neovim = {
@@ -17,7 +17,7 @@
   home.file.".config/nvim" = {
     source = builtins.fetchGit {
       url = "https://github.com/suri312006/nvim";
-      rev = "1c53d7bd79fbd1d85a78bddc8b976fdbafa9e317";
+      rev = "e5bdde1474a60411f2dabac88a512e4564c90341";
     };
   };
 
