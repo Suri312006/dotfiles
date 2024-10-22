@@ -2,13 +2,13 @@
   imports = [
     ./qt.nix
     ./gtk.nix
-#    ./pywal.nix
+    ./pywal.nix
     ./eww
     ./mako.nix
     ./ags.nix
   ];
 
-  pywal.enable = true;
+  pywal.enable = false;
 
   home.packages = with pkgs; [
     wofi
