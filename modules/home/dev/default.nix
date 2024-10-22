@@ -3,6 +3,7 @@
     ./kitty
     ./zsh
     ./nvim.nix
+./nixvim
     ./zellij
 
     ./git.nix
