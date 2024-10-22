@@ -1,4 +1,4 @@
 { ... }: {
 
-  home.file."Pictures/curr_wall.png".source = ./a_cartoon_of_a_machine.png;
+  home.file."Pictures/curr_wall.png".source = ./a_black_sky_with_white_dots.jpg;
 }
