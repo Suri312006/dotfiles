@@ -15,7 +15,7 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.Onepunch;
+      theme = lib.mkForce spicePkgs.themes.Onepunch;
       colorScheme = lib.mkForce "Onepunch";
 
       enabledExtensions = with spicePkgs.extensions; [
