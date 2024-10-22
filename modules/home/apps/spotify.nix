@@ -16,7 +16,7 @@ in
     {
       enable = true;
       theme = spicePkgs.themes.Onepunch;
-      colorScheme = "Onepunch";
+      colorScheme = lib.mkForce "Onepunch";
 
       enabledExtensions = with spicePkgs.extensions; [
         fullAppDisplay
