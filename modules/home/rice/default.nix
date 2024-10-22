@@ -2,7 +2,7 @@
   imports = [
     ./qt.nix
     ./gtk.nix
-    ./pywal.nix
+#    ./pywal.nix
     ./eww
     ./mako.nix
     ./ags.nix
