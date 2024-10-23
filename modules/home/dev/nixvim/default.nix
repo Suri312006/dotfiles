@@ -178,7 +178,7 @@
       softtabstop = 4;
       shiftwidth = 4;
       expandtab = 4;
-      smartindent = 4;
+      smartindent = true;
 
       wrap = true;
 
