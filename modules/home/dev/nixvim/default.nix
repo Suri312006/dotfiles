@@ -466,7 +466,7 @@
   }
     ];
 
-    keybinds += lib.map (i: {
+    keymaps = keymaps ++ lib.map (i: {
   mode = "n";
   key = "," + toString i;
   action = toString i + "<c-w>w";
