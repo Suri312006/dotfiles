@@ -464,9 +464,9 @@
     options = { noremap = true; silent = true; };
     description = "Insert Go error handling block";
   }
-    ];
+    ]
 
-    keymaps = keymaps ++ lib.map (i: {
+ ++ lib.map (i: {
   mode = "n";
   key = "," + toString i;
   action = toString i + "<c-w>w";
