@@ -4,6 +4,10 @@
     # https://nix-community.github.io/nixvim/plugins/neo-tree/index.html?highlight=neo-tree#pluginsneo-treepackage
     plugins.neo-tree = {
       enable = true;
+      window = {
+          position = "right";
+          width = 30;
+      };
 
       filesystem = {
         window = {
@@ -12,8 +16,6 @@
             "x" = "open_split";
             "v" = "open_vsplit";
           };
-          position = "right";
-          width = 30;
         };
       };
     };
