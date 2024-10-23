@@ -24,6 +24,9 @@ in
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
+shellAliases.n = "nvim .";
+shellAliases.nv = "nvim";
+
     # oh my zsh lol
     plugins = [
       {
