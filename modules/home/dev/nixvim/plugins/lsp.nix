@@ -70,13 +70,13 @@
       #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       servers = {
         clangd = {
-         enable = true;
+          enable = true;
         };
         gopls = {
-         enable = true;
+          enable = true;
         };
         pyright = {
-         enable = true;
+          enable = true;
         };
         # rust_analyzer = {
         #  enable = true;
@@ -87,10 +87,10 @@
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
         #
         # But for many setups the LSP (`tsserver`) will work just fine
-        tsserver = {
-         enable = true;
+        ts_ls = {
+          enable = true;
         };
-nil-ls = {enable = true;};
+        nil_ls = {enable = true;};
         marksman = {enable = true;};
         terraformls = {enable = true;};
         ansiblels = {enable = true;};
