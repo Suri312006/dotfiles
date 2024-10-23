@@ -34,6 +34,6 @@ local config = {
   }
 }
 lualine.setup(config)
-        ''
+        '';
     };
 }
