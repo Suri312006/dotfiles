@@ -464,14 +464,7 @@
     options = { noremap = true; silent = true; };
     description = "Insert Go error handling block";
   }
-    ]
-
- ++ lib.map (i: {
-  mode = "n";
-  key = "," + toString i;
-  action = toString i + "<c-w>w";
-  description = "Move to window " + toString i;
-}) (lib.range 1 9);
+    ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
@@ -536,7 +529,14 @@
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
     extraConfigLuaPost = ''
-      -- vim: ts=2 sts=2 sw=2 et
+for i = 1, 9 do
+
+  local lhs = "," .. i
+
+  local rhs = i .. "<c-w>w"
+  vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
+end
+
     '';
   };
 }
