@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     userName = "suri312006";
@@ -11,6 +11,6 @@
 
   home.packages = with pkgs; [
     commitizen
+    lazygit
   ];
-
 }
