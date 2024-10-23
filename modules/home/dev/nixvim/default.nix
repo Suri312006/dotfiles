@@ -42,6 +42,7 @@
     # ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
+    ./plugins/custom/plugins
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./plugins/custom/plugins and import them below
@@ -133,16 +134,6 @@
     # Don't forget to disable the colorschemes you arent using
     #
     # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    colorschemes = {
-      # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-      tokyonight = {
-        enable = true;
-        settings = {
-          # Like many other themes, this one has different styles, and you could load
-          # any other, such as 'storm', 'moon', or 'day'.
-          style = "night";
-        };
-      };
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
