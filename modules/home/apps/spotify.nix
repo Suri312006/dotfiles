@@ -14,7 +14,7 @@ programs.spicetify =
      theme = spicePkgs.themes.catppuccin;
      colorScheme = "mocha";
    }
-}
+};
 #let
 #  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 #in
