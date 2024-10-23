@@ -351,7 +351,11 @@
 
   # Yank to system clipboard
   {
-    mode = ["n", "v"];
+    mode = "n";
+    key = "<leader>y";
+    action = [["+y"]];
+  }{
+    mode = "v";
     key = "<leader>y";
     action = [["+y"]];
   }
@@ -363,19 +367,31 @@
 
   # Paste from system clipboard
   {
-    mode = ["n", "v"];
+    mode = "v";
+    key = "<leader>p";
+    action = [["+p"]];
+  }{
+    mode = "n";
     key = "<leader>p";
     action = [["+p"]];
   }
   {
-    mode = ["n", "v"];
+    mode = "v";
+    key = "<leader>P";
+    action = [["+P"]];
+  }{
+    mode = "n";
     key = "<leader>P";
     action = [["+P"]];
   }
 
   # Delete into black hole register
   {
-    mode = ["n", "v"];
+    mode = "n"; 
+    key = "<leader>d";
+    action = [["_d"]];
+  }{
+    mode = "v"; 
     key = "<leader>d";
     action = [["_d"]];
   }
