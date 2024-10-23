@@ -266,12 +266,12 @@
         };
       }
 # Loop through window numbers 1 to 9 and map ',' followed by the number to switch windows
-  (lib.mkIf (window >= 1 && window <= 9) (map (i: {
+  (map (i: {
     mode = "n";
     key = "," + toString i;
     action = toString i + "<c-w>w";
     description = "Move to window " + toString i;
-  }) (lib.range 1 9)))
+  }) (lib.range 1 9))
       # TIP: Disable arrow keys in normal mode
       /*
       {
