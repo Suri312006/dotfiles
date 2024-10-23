@@ -93,7 +93,6 @@
 nil-ls = {enable = true;};
         marksman = {enable = true;};
         terraformls = {enable = true;};
-        tsserver = {enable = true;};
         ansiblels = {enable = true;};
         jsonls = {enable = true;};
 
