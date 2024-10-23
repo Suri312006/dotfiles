@@ -3,5 +3,5 @@
         ./gruvbox.nix
         ./lualine.nix
         ./headlines.nix
-    ]
+    ];
 }
