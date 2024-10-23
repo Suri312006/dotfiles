@@ -387,14 +387,6 @@
   # Search and replace the word under cursor with confirmation
   {
     mode = "n";
-    key = "<leader>s";
-    action = ":%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>";
-    description = "Search and replace the word under cursor";
-  }
-
-  # Make the current file executable
-  {
-    mode = "n";
     key = "<leader>x";
     action = "<cmd>!chmod +x %<CR>";
     options = { silent = true; };
@@ -495,6 +487,7 @@ vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 
     '';
