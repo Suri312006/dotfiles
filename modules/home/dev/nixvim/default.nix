@@ -472,7 +472,10 @@ vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap 
 --remap window movement
 -- vim.keymap.set("n", "qk", "<C-w>k")
 -- vim: ts=2 sts=2 sw=2 et
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
+vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
     '';
   };
 }

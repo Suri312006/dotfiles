@@ -9,7 +9,11 @@
         window = {
           mappings = {
             "<leader>f" = "close_window";
+            "x" = "open_split";
+            "v" = "open_vsplit"
           };
+          position = "right";
+          width = 30;
         };
       };
     };
