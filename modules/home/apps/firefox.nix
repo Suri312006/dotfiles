@@ -1,6 +1,4 @@
-{ pkgs, ... }: {
-
-
+{pkgs, ...}: {
   programs.firefox.enable = true;
 
   home = {
@@ -8,6 +6,4 @@
       BROWSER = "firefox";
     };
   };
-
-
 }

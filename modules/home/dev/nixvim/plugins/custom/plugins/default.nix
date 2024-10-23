@@ -8,6 +8,7 @@
         ./todo-comments.nix
         ./undotree.nix
         ./conform.nix
+        ./lazygit.nix
 
     ];
 }

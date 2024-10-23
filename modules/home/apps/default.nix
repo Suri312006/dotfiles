@@ -1,11 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # holds default application packages
 
   imports = [
     ./firefox.nix
     ./spotify.nix
   ];
-
 
   home.packages = with pkgs; [
     discord
@@ -23,13 +22,9 @@
     speedtest-cli
     zed-editor
 
-
-# rust stuff
-tokei
-dust
-eza 
-
-
-
+    # rust stuff
+    tokei
+    dust
+    eza
   ];
 }
