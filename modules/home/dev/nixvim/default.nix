@@ -166,13 +166,24 @@
       number = true;
       # You can also add relative line numbers, to help with jumping.
       #  Experiment for yourself to see if you like it!
-      #relativenumber = true
+      relativenumber = true
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
 
       # Don't show the mode, since it's already in the statusline
       showmode = false;
+
+      tapstop = 4;
+      softtabstop = 4;
+      shiftwidth = 4;
+      expandtab = 4;
+      smartindent = 4;
+
+      wrap = true;
+
+      hlsearch = false;
+      incsearch = false;
 
       #  See `:help 'clipboard'`
       clipboard = {
@@ -254,6 +265,13 @@
           desc = "Exit terminal mode";
         };
       }
+# Loop through window numbers 1 to 9 and map ',' followed by the number to switch windows
+  (lib.mkIf (window >= 1 && window <= 9) (map (i: {
+    mode = "n";
+    key = "," + toString i;
+    action = toString i + "<c-w>w";
+    description = "Move to window " + toString i;
+  }) (lib.range 1 9)))
       # TIP: Disable arrow keys in normal mode
       /*
       {
@@ -281,6 +299,105 @@
       #  Use CTRL+<hjkl> to switch between windows
       #
       #  See `:help wincmd` for a list of all window commands
+  # Visual mode move lines with J and K
+  {
+    mode = "v";
+    key = "J";
+    action = ":m '>+1<CR>gv=gv";
+  }
+  {
+    mode = "v";
+    key = "K";
+    action = ":m '<-2<CR>gv=gv";
+  }
+
+  # Normal mode J to join lines but keep cursor in position
+  {
+    mode = "n";
+    key = "J";
+    action = "mzJ`z";
+  }
+
+  # Scroll ctrl+d and ctrl+u while keeping cursor in the middle
+  {
+    mode = "n";
+    key = "<C-d>";
+    action = "<C-d>zz";
+  }
+  {
+    mode = "n";
+    key = "<C-u>";
+    action = "<C-u>zz";
+  }
+
+  # Keep search terms in the middle of the screen
+  {
+    mode = "n";
+    key = "n";
+    action = "nzzzv";
+  }
+  {
+    mode = "n";
+    key = "N";
+    action = "Nzzzv";
+  }
+
+  # Paste over selection without replacing the buffer content
+  {
+    mode = "x";
+    key = "<leader>p";
+    action = [["_dP"]];
+  }
+
+  # Yank to system clipboard
+  {
+    mode = ["n", "v"];
+    key = "<leader>y";
+    action = [["+y"]];
+  }
+  {
+    mode = "n";
+    key = "<leader>Y";
+    action = [["+Y"]];
+  }
+
+  # Paste from system clipboard
+  {
+    mode = ["n", "v"];
+    key = "<leader>p";
+    action = [["+p"]];
+  }
+  {
+    mode = ["n", "v"];
+    key = "<leader>P";
+    action = [["+P"]];
+  }
+
+  # Delete into black hole register
+  {
+    mode = ["n", "v"];
+    key = "<leader>d";
+    action = [["_d"]];
+  }
+
+  # Map Ctrl+c to behave like escape in insert mode
+  {
+    mode = "i";
+    key = "<C-c>";
+    action = "<Esc>";
+  }
+
+  # Disable Q and q in normal mode
+  {
+    mode = "n";
+    key = "Q";
+    action = "<nop>";
+  }
+  {
+    mode = "n";
+    key = "q";
+    action = "<nop>";
+  }
       {
         mode = "n";
         key = "<C-h>";
@@ -313,6 +430,31 @@
           desc = "Move focus to the upper window";
         };
       }
+  # Search and replace the word under cursor with confirmation
+  {
+    mode = "n";
+    key = "<leader>s";
+    action = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]];
+    description = "Search and replace the word under cursor";
+  }
+
+  # Make the current file executable
+  {
+    mode = "n";
+    key = "<leader>x";
+    action = "<cmd>!chmod +x %<CR>";
+    options = { silent = true; };
+    description = "Make the current file executable";
+  }
+
+  # Insert Go error handling block
+  {
+    mode = "n";
+    key = "<leader>ge";
+    action = "iif err != nil {\n \n}<Esc> kk i";
+    options = { noremap = true; silent = true; };
+    description = "Insert Go error handling block";
+  }
     ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html

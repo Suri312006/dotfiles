@@ -8,7 +8,7 @@
       filesystem = {
         window = {
           mappings = {
-            "\\" = "close_window";
+            "<leader>f" = "close_window";
           };
         };
       };
@@ -17,7 +17,7 @@
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       {
-        key = "\\";
+        key = "<leader>f";
         action = "<cmd>Neotree reveal<cr>";
         options = {
           desc = "NeoTree reveal";
