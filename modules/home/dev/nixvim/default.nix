@@ -266,13 +266,6 @@
         };
       }
 # Loop through window numbers 1 to 9 and map ',' followed by the number to switch windows
-  (lib.mkIf (window >= 1 && window <= 9) (map (i: {
-    mode = "n";
-    key = "," + toString i;
-    action = toString i + "<c-w>w";
-    description = "Move to window " + toString i;
-  }) (lib.range 1 9)))
-      # TIP: Disable arrow keys in normal mode
       /*
       {
         mode = "n";
@@ -472,6 +465,13 @@
     description = "Insert Go error handling block";
   }
     ];
+
+    keybinds += lib.map (i: {
+  mode = "n";
+  key = "," + toString i;
+  action = toString i + "<c-w>w";
+  description = "Move to window " + toString i;
+}) (lib.range 1 9);
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
