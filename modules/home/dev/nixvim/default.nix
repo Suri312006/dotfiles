@@ -474,5 +474,5 @@ vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap 
 -- vim: ts=2 sts=2 sw=2 et
 
     '';
-  };
+  }
 }
