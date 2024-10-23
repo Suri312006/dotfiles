@@ -475,7 +475,7 @@ vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
-vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
+-- vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
     '';
   };
 }
