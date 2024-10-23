@@ -174,7 +174,7 @@
       # Don't show the mode, since it's already in the statusline
       showmode = false;
 
-      tapstop = 4;
+      # tapstop = 4;
       softtabstop = 4;
       shiftwidth = 4;
       expandtab = true;
