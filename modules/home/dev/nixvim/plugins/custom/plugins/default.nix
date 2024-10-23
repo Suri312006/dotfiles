@@ -7,6 +7,7 @@
         ./rustaceanvim.nix
         ./todo-comments.nix
         ./undotree.nix
+        ./conform.nix
 
     ];
 }

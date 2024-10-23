@@ -69,15 +69,15 @@
       #  - settings: Override the default settings passed when initializing the server.
       #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       servers = {
-        # clangd = {
-        #  enable = true;
-        #}
-        # gopls = {
-        #  enable = true;
-        #}
-        # pyright = {
-        #  enable = true;
-        #}
+        clangd = {
+         enable = true;
+        }
+        gopls = {
+         enable = true;
+        }
+        pyright = {
+         enable = true;
+        }
         # rust_analyzer = {
         #  enable = true;
         #}
@@ -87,9 +87,15 @@
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
         #
         # But for many setups the LSP (`tsserver`) will work just fine
-        # tsserver = {
-        #  enable = true;
-        #}
+        tsserver = {
+         enable = true;
+        }
+nil-ls = {enable = true;};
+        marksman = {enable = true;};
+        terraformls = {enable = true;};
+        tsserver = {enable = true;};
+        ansiblels = {enable = true;};
+        jsonls = {enable = true;};
 
         lua_ls = {
           enable = true;

@@ -11,7 +11,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>ut";
+      key = "<leader>u";
       action = "<cmd>UndotreeToggle<CR>";
       options = {
         silent = true;

@@ -56,6 +56,13 @@
             desc = "[S]earch [F]iles";
           };
         };
+        "<leader>gf" = {
+          mode = "n";
+          action = "git_files";
+          options = {
+            desc = "[G]it [F]iles";
+          };
+        };
         "<leader>ss" = {
           mode = "n";
           action = "builtin";
