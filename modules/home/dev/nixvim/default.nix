@@ -334,61 +334,6 @@
     key = "N";
     action = "Nzzzv";
   }
-
-  # Paste over selection without replacing the buffer content
-  {
-    mode = "x";
-    key = "<leader>p";
-    action = [["_dP"]];
-  }
-
-  # Yank to system clipboard
-  {
-    mode = "n";
-    key = "<leader>y";
-    action = [["+y"]];
-  }{
-    mode = "v";
-    key = "<leader>y";
-    action = [["+y"]];
-  }
-  {
-    mode = "n";
-    key = "<leader>Y";
-    action = [["+Y"]];
-  }
-
-  # Paste from system clipboard
-  {
-    mode = "v";
-    key = "<leader>p";
-    action = [["+p"]];
-  }{
-    mode = "n";
-    key = "<leader>p";
-    action = [["+p"]];
-  }
-  {
-    mode = "v";
-    key = "<leader>P";
-    action = [["+P"]];
-  }{
-    mode = "n";
-    key = "<leader>P";
-    action = [["+P"]];
-  }
-
-  # Delete into black hole register
-  {
-    mode = "n"; 
-    key = "<leader>d";
-    action = [["_d"]];
-  }{
-    mode = "v"; 
-    key = "<leader>d";
-    action = [["_d"]];
-  }
-
   # Map Ctrl+c to behave like escape in insert mode
   {
     mode = "i";
@@ -537,6 +482,19 @@ for i = 1, 9 do
   vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
 end
 vim.keymap.set("n", "<leader>lh", vim.lsp.inlay_hint.enable)
+
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland, yanks to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
+vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
+
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
 
 
     '';
