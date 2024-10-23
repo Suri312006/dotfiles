@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+    programs.nixvim = {
   config = {
     extraConfigLuaPre =
       # lua
@@ -168,4 +169,5 @@
       };
     };
   };
+};
 }
