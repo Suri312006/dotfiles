@@ -237,14 +237,14 @@
       };
 
       master = {
-        new_is_master = 1;
+        # new_is_master = 1;
         new_on_top = 1;
         mfact = 0.5;
       };
 
       general = {
-        sensitivity = 1.00;
-        apply_sens_to_raw = 1;
+        # sensitivity = 1.00;
+        # apply_sens_to_raw = 1;
         gaps_in = 4;
         gaps_out = 8;
         border_size = 2;
@@ -354,7 +354,7 @@
         # chugs perf but butter smooth
         vfr = 0;
         enable_swallow = true;
-        no_direct_scanout = true; #for fullscreen games
+        # no_direct_scanout = true; #for fullscreen games
         focus_on_activate = false;
         swallow_regex = "^(kitty)$";
         #disable_autoreload = true
