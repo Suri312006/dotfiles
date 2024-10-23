@@ -238,7 +238,7 @@
       scrolloff = 10;
 
       # See `:help hlsearch`
-      hlsearch = true;
+      # hlsearch = true;
     };
 
     # [[ Basic Keymaps ]]
