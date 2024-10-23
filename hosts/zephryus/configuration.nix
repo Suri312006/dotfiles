@@ -35,7 +35,7 @@
 
   # valgrant
   # Minimal configuration for NFS support with Vagrant.
-  services.nfs.server.enable = true;
+  #services.nfs.server.enable = true;
 
   # Add firewall exception for VirtualBox provider 
   networking.firewall.extraCommands = ''
@@ -47,11 +47,6 @@
     allowedTCPPorts = [ 0080 8080 ];
     allowedUDPPorts = [ 8080 0080 ];
   };
-
-  environment.systemPackages = with pkgs; [
-    vagrant
-  ];
-
 
 
   environment.sessionVariables = {
