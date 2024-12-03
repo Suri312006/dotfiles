@@ -9,7 +9,7 @@
     ./pywal.nix
     ./mako.nix
     # ./eww
-    ./ags
+    ./ags.nix
     ./waybar
   ];
 
