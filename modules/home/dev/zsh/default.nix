@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   zsh_history_fix = pkgs.writeShellScriptBin "zsh_history_fix" ''
     mv ~/.zsh_history ~/.zsh_history_bad
     strings ~/.zsh_history_bad > ~/.zsh_history
@@ -7,16 +6,10 @@ let
     rm ~/.zsh_history_bad
 
   '';
-
-
-in
-{
-
+in {
   programs.zoxide.enable = true;
 
-
-  home.packages = with pkgs;
-    [ fd eza zsh_history_fix ];
+  home.packages = with pkgs; [fd eza zsh_history_fix];
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -24,8 +17,8 @@ in
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
-shellAliases.n = "nvim .";
-shellAliases.nv = "nvim";
+    shellAliases.n = "nvim .";
+    shellAliases.nv = "nvim";
 
     # oh my zsh lol
     plugins = [
@@ -48,15 +41,11 @@ shellAliases.nv = "nvim";
         src = pkgs.zsh-vi-mode;
         file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
       }
-
-
     ];
 
-
-
-    oh-my-zsh = {
-      enable = true;
-    };
+    # oh-my-zsh = {
+    #   enable = true;
+    # };
     shellAliases = {
       re = ''
         VERSION=$(($(readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)) 
@@ -68,29 +57,24 @@ shellAliases.nv = "nvim";
       fcd = ''cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
 
       l = ''exa'';
-
     };
     initExtra = ''
-            eval `ssh-agent` &> /dev/null
-            ssh-add ~/.ssh/github_private &> /dev/null
-            ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
-            ssh-add ~/.ssh/connectify &> /dev/null
-            eval "$(zoxide init zsh)"     
+      eval `ssh-agent` &> /dev/null
+      ssh-add ~/.ssh/github_private &> /dev/null
+      ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+      ssh-add ~/.ssh/connectify &> /dev/null
+      eval "$(zoxide init zsh)"
 
-
+      eval "$(starship init zsh)"
 
       function y() {
-      	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-      	yazi "$@" --cwd-file="$tmp"
-      	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-      		cd -- "$cwd"
-      	fi
-      	rm -f -- "$tmp"
+          local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+          yazi "$@" --cwd-file="$tmp"
+          if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+                  cd -- "$cwd"
+          fi
+          rm -f -- "$tmp"
       }
     '';
-
   };
-
 }
-
-
