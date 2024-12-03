@@ -34,8 +34,8 @@
         mapping = {
           # Select the [n]ext item
           "<C-n>" = "cmp.mapping.select_next_item()";
-          "<down>" = "cmp.mapping.select_prev_item()";
-          "<up>" = "cmp.mapping.select_next_item()";
+          "<up>" = "cmp.mapping.select_prev_item()";
+          "<dowm>" = "cmp.mapping.select_next_item()";
           # Select the [p]revious item
           "<C-p>" = "cmp.mapping.select_prev_item()";
           # Scroll the documentation window [b]ack / [f]orward
