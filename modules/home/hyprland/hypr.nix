@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # imports = [
   #   inputs.hyprland.homeManagerModules.default
   # ];
@@ -14,7 +18,6 @@
     settings = {
       "$mod" = "SUPER";
 
-
       exec-once = [
         "swww query || swww-daemon --format xrgb"
         "swww ~/Pictures/curr_wall.png"
@@ -22,7 +25,6 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "ags &"
-
 
         # Polkit (Polkit Gnome / KDE)
         "suri_polkit_init &"
@@ -110,7 +112,6 @@
         "move 72% 7% = title:^(Picture-in-Picture)$"
         # "move 72% 7% = title:^(Firefox)$"
 
-
         #screen sharing stuff
         "opacity 0.0 override,class:^(xwaylandvideobridge)$"
         "noanim,class:^(xwaylandvideobridge)$"
@@ -125,7 +126,6 @@
         "noinitialfocus,class:^(CoupledCats)$"
         "noshadow,class:^(CoupledCats)$"
       ];
-
 
       bind =
         [
@@ -180,23 +180,18 @@
           #TODO: figure out screenshotting
           # screenshot with swappy (another screenshot tool)""
           #"$mod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -"
-
-
         ]
         ++ (
           # workspaces
           # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
           builtins.concatLists (builtins.genList
             (
-              x:
-              let
-                ws =
-                  let
-                    c = (x + 1) / 10;
-                  in
+              x: let
+                ws = let
+                  c = (x + 1) / 10;
+                in
                   builtins.toString (x + 1 - (c * 10));
-              in
-              [
+              in [
                 "$mod, ${ws}, workspace, ${toString (x + 1)}"
                 "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
                 "$mod CTRL, ${ws}, movetoworkspacesilent, ${toString (x + 1)}"
@@ -271,7 +266,7 @@
         shadow_range = 6;
         shadow_render_power = 1;
         # col.shadow = $color2
-        "col.shadow_inactive" = "0x50000000";
+        # "col.shadow_inactive" = "0x50000000";
 
         blur = {
           enabled = true;
@@ -298,7 +293,6 @@
         ];
 
         animation = [
-
           "windowsIn, 1, 1, winIn, popin"
           "windowsOut, 1, 1, winOut, popin"
           "windowsMove, 1, 1, myBezier, popin"
@@ -307,10 +301,8 @@
           "fade, 1, 5, overshot"
           "workspaces, 1, 2, myBezier"
           "windows, 1, 5, bounce, popin"
-
         ];
       };
-
 
       input = {
         kb_layout = "us";
@@ -370,8 +362,6 @@
       xwayland = {
         force_zero_scaling = true;
       };
-
     };
   };
 }
-
