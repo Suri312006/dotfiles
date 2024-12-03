@@ -1,10 +1,11 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./kitty
     ./zsh
     ./nvim.nix
-./nixvim
+    ./nixvim
     ./zellij
+    ./starship
 
     ./git.nix
     ./wezterm
@@ -24,19 +25,14 @@
 
     python3
 
-
     # gnumake42
     # llvmPackages_18.libcxxClang
-
-
 
     # c stuff
 
     cmake
     ninja
     clang13Stdenv
-
-
 
     valgrind
 
@@ -64,12 +60,9 @@
     gpp # c++ module?, decrypt
     gecode # c++ module
 
-
     vscode
 
-
     tshark
-
 
     air
 
@@ -78,6 +71,4 @@
     just
     # rust-analyzer
   ];
-
-
 }
