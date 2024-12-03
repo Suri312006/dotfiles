@@ -10,7 +10,12 @@
 #     plugins.lualine.enable = true;
 #   };
 # }
-{ pkgs, inputs, lib,... }: {
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     # NOTE: The first thing you will want to do is uncommented on of the three imports below
     # depending on which module you chose to use to install Nixvim.
@@ -134,7 +139,6 @@
     # Don't forget to disable the colorschemes you arent using
     #
     # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {
@@ -256,7 +260,7 @@
           desc = "Exit terminal mode";
         };
       }
-# Loop through window numbers 1 to 9 and map ',' followed by the number to switch windows
+      # Loop through window numbers 1 to 9 and map ',' followed by the number to switch windows
       /*
       {
         mode = "n";
@@ -283,66 +287,66 @@
       #  Use CTRL+<hjkl> to switch between windows
       #
       #  See `:help wincmd` for a list of all window commands
-  # Visual mode move lines with J and K
-  {
-    mode = "v";
-    key = "J";
-    action = ":m '>+1<CR>gv=gv";
-  }
-  {
-    mode = "v";
-    key = "K";
-    action = ":m '<-2<CR>gv=gv";
-  }
+      # Visual mode move lines with J and K
+      {
+        mode = "v";
+        key = "J";
+        action = ":m '>+1<CR>gv=gv";
+      }
+      {
+        mode = "v";
+        key = "K";
+        action = ":m '<-2<CR>gv=gv";
+      }
 
-  # Normal mode J to join lines but keep cursor in position
-  {
-    mode = "n";
-    key = "J";
-    action = "mzJ`z";
-  }
+      # Normal mode J to join lines but keep cursor in position
+      {
+        mode = "n";
+        key = "J";
+        action = "mzJ`z";
+      }
 
-  # Scroll ctrl+d and ctrl+u while keeping cursor in the middle
-  {
-    mode = "n";
-    key = "<C-d>";
-    action = "<C-d>zz";
-  }
-  {
-    mode = "n";
-    key = "<C-u>";
-    action = "<C-u>zz";
-  }
+      # Scroll ctrl+d and ctrl+u while keeping cursor in the middle
+      {
+        mode = "n";
+        key = "<C-d>";
+        action = "<C-d>zz";
+      }
+      {
+        mode = "n";
+        key = "<C-u>";
+        action = "<C-u>zz";
+      }
 
-  # Keep search terms in the middle of the screen
-  {
-    mode = "n";
-    key = "n";
-    action = "nzzzv";
-  }
-  {
-    mode = "n";
-    key = "N";
-    action = "Nzzzv";
-  }
-  # Map Ctrl+c to behave like escape in insert mode
-  {
-    mode = "i";
-    key = "<C-c>";
-    action = "<Esc>";
-  }
+      # Keep search terms in the middle of the screen
+      {
+        mode = "n";
+        key = "n";
+        action = "nzzzv";
+      }
+      {
+        mode = "n";
+        key = "N";
+        action = "Nzzzv";
+      }
+      # Map Ctrl+c to behave like escape in insert mode
+      {
+        mode = "i";
+        key = "<C-c>";
+        action = "<Esc>";
+      }
 
-  # Disable Q and q in normal mode
-  {
-    mode = "n";
-    key = "Q";
-    action = "<nop>";
-  }
-  {
-    mode = "n";
-    key = "q";
-    action = "<nop>";
-  }
+      # Disable Q and q in normal mode
+      {
+        mode = "n";
+        key = "Q";
+        action = "<nop>";
+      }
+      {
+        mode = "n";
+        key = "q";
+        action = "<nop>";
+      }
       {
         mode = "n";
         key = "<C-h>";
@@ -440,43 +444,46 @@
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
     extraConfigLuaPost = ''
-for i = 1, 9 do
+      for i = 1, 9 do
 
-  local lhs = "," .. i
+        local lhs = "," .. i
 
-  local rhs = i .. "<c-w>w"
-  vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
-end
-vim.keymap.set("n", "<leader>lh", vim.lsp.inlay_hint.enable)
+        local rhs = i .. "<c-w>w"
+        vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
+      end
+      vim.keymap.set("n", "<leader>lh", vim.lsp.inlay_hint.enable)
 
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+      -- greatest remap ever
+      vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- next greatest remap ever : asbjornHaland, yanks to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+      -- next greatest remap ever : asbjornHaland, yanks to system clipboard
+      vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+      vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
-vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
+      vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
+      vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+      vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+      vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- make scripts executabe from vim
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+      -- make scripts executabe from vim
+      vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- vim.keymap.set("n", "<leader>e", "")
--- go error
-vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap = true, silent = true })
---remap window movement
--- vim.keymap.set("n", "qk", "<C-w>k")
--- vim: ts=2 sts=2 sw=2 et
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+      -- vim.keymap.set("n", "<leader>e", "")
+      -- go error
+      vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap = true, silent = true })
+      --remap window movement
+      -- vim.keymap.set("n", "qk", "<C-w>k")
+      -- vim: ts=2 sts=2 sw=2 et
+      vim.o.background = "dark" -- or "light" for light mode
+      vim.cmd([[colorscheme gruvbox]])
 
--- vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
+      vim.keymap.set('n', '<leader>e', function()
+        vim.diagnostic.open_float(nil, { focus = false })
+      end, { desc = 'Show diagnostics floating window' })
+
+      -- vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
     '';
   };
 }
-
