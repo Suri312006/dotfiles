@@ -188,14 +188,6 @@
               desc = "LSP: [W]orkspace [S]ymbols";
             };
           }
-          {
-            mode = "n";
-            key = "<leader>we";
-            action.__raw = "vim.diagnostic.open_float(nil, { focus = false })";
-            options = {
-              desc = "Show Diagnostics Floating Window";
-            };
-          }
         ];
 
         lspBuf = {
