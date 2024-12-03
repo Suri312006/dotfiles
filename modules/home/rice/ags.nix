@@ -35,4 +35,6 @@
       inputs.ags.packages.${pkgs.system}.auth
     ];
   };
+
+  home.file.".config/ags".source = ./ags;
 }
