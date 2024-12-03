@@ -1,11 +1,16 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./qt.nix
     ./gtk.nix
     ./pywal.nix
-    ./eww
     ./mako.nix
-    ./ags.nix
+    # ./eww
+    # ./ags.nix
+    ./waybar
   ];
 
   pywal.enable = false;
@@ -23,9 +28,8 @@
     };
   };
 
-
   # stylix.autoEnable = true;
   # stylix.targets.zellij.enable = true;
 
-  # home.file."~/Pictures/Wallpaper.png" = 
+  # home.file."~/Pictures/Wallpaper.png" =
 }
