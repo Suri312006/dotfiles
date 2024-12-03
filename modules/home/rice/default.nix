@@ -21,12 +21,12 @@
     fastfetch
   ];
 
-  home.file."Pictures/Wallpapers" = {
-    source = builtins.fetchGit {
-      url = "https://github.com/suri312006/wallpaperbank";
-      rev = "5c549a4d63e4d15506c2648c3bdc07a8360bbeaa";
-    };
-  };
+  # home.file."Pictures/Wallpapers" = {
+  # source = builtins.fetchGit {
+  #   url = "https://github.com/suri312006/wallpaperbank";
+  #   rev = "5c549a4d63e4d15506c2648c3bdc07a8360bbeaa";
+  # };
+  # };
 
   # stylix.autoEnable = true;
   # stylix.targets.zellij.enable = true;
