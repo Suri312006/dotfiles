@@ -262,7 +262,7 @@
         dim_inactive = true;
         dim_strength = 0.1;
 
-        drop_shadow = true;
+        # drop_shadow = true;
         shadow_range = 6;
         shadow_render_power = 1;
         # col.shadow = $color2
