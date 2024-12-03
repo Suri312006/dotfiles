@@ -4,7 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-  zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
@@ -14,7 +14,7 @@
     nh.url = "github:viperML/nh";
 
     spicetify-nix = {
-url = "github:Gerg-L/spicetify-nix";
+      url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,44 +34,47 @@ url = "github:Gerg-L/spicetify-nix";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixvim = {
-        url = "github:nix-community/nixvim";
-        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    matugen.url = "github:InioX/Matugen?rev=0bd628f263b1d97f238849315f2ce3ab4439784e";
+    astal = {
+      url = "github:Aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , stylix
-    , ...
-    } @ inputs:
-    let
-      inherit (self) outputs;
-    in
-    {
-      # NixOS configuration entrypoint
-      # Available through 'nixos-rebuild --flake .#your-hostname'
-      nixosConfigurations = {
-        # FIXME replace with your hostname
-        zephryus = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          # > Our main nixos configuration file <
-          modules = [ stylix.nixosModules.stylix ./hosts/zephryus ];
-        };
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+  in {
+    # NixOS configuration entrypoint
+    # Available through 'nixos-rebuild --flake .#your-hostname'
+    nixosConfigurations = {
+      # FIXME replace with your hostname
+      zephryus = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        # > Our main nixos configuration file <
+        modules = [stylix.nixosModules.stylix ./hosts/zephryus];
       };
-
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      # homeConfigurations = {
-      #   # FIXME replace with your username@hostname
-      #   "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
-      #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-      #     extraSpecialArgs = { inherit inputs outputs; };
-      #     # > Our main home-manager configuration file <
-      #     modules = [ ./home-manager/home.nix ];
-      #   };
-      # };
     };
+
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake .#your-username@your-hostname'
+    # homeConfigurations = {
+    #   # FIXME replace with your username@hostname
+    #   "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+    #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+    #     extraSpecialArgs = { inherit inputs outputs; };
+    #     # > Our main home-manager configuration file <
+    #     modules = [ ./home-manager/home.nix ];
+    #   };
+    # };
+  };
 }
