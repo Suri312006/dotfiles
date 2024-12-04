@@ -52,7 +52,7 @@
   // === Modules ===
   "tray": {
     "icon-size": 12,
-    "spacing": 3
+    "spacing": 5
   },
   "custom/ws": {
     "format": "  ",
