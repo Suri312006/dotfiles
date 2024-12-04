@@ -25,11 +25,11 @@
 @define-color workspaces      #181825;
 
 @define-color cpuinfo         #181825;
-@define-color memory          #313244;
+@define-color memory          #1e1e2e;
 @define-color cpu             #313244;
 @define-color distro-fg       #000000;
 @define-color distro-bg       #9399b2;
-@define-color time            #1e1e2e;
+@define-color time            #313244;
 @define-color date            #1e1e2e;
 @define-color tray            #181825;
 
