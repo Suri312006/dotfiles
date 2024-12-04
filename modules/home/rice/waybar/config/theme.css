@@ -6,6 +6,54 @@
 
 /* Main Colors */
 
+@define-color main-fg         #458588; /* Gruvbox light text color */
+@define-color main-bg         #3c3836; /* Gruvbox dark background */
+@define-color main-br         #d5c4a1; /* Gruvbox subtle border color */
+
+@define-color active-bg       #fabd2f; /* Gruvbox yellow for active elements */
+@define-color active-fg       #282828; /* Match active background for contrast */
+
+@define-color hover-bg        #504945; /* Gruvbox darker gray for hover */
+@define-color hover-fg        rgba(235, 219, 178, 0.75); /* Hover with transparency */
+
+@define-color white           #fbf1c7; /* Gruvbox lightest shade */
+@define-color black           #1d2021; /* Gruvbox darkest shade */
+
+/* Module Colors */
+
+@define-color module-fg       #d79921; /* Gruvbox yellow for module text */
+@define-color workspaces      #3c3836; /* Gruvbox mid-gray */
+
+@define-color cpuinfo         #3c3836; /* Matching workspace background */
+@define-color memory          #504945; /* Slightly lighter for memory module */
+@define-color cpu             #665c54; /* Gruvbox neutral medium */
+@define-color distro-fg       #1d2021; /* Very dark for distro text */
+@define-color distro-bg       #b16286; /* Gruvbox purple for distro background */
+@define-color time            #665c54; /* Neutral medium tone for time */
+@define-color date            #504945; /* Subtle date color */
+@define-color tray            #3c3836; /* Consistent dark for tray */
+
+@define-color pulseaudio      #3c3836; /* Reuse workspace color for uniformity */
+@define-color backlight       #504945; /* Neutral subtle tone */
+@define-color battery         #665c54; /* Slightly lighter gray */
+@define-color power           #98971a; /* Gruvbox green for power */
+
+/* State Colors */
+
+@define-color good            #b8bb26; /* Gruvbox green for good state */
+@define-color warning         #fabd2f; /* Gruvbox yellow for warning */
+@define-color critical        #fb4934; /* Gruvbox red for critical */
+@define-color full            #8ec07c; /* Gruvbox aqua for full battery */
+@define-color charging        #d3869b; /* Gruvbox pink for charging state */
+
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+/* Main Colors */
+
 @define-color main-fg         #8ec07c; /* Gruvbox aqua as the main font color */
 @define-color main-bg         #282828; /* Gruvbox dark background */
 @define-color main-br         #d5c4a1; /* Gruvbox subtle border color */

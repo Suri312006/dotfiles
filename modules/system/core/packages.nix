@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }: {
-
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment = {
     systemPackages = with pkgs; [
       btop
@@ -14,6 +17,8 @@
       libnotify
       gnupg
       xfce.thunar
+
+      lm_sensors
 
       #stuff for the thing
       libsForQt5.qt5.qtquickcontrols2
@@ -31,7 +36,6 @@
       pavucontrol
 
       lshw
-
 
       gnumake42
       #apparenly this is java support
