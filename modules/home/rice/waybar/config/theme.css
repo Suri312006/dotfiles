@@ -6,42 +6,45 @@
 
 /* Main Colors */
 
-@define-color main-fg         #cdd6f4;
-@define-color main-bg         #11111b;
-@define-color main-br         #cdd6f4;
+@define-color main-fg         #ebdbb2; /* Gruvbox fg */
+@define-color main-bg         #282828; /* Gruvbox bg */
+@define-color main-br         #ebdbb2; /* Match fg */
 
-@define-color active-bg       #9399b2;
-@define-color active-fg       #11111b;
+/* Active Colors */
+@define-color active-bg       #d79921; /* Gruvbox yellow */
+@define-color active-fg       #282828; /* Match bg */
 
-@define-color hover-bg        #313244;
-@define-color hover-fg        rgba(205, 214, 244, 0.75);
+/* Hover Colors */
+@define-color hover-bg        #504945; /* Gruvbox gray */
+@define-color hover-fg        rgba(235, 219, 178, 0.75); /* Transparent fg */
 
-@define-color white           #ffffff;
-@define-color black           #000000;
+/* Basic Colors */
+@define-color white           #fbf1c7; /* Gruvbox lightest tone */
+@define-color black           #1d2021; /* Gruvbox darkest tone */
 
 /* Module Colors */
 
-@define-color module-fg       #f5e0dc;
-@define-color workspaces      #181825;
+@define-color module-fg       #d3869b; /* Gruvbox pink */
+@define-color workspaces      #282828; /* Match bg */
 
-@define-color cpuinfo         #181825;
-@define-color memory          #1e1e2e;
-@define-color cpu             #313244;
-@define-color distro-fg       #000000;
-@define-color distro-bg       #9399b2;
-@define-color time            #313244;
-@define-color date            #1e1e2e;
-@define-color tray            #181825;
+@define-color cpuinfo         #282828; /* Match bg */
+@define-color memory          #3c3836; /* Gruvbox darker gray */
+@define-color cpu             #504945; /* Gruvbox gray */
+@define-color distro-fg       #1d2021; /* Match darkest tone */
+@define-color distro-bg       #8ec07c; /* Gruvbox aqua */
+@define-color time            #504945; /* Match gray */
+@define-color date            #3c3836; /* Match darker gray */
+@define-color tray            #282828; /* Match bg */
 
-@define-color pulseaudio      #181825;
-@define-color backlight       #1e1e2e;
-@define-color battery         #313244;
-@define-color power           #9399b2;
+@define-color pulseaudio      #282828; /* Match bg */
+@define-color backlight       #3c3836; /* Match darker gray */
+@define-color battery         #504945; /* Match gray */
+@define-color power           #d79921; /* Match yellow */
 
 /* State Colors */
 
-@define-color good            #f5e0dc;
-@define-color warning         #f9e2af;
-@define-color critical        #f38ba8;
-@define-color full            #a6e3a1;
-@define-color charging        #cdd6f4;
+@define-color good            #b8bb26; /* Gruvbox green */
+@define-color warning         #fabd2f; /* Gruvbox orange */
+@define-color critical        #fb4934; /* Gruvbox red */
+@define-color full            #b8bb26; /* Match green */
+@define-color charging        #ebdbb2; /* Match fg */
