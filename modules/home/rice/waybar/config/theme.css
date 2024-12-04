@@ -6,9 +6,9 @@
 
 /* Main Colors */
 
-@define-color main-fg         #ebdbb2; /* Gruvbox fg */
+@define-color main-fg         #b8bb26; /* Gruvbox green */
 @define-color main-bg         #282828; /* Gruvbox bg */
-@define-color main-br         #ebdbb2; /* Match fg */
+@define-color main-br         #b8bb26; /* Match green */
 
 /* Active Colors */
 @define-color active-bg       #d79921; /* Gruvbox yellow */
@@ -16,7 +16,7 @@
 
 /* Hover Colors */
 @define-color hover-bg        #504945; /* Gruvbox gray */
-@define-color hover-fg        rgba(235, 219, 178, 0.75); /* Transparent fg */
+@define-color hover-fg        rgba(184, 187, 38, 0.75); /* Transparent green */
 
 /* Basic Colors */
 @define-color white           #fbf1c7; /* Gruvbox lightest tone */
@@ -30,7 +30,7 @@
 @define-color cpuinfo         #282828; /* Match bg */
 @define-color memory          #3c3836; /* Gruvbox darker gray */
 @define-color cpu             #504945; /* Gruvbox gray */
-@define-color distro-fg       #1d2021; /* Match darkest tone */
+@define-color distro-fg       #fe8019; /* Gruvbox orange */
 @define-color distro-bg       #8ec07c; /* Gruvbox aqua */
 @define-color time            #504945; /* Match gray */
 @define-color date            #3c3836; /* Match darker gray */
@@ -47,4 +47,4 @@
 @define-color warning         #fabd2f; /* Gruvbox orange */
 @define-color critical        #fb4934; /* Gruvbox red */
 @define-color full            #b8bb26; /* Match green */
-@define-color charging        #ebdbb2; /* Match fg */
+@define-color charging        #b8bb26; /* Match green */
