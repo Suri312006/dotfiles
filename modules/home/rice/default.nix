@@ -11,6 +11,7 @@
     # ./eww
     ./ags.nix
     ./waybar
+    ./rofi
   ];
 
   pywal.enable = false;
