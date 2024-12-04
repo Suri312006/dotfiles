@@ -11,7 +11,7 @@
 @define-color main-br         #ebdbb2; /* Match fg */
 
 /* Active Colors */
-@define-color active-bg       #d79921; /* Gruvbox yellow */
+@define-color active-bg       #b8bb26; /* Gruvbox green */
 @define-color active-fg       #282828; /* Match bg */
 
 /* Hover Colors */
@@ -24,14 +24,14 @@
 
 /* Module Colors */
 
-@define-color module-fg       #d3869b; /* Gruvbox pink */
+@define-color module-fg       #95971a; /* Gruvbox tark green */
 @define-color workspaces      #282828; /* Match bg */
 
 @define-color cpuinfo         #282828; /* Match bg */
 @define-color memory          #3c3836; /* Gruvbox darker gray */
 @define-color cpu             #504945; /* Gruvbox gray */
 @define-color distro-fg       #1d2021; /* Match darkest tone */
-@define-color distro-bg       #8ec07c; /* Gruvbox aqua */
+@define-color distro-bg       #458588; /* Gruvbox blue */
 @define-color time            #504945; /* Match gray */
 @define-color date            #3c3836; /* Match darker gray */
 @define-color tray            #282828; /* Match bg */
@@ -39,7 +39,7 @@
 @define-color pulseaudio      #282828; /* Match bg */
 @define-color backlight       #3c3836; /* Match darker gray */
 @define-color battery         #504945; /* Match gray */
-@define-color power           #d79921; /* Match yellow */
+@define-color power           #fe8019; /* Match yellow */
 
 /* State Colors */
 
