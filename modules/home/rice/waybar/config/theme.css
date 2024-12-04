@@ -6,8 +6,8 @@
 
 /* Main Colors */
 
-@define-color main-fg         #458588; /* Gruvbox light text color */
-@define-color main-bg         #3c3836; /* Gruvbox dark background */
+@define-color main-fg         #8ec07c; /* Gruvbox aqua as the main font color */
+@define-color main-bg         #282828; /* Gruvbox dark background */
 @define-color main-br         #d5c4a1; /* Gruvbox subtle border color */
 
 @define-color active-bg       #fabd2f; /* Gruvbox yellow for active elements */

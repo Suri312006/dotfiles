@@ -20,7 +20,7 @@
     "custom/left2",
     "custom/cpuinfo", // temperature
     "custom/left3",
-    "memory", // memory
+    "clock#time", // time
     "custom/left4",
     "custom/cpu", // cpu
     "custom/leftin1",
@@ -28,11 +28,11 @@
     "idle_inhibitor", // distro icon
     "custom/right2",
     "custom/rightin1",
-    "clock#time", // time
+    "memory", // memory
     "custom/right3",
     "clock#date", // date
     "custom/right4",
-    "custom/wifi", // wi-fi
+    //"custom/wifi", // wi-fi
     "bluetooth", // bluetooth
     "tray", // i added this
     "custom/update", // system update
@@ -50,6 +50,10 @@
     "custom/power" // power button
   ],
   // === Modules ===
+  "tray": {
+    "icon-size": 12,
+    "spacing": 3
+  },
   "custom/ws": {
     "format": "  ",
     "tooltip": false,
@@ -159,7 +163,7 @@
     "tooltip": true,
     "tooltip-format": "Standard Time: {:%I:%M:%S %p}",
     "min-length": 8,
-    "max-length": 8
+    "max-length": 16
   },
   "clock#date": {
     "format": "󰨳 {:%m-%d-%y}",
@@ -179,7 +183,7 @@
       "on-click-right": "mode"
     },
     "min-length": 8,
-    "max-length": 8
+    "max-length": 16
   },
   "custom/wifi": {
     "exec": "~/.config/waybar/scripts/wifi-status.sh",
