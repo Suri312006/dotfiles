@@ -34,6 +34,7 @@
     "custom/right4",
     "custom/wifi", // wi-fi
     "bluetooth", // bluetooth
+    "tray", // i added this
     "custom/update", // system update
     "custom/right5"
   ],
