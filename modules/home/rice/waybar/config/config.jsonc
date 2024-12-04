@@ -154,14 +154,14 @@
     "timeout": 5
   },
   "clock#time": {
-    "format": "󱑂 {:%H:%M}",
+    "format": "󱑂 {:%I:%M %p}",
     "tooltip": true,
-    "tooltip-format": "Standard Time: {:%I:%M %p}",
+    "tooltip-format": "Standard Time: {:%I:%M:%S %p}",
     "min-length": 8,
     "max-length": 8
   },
   "clock#date": {
-    "format": "󰨳 {:%m-%d}",
+    "format": "󰨳 {:%m-%d-%y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
