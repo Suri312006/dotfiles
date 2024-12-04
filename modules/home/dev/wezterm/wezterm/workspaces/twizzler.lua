@@ -9,7 +9,7 @@ wezterm.on("gui-startup", function(cmd)
 
 	local twizz_dir = wezterm.home_dir .. "/dev/work/Twizzler"
 	local rs_t, rs_p, rs_w = mux.spawn_window({
-		workspace = "term2term",
+		workspace = "twizzler",
 		cwd = twizz_dir .. "/twizsec",
 		args = args,
 	})
