@@ -242,6 +242,10 @@ tooltip label {
   padding-right: 8px;
   background: @tray;
 }
+#tray {
+  background: @tray;
+}
+
 #custom-wifi:hover {
   color: @hover-fg;
   text-shadow: none;
