@@ -19,8 +19,8 @@
       "$mod" = "SUPER";
 
       exec-once = [
-        "swww query || swww-daemon --format xrgb"
-        "swww ~/Pictures/curr_wall.png"
+        "swww query || swww-daemon --format xrgb &"
+        "swww ~/Pictures/curr_wall.png &"
         # Startup
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -39,6 +39,7 @@
         "google-chrome-stable &"
         "spotify &"
         "zulip &"
+        "slack && sleep 1 &"
 
         # "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
