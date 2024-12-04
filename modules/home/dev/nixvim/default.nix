@@ -175,7 +175,7 @@
       expandtab = true;
       smartindent = true;
 
-      wrap = true;
+      wrap = false;
 
       hlsearch = false;
       incsearch = false;
