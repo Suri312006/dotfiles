@@ -28,6 +28,8 @@
           completeopt = "menu,menuone,noinsert";
         };
 
+        view.docs.auto_open = true;
+
         # For an understanding of why these mappings were
         # chosen, you will need to read `:help ins-completion`
         #
@@ -35,7 +37,7 @@
         mapping = {
           # Select the [n]ext item
           "<C-n>" = "cmp.mapping.select_next_item()";
-          "<up>" = "cmp.mapping.select_prev_item()";
+          "<up>" = "cmp.mapping.select_prev_item() ";
           "<down>" = "cmp.mapping.select_next_item()";
           # Select the [p]revious item
           "<C-p>" = "cmp.mapping.select_prev_item()";
