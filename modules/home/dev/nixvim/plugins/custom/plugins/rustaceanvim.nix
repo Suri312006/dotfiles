@@ -1,5 +1,5 @@
 {
-    programs.nixvim = {
-        plugins.rustaceanvim.enable = true;
-    };
+  programs.nixvim = {
+    plugins.rustaceanvim.enable = false;
+  };
 }
