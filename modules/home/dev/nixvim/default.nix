@@ -444,47 +444,49 @@
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
     extraConfigLuaPost = ''
-            for i = 1, 9 do
+      for i = 1, 9 do
+        local lhs = "," .. i
+        local rhs = i .. "<c-w>w"
+        vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
+      end
+      vim.keymap.set("n", "<leader>lh", vim.lsp.inlay_hint.enable)
 
-              local lhs = "," .. i
+      -- greatest remap ever
+      vim.keymap.set("x", "<leader>p", [["_dP]])
 
-              local rhs = i .. "<c-w>w"
-              vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
-            end
-            vim.keymap.set("n", "<leader>lh", vim.lsp.inlay_hint.enable)
+      -- next greatest remap ever : asbjornHaland, yanks to system clipboard
+      vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+      vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-            -- greatest remap ever
-            vim.keymap.set("x", "<leader>p", [["_dP]])
+      vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
+      vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
 
-            -- next greatest remap ever : asbjornHaland, yanks to system clipboard
-            vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-            vim.keymap.set("n", "<leader>Y", [["+Y]])
+      vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-            vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
-            vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]])
+      vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-            vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+      -- make scripts executabe from vim
+      vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-            vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+      -- vim.keymap.set("n", "<leader>e", "")
+      -- go error
+      vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap = true, silent = true })
+      --remap window movement
+      -- vim.keymap.set("n", "qk", "<C-w>k")
+      -- vim: ts=2 sts=2 sw=2 et
+      vim.o.background = "dark" -- or "light" for light mode
+      vim.cmd([[colorscheme gruvbox]])
 
-            -- make scripts executabe from vim
-            vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-            -- vim.keymap.set("n", "<leader>e", "")
-            -- go error
-            vim.keymap.set('n', '<leader>ge', 'iif err != nil {\n \n}<Esc> kk i', { noremap = true, silent = true })
-            --remap window movement
-            -- vim.keymap.set("n", "qk", "<C-w>k")
-            -- vim: ts=2 sts=2 sw=2 et
-            vim.o.background = "dark" -- or "light" for light mode
-            vim.cmd([[colorscheme gruvbox]])
-
-            vim.keymap.set('n', '<leader>e', function()
-              vim.diagnostic.open_float(nil, { focus = false })
-            end, { desc = 'Show diagnostics floating window' })
+      vim.keymap.set('n', '<leader>e', function()
+        vim.diagnostic.open_float(nil, { focus = false })
+      end, { desc = 'Show diagnostics floating window' })
 
             -- vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
-
+      vim.g.rustaceanvim = {
+         server = {
+           capabilities = vim.lsp.protocol.make_client_capabilities(),
+         }
+      }
       -- place this in one of your configuration file(s)
       local hop = require('hop')
       local directions = require('hop.hint').HintDirection
