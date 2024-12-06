@@ -74,7 +74,7 @@
       ];
       windowrulev2 = [
         # windowrule v2
-        "workspace 2 silent,  class:^(dev.zed.Zed)$"
+        "workspace 1 silent,  class:^(dev.zed.Zed)$"
         "workspace 4 silent,  class:^([Gg]oogle-chrome)$"
         "workspace 3 silent, class:^(firefox)$"
         "workspace 6 silent, class:^(obsidian)$"
