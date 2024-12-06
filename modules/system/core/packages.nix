@@ -9,6 +9,7 @@
       unzip
       gparted
       fzf
+      cowsay
       wget
       gcc
       git
