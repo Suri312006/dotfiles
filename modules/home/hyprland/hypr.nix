@@ -91,7 +91,7 @@
         "opacity 0.8 0.9, class:^(pcmanfm-qt)$"
         "opacity 0.9 0.9, class:^(gedit)$"
         "opacity 0.85 0.9, class:^(org.wezfurlong.wezterm)$"
-        "opacity 0.85 0.9, class:^(dev.zed.Zed)$"
+        "opacity 0.9 0.9, class:^(dev.zed.Zed)$"
         "opacity 0.85 0.9, class:^(kitty)$"
         "opacity 0.9 0.9, class:^(mousepad)$"
         "opacity 0.99 0.95, class:^(codium-url-handler)$"
