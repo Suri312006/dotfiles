@@ -39,7 +39,7 @@
         "google-chrome-stable &"
         "spotify &"
         "zulip &"
-        "zed &"
+        "zeditor &"
         "slack && sleep 1 &"
 
         # "sleep 1 && slack &" # time delay for slack
