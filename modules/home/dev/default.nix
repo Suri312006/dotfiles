@@ -24,6 +24,7 @@
     postman
 
     nixd
+    nil
     python3
 
     # gnumake42
