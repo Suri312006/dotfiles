@@ -23,6 +23,7 @@
     gdb
     postman
 
+    nixd
     python3
 
     # gnumake42
