@@ -125,11 +125,11 @@
         "noblur,class:^(xwaylandvideobridge)$"
 
         # coupled cats window rules
-        "noblur,class:^(CoupledCats)$"
-        "noborder,class:^(CoupledCats)$"
-        "nodim,class:^(CoupledCats)$"
-        "noinitialfocus,class:^(CoupledCats)$"
-        "noshadow,class:^(CoupledCats)$"
+        "noblur,class:^(coupled-cats)$"
+        "noborder,class:^(coupled-cats)$"
+        "nodim,class:^(coupled-cats)$"
+        "noinitialfocus,class:^(coupled-cats)$"
+        "noshadow,class:^(coupled-cats)$"
       ];
 
       bind =
