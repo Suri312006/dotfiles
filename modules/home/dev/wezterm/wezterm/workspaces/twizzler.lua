@@ -14,15 +14,12 @@ wezterm.on("gui-startup", function(cmd)
 		args = args,
 	})
 
-	rs_p:send_text("nvim .\n")
-	rs_t:set_title("rs")
+	rs_p:send_text("lazygit\n")
+	rs_t:set_title("git")
 
-	-- local go_t, go_p, go_w = rs_w:spawn_tab {
-	--     cwd = twizz_dir .. '/go',
-	-- }
-	--
-	-- go_p:send_text 'nvim .\n'
-	-- go_t:set_title 'go'
+	local build_t, build_p, build_w = rs_w:spawn_tab({
+		cwd = twizz_dir,
+	})
 
 	rs_t:activate()
 end)
