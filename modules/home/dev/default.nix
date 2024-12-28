@@ -6,6 +6,7 @@
     ./nixvim
     ./zellij
     ./starship
+    ./ghostty
 
     ./git.nix
     ./wezterm

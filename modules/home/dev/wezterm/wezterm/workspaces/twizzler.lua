@@ -21,5 +21,14 @@ wezterm.on("gui-startup", function(cmd)
 		cwd = twizz_dir,
 	})
 
+	build_t:set_title("twizsec build")
+
+	local os_t, os_p, os_w = build_w.spawn_tab({
+		cwd = twizz_dir .. "/twizzler",
+	})
+
+	os_p:send_text('docker run -v "$(pwd)":/twizzler -it twizzler:latest\n')
+	os_p:set_title("os_container")
+
 	rs_t:activate()
 end)
