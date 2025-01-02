@@ -27,6 +27,10 @@
     powerOnBoot = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    pulseaudio
+  ];
+
   services.blueman.enable = true;
   services.pipewire.wireplumber.extraConfig = {
     "monitor.bluez.properties" = {
