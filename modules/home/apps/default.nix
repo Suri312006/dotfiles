@@ -20,7 +20,7 @@
     texliveFull
     texlivePackages.lastpage
     speedtest-cli
-    # zed-editor
+    zed-editor
 
     # rust stuff
     tokei
