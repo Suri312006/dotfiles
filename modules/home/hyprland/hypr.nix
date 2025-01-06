@@ -53,7 +53,7 @@
         "HDMI-A-1, 1920x1080@74.97, 1920x0, 1"
         # "HDMI-A-1, 3840x2160@74.99, 1920x0, 1"
         # "DP-1, 1920x1080@74.97, 1920x0, 1"
-        "DP-3, 1920x1080@74.67, 3840x0, 1, transform, 1"
+        "DP-3, 1920x1080@74.67, 3840x0, 1, transform, -1"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
@@ -215,7 +215,7 @@
         # "2, monitor:DP-3"
         # "3, monitor:DP-3"
         # "4, monitor:DP-3"
-        "5, monitor:DP-3"
+        "10, monitor:DP-3"
 
         "1, monitor:HDMI-A-1"
         "2, monitor:HDMI-A-1"
