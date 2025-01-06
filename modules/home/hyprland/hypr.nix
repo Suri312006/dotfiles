@@ -53,7 +53,7 @@
         "HDMI-A-1, 1920x1080@74.97, 1920x0, 1"
         # "HDMI-A-1, 3840x2160@74.99, 1920x0, 1"
         # "DP-1, 1920x1080@74.97, 1920x0, 1"
-        "DP-3, 1920x1080@74.67, 3840x0, 1, transform, -1"
+        "DP-3, 1920x1080@74.67, 3840x0, 1, transform, 3"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
