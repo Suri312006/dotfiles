@@ -215,7 +215,7 @@
         # "2, monitor:DP-3"
         # "3, monitor:DP-3"
         # "4, monitor:DP-3"
-        # "5, monitor:DP-3"
+        "5, monitor:DP-3"
 
         "1, monitor:HDMI-A-1"
         "2, monitor:HDMI-A-1"
@@ -227,7 +227,7 @@
         "7, monitor:eDP-1"
         "8, monitor:eDP-1"
         "9, monitor:eDP-1"
-        "10, monitor:eDP-1"
+        # "10, monitor:eDP-1"
       ];
 
       dwindle = {
