@@ -14,7 +14,7 @@
     zulip
     kdePackages.filelight
     zathura
-    gimp-with-plugins
+    # gimp-with-plugins
     # texlive.combined.scheme-small
     # texliveMedium
     texliveFull
