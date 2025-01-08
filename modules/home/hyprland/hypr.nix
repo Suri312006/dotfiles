@@ -41,7 +41,7 @@
 
         "discord &"
         "zulip &"
-        "slack && sleep 1 &"
+        "slack && sleep 2 &"
 
         # "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
@@ -216,7 +216,7 @@
         # "2, monitor:DP-3"
         # "3, monitor:DP-3"
         # "4, monitor:DP-3"
-        "9, monitor:DP-3, layoutopt:orientation:bottom, allow_small_split:true"
+        "9, monitor:DP-3"
         "10, monitor:DP-3"
 
         "1, monitor:HDMI-A-1"
@@ -236,7 +236,7 @@
         pseudotile = "yes";
         # preserve_split = "yes";
         smart_split = true;
-        smart_resizing = false;
+        # smart_resizing = false;
       };
 
       master = {
@@ -250,7 +250,7 @@
       general = {
         # sensitivity = 1.00;
         # apply_sens_to_raw = 1;
-        gaps_in = 4;
+        gaps_in = 3;
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
