@@ -242,7 +242,7 @@
         new_on_top = 1;
         mfact = 0.34;
         always_center_master = true;
-        orientation = "center";
+        orientation = "bottom";
       };
 
       general = {
