@@ -234,9 +234,10 @@
 
       dwindle = {
         pseudotile = "yes";
-        # preserve_split = "yes";
+        force_split = "0";
+        preserve_split = "yes";
         smart_split = true;
-        # smart_resizing = false;
+        smart_resizing = false;
       };
 
       master = {
