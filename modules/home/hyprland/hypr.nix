@@ -234,7 +234,7 @@
       dwindle = {
         pseudotile = "yes";
         # preserve_split = "yes";
-        # smart_split = true;
+        smart_split = true;
         smart_resizing = false;
       };
 
