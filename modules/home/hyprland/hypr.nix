@@ -215,7 +215,7 @@
         # "2, monitor:DP-3"
         # "3, monitor:DP-3"
         # "4, monitor:DP-3"
-        "9, monitor:DP-3"
+        "9, monitor:DP-3, layoutopt:orientation:bottom"
         "10, monitor:DP-3"
 
         "1, monitor:HDMI-A-1"
