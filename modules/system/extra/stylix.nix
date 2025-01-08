@@ -1,7 +1,10 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   # stylix.image = ../../wallpapers/curr_wall.png;
-  stylix.image = ../../wallpapers/a_cartoon_of_a_machine.jpg;
+  # stylix.image = ../../wallpapers/a_cartoon_of_a_machine.jpg;
   # https://stylix.danth.me/
 
   stylix = {
@@ -56,13 +59,6 @@
         desktop = 11;
         applications = 11;
       };
-
     };
-
-
   };
-
-
-
-
 }
