@@ -215,7 +215,7 @@
         # "2, monitor:DP-3"
         # "3, monitor:DP-3"
         # "4, monitor:DP-3"
-        "9, monitor:DP-3, layoutopt:orientation:bottom"
+        "9, monitor:DP-3, layoutopt:orientation:bottom, allow_small_split:true"
         "10, monitor:DP-3"
 
         "1, monitor:HDMI-A-1"
@@ -240,7 +240,9 @@
       master = {
         # new_is_master = 1;
         new_on_top = 1;
-        mfact = 0.5;
+        mfact = 0.34;
+        always_center_master = true;
+        orientation = "center";
       };
 
       general = {
