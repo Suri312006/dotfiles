@@ -39,12 +39,12 @@
         "spotify &"
         "zeditor &"
 
-        "hyprctl keyword dwindle:permanent_direction_override true"
-        "hyprctl dispatch layoutmsg preselect t"
+        "hyprctl keyword dwindle:permanent_direction_override true&"
+        "hyprctl dispatch layoutmsg preselect t&"
         "discord &"
         "zulip &"
         "slack && sleep 1 &"
-        "hyprctl keyword dwindle:permanent_direction_override false"
+        "hyprctl keyword dwindle:permanent_direction_override false&"
 
         # "sleep 1 && slack &" # time delay for slack
         "wl-paste --type text --watch cliphist store"
