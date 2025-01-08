@@ -236,7 +236,7 @@
         pseudotile = "yes";
         # force_split = "0";
         preserve_split = "yes";
-        # smart_split = true;
+        smart_split = true;
         # smart_resizing = false;
         special_scale_factor = 0.8;
       };
