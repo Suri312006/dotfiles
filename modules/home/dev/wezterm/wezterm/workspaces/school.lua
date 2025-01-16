@@ -20,7 +20,7 @@ wezterm.on('gui-startup', function(cmd)
     }
 
     local dev_tab, dev_pane, dev_window = window:spawn_tab {
-        cwd = dev_dir .. 'cse130'
+        cwd = dev_dir .. '/cse130'
     }
 
     dev_pane:send_text("nix-shell\n")
