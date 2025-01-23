@@ -1,15 +1,9 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   # imports = [
   #   inputs.hyprland.homeManagerModules.default
   # ];
 
-  home.packages = with pkgs; [
-    xwaylandvideobridge
-  ];
+  home.packages = with pkgs; [ xwaylandvideobridge ];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -105,6 +99,7 @@
         "opacity 0.9 0.9, class:^([Ss]lack)$"
         "opacity 0.9 0.9, class:^(Zulip)$"
         "opacity 0.95 0.95, title:(.*)(Visual Studio Code)$"
+        "opacity 0.9 0.9, title:com.mitchellh.ghostty"
         "opacity 0.9 0.9, class:^(obsidian)$"
         "opacity 0.95 0.75, title:^(Picture-in-Picture)$" # for opacity: [focus num] [bg num]
 
@@ -133,83 +128,71 @@
         "noshadow,class:^(coupled-cats)$"
       ];
 
-      bind =
-        [
-          "$mod, Q, killactive"
-          "$mod, F, fullscreen"
-          "$mod SHIFT, Q, closewindow"
-          "$mod SHIFT, F, togglefloating"
-          "$mod SHIFT, F, togglefloating"
+      bind = [
+        "$mod, Q, killactive"
+        "$mod, F, fullscreen"
+        "$mod SHIFT, Q, closewindow"
+        "$mod SHIFT, F, togglefloating"
+        "$mod SHIFT, F, togglefloating"
 
-          "$mod, S, exec, firefox"
-          # "$mod, D, exec, discord"
-          "$mod, D, exec, webcord"
-          "$mod, Return, exec, wezterm-gui start --always-new-process"
-          # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
-          "$mod, escape, exec, ~/.config/rofi/launchers/type-5/launcher.sh"
-          # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
-          "$mod, T, exec, thunar"
+        "$mod, S, exec, firefox"
+        # "$mod, D, exec, discord"
+        "$mod, D, exec, webcord"
+        "$mod, Return, exec, wezterm-gui start --always-new-process"
+        # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
+        "$mod, escape, exec, ~/.config/rofi/launchers/type-5/launcher.sh"
+        # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
+        "$mod, T, exec, thunar"
 
-          "$mod, tab, focusmonitor, +1"
-          "$mod, right, workspace, m+1"
-          "$mod, left, workspace, m-1"
+        "$mod, tab, focusmonitor, +1"
+        "$mod, right, workspace, m+1"
+        "$mod, left, workspace, m-1"
 
-          # Move focus with mod + arrow keys
-          "$mod, I, movefocus, u"
-          "$mod, E, movefocus, d"
-          "$mod, N, movefocus, l"
-          "$mod, O, movefocus, r"
+        # Move focus with mod + arrow keys
+        "$mod, I, movefocus, u"
+        "$mod, E, movefocus, d"
+        "$mod, N, movefocus, l"
+        "$mod, O, movefocus, r"
 
-          "CTRL ALT, L, exec, suri_screenlock"
-          "CTRL ALT, P, exec, suri_wlogout"
-          "$mod ALT, L, exec, suri_changelayout"
-          "$mod ALT, R, exec, suri_refresh"
-          "$mod SHIFT, B, exec, suri_change_blur"
-          "$mod ALT, V, exec, suri_clipmanager"
-          "CTRL ALT, B, exec, suri_toggle_battery_mode"
+        "CTRL ALT, L, exec, suri_screenlock"
+        "CTRL ALT, P, exec, suri_wlogout"
+        "$mod ALT, L, exec, suri_changelayout"
+        "$mod ALT, R, exec, suri_refresh"
+        "$mod SHIFT, B, exec, suri_change_blur"
+        "$mod ALT, V, exec, suri_clipmanager"
+        "CTRL ALT, B, exec, suri_toggle_battery_mode"
 
-          ''$mod SHIFT, S, exec, grim -g "''$(slurp)" - | swappy -f -''
+        ''$mod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -''
 
-          ", xf86audioraisevolume, exec, suri_volume --inc #volume up"
-          ", xf86audiolowervolume, exec, suri_volume --dec #volume down"
-          ", xf86AudioMicMute, exec, suri_volume --toggle-mic #mute mic"
-          ", xf86audiomute, exec, suri_volume --toggle"
-          ", xf86Sleep, exec, systemctl suspend  # sleep button "
+        ", xf86audioraisevolume, exec, suri_volume --inc #volume up"
+        ", xf86audiolowervolume, exec, suri_volume --dec #volume down"
+        ", xf86AudioMicMute, exec, suri_volume --toggle-mic #mute mic"
+        ", xf86audiomute, exec, suri_volume --toggle"
+        ", xf86Sleep, exec, systemctl suspend  # sleep button "
 
-          ", xf86AudioPlayPause, exec, suri_media --pause"
-          ", xf86AudioPause, exec, suri_media --pause"
-          ", xf86AudioPlay, exec, suri_media --pause"
-          ", xf86AudioNext, exec, suri_media --nxt"
-          ", xf86AudioPrev, exec, suri_media --prv"
-          ", xf86audiostop, exec, suri_media --stop"
+        ", xf86AudioPlayPause, exec, suri_media --pause"
+        ", xf86AudioPause, exec, suri_media --pause"
+        ", xf86AudioPlay, exec, suri_media --pause"
+        ", xf86AudioNext, exec, suri_media --nxt"
+        ", xf86AudioPrev, exec, suri_media --prv"
+        ", xf86audiostop, exec, suri_media --stop"
 
-          #TODO: figure out screenshotting
-          # screenshot with swappy (another screenshot tool)""
-          #"$mod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -"
-        ]
-        ++ (
-          # workspaces
-          # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-          builtins.concatLists (builtins.genList
-            (
-              x: let
-                ws = let
-                  c = (x + 1) / 10;
-                in
-                  builtins.toString (x + 1 - (c * 10));
-              in [
-                "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-                "$mod CTRL, ${ws}, movetoworkspacesilent, ${toString (x + 1)}"
-              ]
-            )
-            10)
-        );
+        #TODO: figure out screenshotting
+        # screenshot with swappy (another screenshot tool)""
+        #"$mod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -"
+      ] ++ (
+        # workspaces
+        # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
+        builtins.concatLists (builtins.genList (x:
+          let
+            ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
+          in [
+            "$mod, ${ws}, workspace, ${toString (x + 1)}"
+            "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+            "$mod CTRL, ${ws}, movetoworkspacesilent, ${toString (x + 1)}"
+          ]) 10));
 
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
-      ];
+      bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
 
       workspace = [
         # "1, monitor:DP-3"
@@ -309,7 +292,7 @@
           "windowsOut, 1, 1, winOut, popin"
           "windowsMove, 1, 1, myBezier, popin"
           "border, 1, 10, linear"
-          "borderangle, 1, 180, linear, loop" #used by rainbow borders and rotating colors
+          "borderangle, 1, 180, linear, loop" # used by rainbow borders and rotating colors
           "fade, 1, 5, overshot"
           "workspaces, 1, 2, myBezier"
           "windows, 1, 5, bounce, popin"
@@ -371,9 +354,7 @@
       };
 
       #Could help when scaling and not pixelating
-      xwayland = {
-        force_zero_scaling = true;
-      };
+      xwayland = { force_zero_scaling = true; };
     };
   };
 }
