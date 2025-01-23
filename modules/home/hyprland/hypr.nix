@@ -252,8 +252,8 @@
       general = {
         # sensitivity = 1.00;
         # apply_sens_to_raw = 1;
-        gaps_in = 3;
-        gaps_out = 8;
+        gaps_in = 2;
+        gaps_out = 5;
         border_size = 2;
         resize_on_border = true;
 
