@@ -3,6 +3,6 @@
 
   home.file.".config/ghostty/config".text = ''
     font-family = ""
-    font-family = "Monaspace Krypton Var SemiBold"
+    font-family = "Monaspace Krypton"
   '';
 }
