@@ -5,5 +5,6 @@
     font-family = ""
     font-family = "Monaspace Krypton"
     font-size = "9"
+    theme = "Monokai Soda"
   '';
 }
