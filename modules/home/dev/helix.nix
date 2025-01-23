@@ -13,11 +13,11 @@
     auto-format = true;
     formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
   }];
-  themes = {
-    autumn_night_transparent = {
-      "inherits" = "autumn_night";
-      "ui.background" = { };
-    };
-  };
+  # themes = {
+  #   autumn_night_transparent = {
+  #     # "inherits" = "autumn_night";
+  #     "ui.background" = { };
+  #   };
+  # };
 };
 }
