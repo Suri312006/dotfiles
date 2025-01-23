@@ -6,5 +6,6 @@
     font-family = "Monaspace Krypton"
     font-size = "12"
     theme = "GruvboxDarkHard"
+    initial-command = "zellij"
   '';
 }
