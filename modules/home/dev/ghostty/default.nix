@@ -4,7 +4,7 @@
   home.file.".config/ghostty/config".text = ''
     font-family = ""
     font-family = "Monaspace Krypton"
-    font-size = "9"
+    font-size = "11"
     theme = "GruvboxDarkHard"
   '';
 }
