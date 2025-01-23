@@ -10,7 +10,7 @@
 
     ./git.nix
     ./wezterm
-
+    ./helix.nix
     ./langs
   ];
 
