@@ -31,7 +31,7 @@
         "firefox &"
         "google-chrome-stable &"
         "spotify &"
-        "zeditor &"
+        # "zeditor &"
 
         "discord &"
         "zulip &"
@@ -139,7 +139,7 @@
         # "$mod, D, exec, discord"
         "$mod, D, exec, webcord"
         # "$mod, Return, exec, wezterm-gui start --always-new-process"
-        "$mod, Return, exec, ghostty"
+        "$mod, Return, exec, ghostty -e suri_zellij_session_helper"
         # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
         "$mod, escape, exec, ~/.config/rofi/launchers/type-5/launcher.sh"
         # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
