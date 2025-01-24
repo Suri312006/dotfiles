@@ -5,7 +5,7 @@
     font-family = ""
     font-family = "Monaspace Krypton SemiBold"
     font-size = "11"
-    theme = "GruvboxDarkHard"
+    theme = "Monokai Pro"
     initial-command = "zellij"
   '';
 }
