@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./kitty
     ./zsh
@@ -23,6 +23,7 @@
     valgrind
     gdb
     postman
+    glow
 
     nixd
     nil
