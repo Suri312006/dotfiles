@@ -24,9 +24,17 @@ wezterm.on('gui-startup', function(cmd)
         cwd = dev_dir,
             })
 
+            local g_t, g_p, g_w = r_w:spawn_tab({
+                cwd = dev_dir .. '/sjammish'
+            })
+
+            g_p:send_text("lazygit \n")
+
     r_t:set_title "Build"
     r_p:send_text("nix-shell\n")
     r_p:send_text("cd sjammish\n")
+
+    tab:activate()
 
 
 end)
