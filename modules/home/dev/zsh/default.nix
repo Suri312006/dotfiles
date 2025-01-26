@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   zsh_history_fix = pkgs.writeShellScriptBin "zsh_history_fix" ''
     mv ~/.zsh_history ~/.zsh_history_bad
     strings ~/.zsh_history_bad > ~/.zsh_history
@@ -9,7 +10,7 @@
 in {
   programs.zoxide.enable = true;
 
-  home.packages = with pkgs; [fd eza zsh_history_fix];
+  home.packages = with pkgs; [ fd eza zsh_history_fix ];
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -51,12 +52,16 @@ in {
         VERSION=$(($(readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)) 
         z ~/dots/nixdots && git add -A && git commit -m "Generation: '$VERSION'" && sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus && git push'';
 
-      ree = ''sudo nixos-rebuild switch --flake ~/dots/nixdots#zephryus && git push'';
+      ree =
+        "sudo nixos-rebuild switch --flake ~/dots/nixdots#zephryus && git push";
 
       dots = "z ~/dots";
-      fcd = ''cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
+      fcd = ''
+        cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
 
-      l = ''exa'';
+      l = "exa";
+
+      h = "hx .";
     };
     initExtra = ''
       eval `ssh-agent` &> /dev/null

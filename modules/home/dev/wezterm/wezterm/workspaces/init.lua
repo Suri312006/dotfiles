@@ -1,4 +1,3 @@
-require("workspaces.school")
 require("workspaces.dots")
 require("workspaces.default")
 -- TODO: make a projects section instead
