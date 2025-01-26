@@ -18,10 +18,8 @@ wezterm.on("gui-startup", function(cmd)
 	rs_p:send_text("hx .\n")
 	rs_t:set_title("Helix")
 
-	local os_git_t, os_git_p, os_git_w = rs_w.spawn_window({
-		workspace = "twizzler",
+	local os_git_t, os_git_p, os_git_w = rs_w:spawn_tab({
 		cwd = twizz_dir .. "/twizzler",
-		args = args,
 	})
 
 	os_git_p:send_text("lazygit\n")
