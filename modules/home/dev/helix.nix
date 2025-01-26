@@ -10,7 +10,7 @@
       taplo
       lua-language-server
       haskell-language-server
-      python312Packages.python-python-lsp-server
+      python312Packages.python-lsp-server
       typescript-language-server
       svelte-language-server
       tailwindcss-language-server
