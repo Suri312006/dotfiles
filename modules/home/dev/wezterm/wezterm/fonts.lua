@@ -5,7 +5,7 @@ local module = {}
 
 
 function module.apply_to_config(config)
-    config.font_size = 10.5;
+    config.font_size = 10.3;
     config.warn_about_missing_glyphs = true
     config.freetype_load_target =
     'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
