@@ -31,6 +31,8 @@
 
         auto-save = { focus-lost = true; };
 
+        lsp = { display-inlay-hints = true; };
+
         statusline = {
           left = [
             "mode"
