@@ -1,3 +1,4 @@
+
 local wezterm = require 'wezterm'
 
 
@@ -10,20 +11,22 @@ wezterm.on('gui-startup', function(cmd)
     if cmd then
         args = cmd.args
     end
-    local quarters_dir = wezterm.home_dir .. '/Documents/quarters'
-    local dev_dir = wezterm.home_dir .. '/dev/school'
+    local dev_dir = wezterm.home_dir .. '/dev/school/cse108'
 
     local tab, pane, window = mux.spawn_window {
-        workspace = 'school',
-        cwd = quarters_dir,
+        workspace = 'cse108',
+        cwd = dev_dir,
         args = args
     }
 
-    local dev_tab, dev_pane, dev_window = window:spawn_tab {
-        cwd = dev_dir .. '/cse130'
-    }
+    tab:set_title "Helix"
+    pane:send_text "hx .\n"
 
-    dev_pane:send_text("nix-shell\n")
+    tab:activate()
+    
+
+
+
 end)
 
 return {}
