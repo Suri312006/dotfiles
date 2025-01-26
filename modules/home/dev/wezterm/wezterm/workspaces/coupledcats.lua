@@ -14,8 +14,15 @@ wezterm.on("gui-startup", function(cmd)
 		args = args,
 	})
 
-	rs_p:send_text("lazygit\n")
+	
+	rs_p:send_text("hx .\n")
 	rs_t:set_title("git")
+
+	local lg_t, lg_p, lg_w = rs_w:spawn_tab({
+		cwd = cats_dir,
+	})
+	lg_p:send_text("lazygit\n")
+	lg_t:set_title("git")
 
 	local build_t, build_p, build_w = rs_w:spawn_tab({
 		cwd = cats_dir,
@@ -25,7 +32,6 @@ wezterm.on("gui-startup", function(cmd)
 
 	build_p:send_text("nix-shell\n")
 	build_p:send_text("clear\n")
-	build_p:send_text("zeditor .")
 
 	rs_t:activate()
 end)
