@@ -15,6 +15,7 @@ wezterm.on("gui-startup", function(cmd)
 	})
 
 	
+	rs_p:send_text("nix-shell\n")
 	rs_p:send_text("hx .\n")
 	rs_t:set_title("git")
 
