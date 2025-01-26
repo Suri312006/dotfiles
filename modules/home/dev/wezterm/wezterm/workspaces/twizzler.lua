@@ -33,5 +33,5 @@ wezterm.on("gui-startup", function(cmd)
 	os_p:send_text('docker run -v "$(pwd)":/twizzler -it twizzler:latest\n')
 	os_t:set_title("os_container")
 
-	os_git_t:activate()
+	rs_t:activate()
 end)

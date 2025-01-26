@@ -19,6 +19,7 @@ wezterm.on('gui-startup', function(cmd)
     }
 
     tab:set_title "Helix"
+    pane:send_text "hx .\n"
 
     local r_t, r_p, r_w= window:spawn_tab({
         cwd = dev_dir,
