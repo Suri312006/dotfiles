@@ -22,6 +22,7 @@ wezterm.on("gui-startup", function(cmd)
 
 	local c_t, c_p, c_w= rs_w:spawn_tab({
 		cwd = ectf_dir
+		   .. '/ucsc-ectf-2025'
 		,
 	})
 	c_p:send_text("lazygit\n")
