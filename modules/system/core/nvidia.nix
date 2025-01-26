@@ -45,11 +45,8 @@
 #
 #
 # }
-{
-  pkgs,
-  config,
-  ...
-}: let
+{ pkgs, config, ... }:
+let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
@@ -58,10 +55,10 @@
     exec "$@"
   '';
 in {
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
 
     nvidia = {
       modesetting.enable = true;
@@ -116,7 +113,7 @@ in {
     };
   };
 
-  environment.systemPackages = [nvidia-offload];
+  environment.systemPackages = [ nvidia-offload ];
 
   #NOTE: not sure this is in the right spot
   # services.supergfxd = {

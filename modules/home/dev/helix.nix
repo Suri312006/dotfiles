@@ -63,7 +63,7 @@
       {
         name = "nix";
         auto-format = true;
-        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+        formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";
       }
 
       {

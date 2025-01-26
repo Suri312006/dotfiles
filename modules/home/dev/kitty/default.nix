@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    theme = "Monokai Pro (Filter Octagon)";
+    # theme = "Monokai Pro (Filter Octagon)";
     font = {
       #   package = pkgs.fira-code;
       # name = "Fira Code SemiBold";
@@ -24,7 +24,5 @@
   home.file.".config/kitty/launch.conf".source = ./launch.conf;
   home.file.".config/fontcongfig/fonts.conf".source = ./fonts.conf;
 
-  home.packages = [
-    pkgs.yazi
-  ];
+  home.packages = [ pkgs.yazi ];
 }
