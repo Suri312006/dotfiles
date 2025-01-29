@@ -73,7 +73,7 @@
         "workspace 4 silent,  class:^([Gg]oogle-chrome)$"
         "workspace 3 silent, class:^(firefox)$"
         "workspace 6 silent, class:^(obsidian)$"
-        "workspace 9 silent, class:^(discord)$"
+        "workspace 7 silent, class:^(discord)$"
         "workspace 9 silent, class:^(WebCord)$"
         "workspace 8 silent, title:^(Spotify Free)$"
         "workspace 8 silent, class:^(Spotify)$"
