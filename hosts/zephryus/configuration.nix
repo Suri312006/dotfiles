@@ -1,13 +1,6 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  outputs,
-  ...
-}: {
+{ inputs, lib, config, pkgs, outputs, ... }: {
   # You can import other NixOS modules here
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):
@@ -29,8 +22,9 @@
   programs.rog-control-center.enable = true;
 
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys =
+      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # valgrant
@@ -44,13 +38,11 @@
 
   # Add firewall exception for libvirt provider when using NFSv4
   networking.firewall.interfaces."virbr1" = {
-    allowedTCPPorts = [0080 8080];
-    allowedUDPPorts = [8080 0080];
+    allowedTCPPorts = [ 80 8080 ];
+    allowedUDPPorts = [ 8080 80 ];
   };
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
+  environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
@@ -69,15 +61,14 @@
           (pkgs.OVMF.override {
             secureBoot = true;
             tpmSupport = true;
-          })
-          .fd
+          }).fd
         ];
       };
     };
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
     # backupFileExtension = "backup";
     users = {
       # Import your home-manager configuration
@@ -87,6 +78,27 @@
 
   home-manager.backupFileExtension = "backup";
 
+  # Enable common container config files in /etc/containers
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
+  # Useful other development tools
+  environment.systemPackages = with pkgs; [
+    dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    docker-compose # start group of containers for dev
+    podman-compose # start group of containers for dev
+  ];
   # nixpkgs = {
   #   # You can add overlays here
   #   overlays = [
@@ -147,7 +159,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel" "libvirtd" "docker" "audio"];
+      extraGroups = [ "wheel" "libvirtd" "docker" "audio" ];
     };
   };
   boot.extraModprobeConfig = ''
