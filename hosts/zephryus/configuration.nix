@@ -79,7 +79,7 @@
   home-manager.backupFileExtension = "backup";
 
   services.udev.extraRules = ''
-    ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="users"    
+    ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="dailout"    
   '';
 
   # # Enable common container config files in /etc/containers
@@ -163,7 +163,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = [ "wheel" "libvirtd" "docker" "audio" ];
+      extraGroups = [ "wheel" "libvirtd" "docker" "audio" "dailout" ];
     };
   };
   boot.extraModprobeConfig = ''
