@@ -29,6 +29,7 @@
         line-number = "relative";
         inline-diagnostics.cursor-line = "warning";
         end-of-line-diagnostics = "hint";
+        file-picker.hidden = false;
 
         auto-save = { focus-lost = true; };
 
