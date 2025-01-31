@@ -28,7 +28,7 @@
         "rog-control-center &"
         "blueman-applet & "
         # "webcord &"
-        "firefox &"
+        "zen &"
         "google-chrome-stable &"
         "spotify &"
         # "zeditor &"
@@ -71,7 +71,7 @@
         # windowrule v2
         "workspace 1 silent,  class:^(dev.zed.Zed)$"
         "workspace 4 silent,  class:^([Gg]oogle-chrome)$"
-        "workspace 3 silent, class:^(firefox)$"
+        "workspace 3 silent, class:^(zen)$"
         "workspace 6 silent, class:^(obsidian)$"
         "workspace 7 silent, class:^(discord)$"
         "workspace 9 silent, class:^(WebCord)$"
@@ -82,7 +82,7 @@
 
         # opacity (transparent) #enable as desired
         "opacity 0.9 0.9, class:^([Rr]ofi)$"
-        "opacity 0.9 1, class:^(firefox)$"
+        "opacity 0.9 1, class:^(zen)$"
         "opacity 0.9 0.9, class:^([Gg]oogle-chrome)$"
         "opacity 0.9 0.9, class:^([Tt]hunar)$"
         "opacity 0.8 0.9, class:^(pcmanfm-qt)$"
@@ -105,13 +105,13 @@
 
         # Interestingly, the opacity rule above doesn't need the reduplication?
         "pin, title:^(Picture-in-Picture)$"
-        # "pin = title:^(Firefox)$"
+        # "pin = title:^(zen)$"
         "float, title:^(Picture-in-Picture)$"
-        # "float = title:^(Firefox)$"
+        # "float = title:^(zen)$"
         "size 25% 25% = title:^(Picture-in-Picture)$"
-        # "size 25% 25% = title:^(Firefox)$"
+        # "size 25% 25% = title:^(zen)$"
         "move 72% 7% = title:^(Picture-in-Picture)$"
-        # "move 72% 7% = title:^(Firefox)$"
+        # "move 72% 7% = title:^(zen)$"
 
         #screen sharing stuff
         "opacity 0.0 override,class:^(xwaylandvideobridge)$"
@@ -135,7 +135,7 @@
         "$mod SHIFT, F, togglefloating"
         "$mod SHIFT, F, togglefloating"
 
-        "$mod, S, exec, firefox"
+        "$mod, S, exec, zen"
         # "$mod, D, exec, discord"
         "$mod, D, exec, webcord"
         "$mod, Return, exec, wezterm-gui start --always-new-process"
