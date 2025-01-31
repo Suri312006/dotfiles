@@ -79,7 +79,7 @@
   home-manager.backupFileExtension = "backup";
 
   services.udev.extraRules = ''
-    ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="dailout"    
+    ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="users"    
   '';
 
   # # Enable common container config files in /etc/containers
