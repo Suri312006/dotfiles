@@ -8,7 +8,7 @@ wezterm.on("gui-startup", function(cmd)
 	end
 
 	local ectf_dir
-	 = wezterm.home_dir .. "/dev/clubs/ectf"
+		 = wezterm.home_dir .. "/dev/clubs/ectf"
 
 	local rs_t, rs_p, rs_w = mux.spawn_window({
 		workspace = "ectf",
