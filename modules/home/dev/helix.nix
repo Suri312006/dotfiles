@@ -1,6 +1,7 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, inputs, ... }: {
   programs.helix = {
-    enable = true;
+    # enable = true;
+    package = inputs.helix-master.packages.${pkgs.system}.default;
     defaultEditor = true;
     extraPackages = with pkgs; [
       markdown-oxide
