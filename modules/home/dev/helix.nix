@@ -46,14 +46,13 @@
             "file-encoding"
           ];
           right = [
+            "version-control"
+            "position"
             "selections"
             "primary-selection-length"
-            "position"
             "position-percentage"
             "spacer"
-            "diagnostics"
             "workspace-diagnostics"
-            "version-control"
           ];
           separator = "│";
           mode.normal = "NORMAL";
