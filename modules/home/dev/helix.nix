@@ -31,6 +31,8 @@
         inline-diagnostics.cursor-line = "warning";
         end-of-line-diagnostics = "hint";
         file-picker.hidden = false;
+        completion-trigger-len = 1;
+        completion-timeout = 5;
 
         auto-save = { focus-lost = true; };
 
