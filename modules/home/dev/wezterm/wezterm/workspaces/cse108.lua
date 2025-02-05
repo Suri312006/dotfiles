@@ -25,7 +25,15 @@ wezterm.on('gui-startup', function(cmd)
     tab:set_title "Helix"
     pane:send_text "hx .\n"
 
-    local b_t, b_p, b_w = window:spawn_tab({
+    local g_t, g_p, g_w = window:spawn_tab({
+        cwd = dev_dir
+    })
+
+    g_p:send_text "lazygit\n"
+    g_t:set_title "Git"
+
+    
+    local b_t, b_p, b_w = g_w:spawn_tab({
         cwd = dev_dir
     })
 
