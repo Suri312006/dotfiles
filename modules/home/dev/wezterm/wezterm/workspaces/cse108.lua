@@ -14,7 +14,7 @@ wezterm.on('gui-startup', function(cmd)
 
     -- local class_dir = wezterm.home_dir .. 'dev/school/cse108'
     
-    local dev_dir = wezterm.home_dir .. 'dev/school/cse108/hermes'
+    local dev_dir = wezterm.home_dir .. '/dev/school/cse108/hermes'
 
     local tab, pane, window = mux.spawn_window {
         workspace = 'cse108',
