@@ -30,6 +30,12 @@ wezterm.on("gui-startup", function(cmd)
 		cwd = twizz_dir .. "/twizzler",
 	})
 
+	local m_t, m_p, m_w = os_w:spawn_tab({
+		cwd = twizz_dir .. "/twizzler",
+	})
+
+	m_p:send_text("ssh suri@melete.soc.ucsc.edu")
+
 	os_p:send_text('docker run -v "$(pwd)":/twizzler -it twizzler:latest\n')
 	os_p:send_text('clear\n')
 	os_p:send_text('cd twizzler\n')
