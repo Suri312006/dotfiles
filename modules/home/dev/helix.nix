@@ -30,6 +30,7 @@
         line-number = "relative";
         inline-diagnostics.cursor-line = "warning";
         end-of-line-diagnostics = "hint";
+        color-modes = true;
         file-picker.hidden = false;
         completion-trigger-len = 1;
         completion-timeout = 5;
