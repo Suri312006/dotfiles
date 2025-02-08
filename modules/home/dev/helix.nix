@@ -66,6 +66,8 @@
 
     };
 
+    keys.normal = { X = "extend_line_above"; };
+
     languages.language = [
       {
         name = "nix";
