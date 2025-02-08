@@ -63,10 +63,9 @@
           mode.select = "SELECT";
         };
       };
+      keys.normal = { X = "extend_line_above"; };
 
     };
-
-    keys.normal = { X = "extend_line_above"; };
 
     languages.language = [
       {
