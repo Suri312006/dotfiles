@@ -34,7 +34,7 @@ wezterm.on("gui-startup", function(cmd)
 		cwd = twizz_dir .. "/twizzler",
 	})
 
-	m_p:send_text("ssh suri@melete.soc.ucsc.edu")
+	m_p:send_text("ssh suri@melete.soe.ucsc.edu")
 
 	os_p:send_text('docker run -v "$(pwd)":/twizzler -it twizzler:latest\n')
 	os_p:send_text('clear\n')
