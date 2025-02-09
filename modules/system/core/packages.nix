@@ -25,6 +25,8 @@
 
       wl-clipboard
 
+      screen
+
       networkmanagerapplet
 
       pamixer
