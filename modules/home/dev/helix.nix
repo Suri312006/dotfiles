@@ -4,7 +4,7 @@
     package = inputs.helix.packages.${pkgs.system}.default;
     defaultEditor = true;
     extraPackages = with pkgs; [
-      markdown-oxide
+      # markdown-oxide
       gopls
       nil
       texlab
@@ -16,6 +16,7 @@
       svelte-language-server
       tailwindcss-language-server
       emmet-language-server
+      marksman
     ];
 
     settings = {
