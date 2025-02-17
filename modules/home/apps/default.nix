@@ -1,10 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # holds default application packages
 
-  imports = [
-    ./firefox.nix
-    ./spotify.nix
-  ];
+  imports = [ ./firefox.nix ./spotify.nix ];
 
   home.packages = with pkgs; [
     discord
@@ -20,7 +17,7 @@
     texliveFull
     texlivePackages.lastpage
     speedtest-cli
-    zed-editor
+    # zed-editor
 
     # rust stuff
     tokei
