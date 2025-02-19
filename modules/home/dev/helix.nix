@@ -25,6 +25,8 @@
         normal = "block";
         insert = "bar";
         select = "underline";
+
+        language-server.rust-analyzer.config.check.command = "clippy";
       };
 
       editor = {
@@ -102,7 +104,6 @@
       }
     ];
 
-    language-server.rust-analyzer.config.check.command = "clippy";
   };
 }
 
