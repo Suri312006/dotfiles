@@ -8,4 +8,5 @@ require("workspaces.cse108")
 require("workspaces.cse130")
 require("workspaces.writ2")
 require("workspaces.ectf")
+require("workspaces.grad")
 
