@@ -28,9 +28,8 @@
 
       };
 
-      language-server.rust-analyzer.config.check.command = "clippy";
-
       editor = {
+
         line-number = "relative";
         inline-diagnostics.cursor-line = "warning";
         end-of-line-diagnostics = "hint";
@@ -71,39 +70,44 @@
 
     };
 
-    languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-        formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";
-      }
+    languages = {
 
-      {
-        name = "svelte";
-        auto-format = true;
-        formatter = {
-          command = "dprint";
-          args = [ "fmt" "--stdin" "svelte" ];
-        };
+      language-server.rust-analyzer.config.check.command = "clippy";
 
-        language-servers = [
-          # "emmet-lsp"
-          "svelteserver"
-          # "tailwindcss-ls"
-          "tailwindcss-language-server"
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";
+        }
 
-          # "typescript-language-server"
-        ];
-      }
-      {
-        name = "html";
-        language-servers = [ "vscode-html-language-server" "tailwindcss-ls" ];
-      }
-      {
-        name = "css";
-        language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
-      }
-    ];
+        {
+          name = "svelte";
+          auto-format = true;
+          formatter = {
+            command = "dprint";
+            args = [ "fmt" "--stdin" "svelte" ];
+          };
+
+          language-servers = [
+            # "emmet-lsp"
+            "svelteserver"
+            # "tailwindcss-ls"
+            "tailwindcss-language-server"
+
+            # "typescript-language-server"
+          ];
+        }
+        {
+          name = "html";
+          language-servers = [ "vscode-html-language-server" "tailwindcss-ls" ];
+        }
+        {
+          name = "css";
+          language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
+        }
+      ];
+    };
 
   };
 }
