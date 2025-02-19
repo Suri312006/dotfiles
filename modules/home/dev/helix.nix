@@ -101,6 +101,8 @@
         language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
       }
     ];
+
+    language-server.rust-analyzer.config.check.command = "clippy";
   };
 }
 
