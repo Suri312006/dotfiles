@@ -71,16 +71,49 @@
     };
 
     languages = {
+      language-server.ltex = {
+        command = "ltex-ls-plus";
+        config.ltex.dictionary."en-US" = [ "ewwe" "flaberrasted" ];
+      };
 
       language-server.rust-analyzer.config.check.command = "clippy";
 
+      language-server.texlab = {
+        command = "texlab";
+        config.texlab = {
+          build = {
+            onSave = true;
+            forwardSearchAfter = true;
+            executable = "latexmk";
+            args = [
+              "-pdf"
+              "-interaction=nonstopmode"
+              "-synctex=1"
+              "-shell-escape"
+              "%f"
+            ];
+          };
+          forwardSearch = {
+            executable = "zathura";
+            args = [ "--synctex-forward" "%l:%c:%f" "%p" ];
+          };
+          chktex = {
+            onOpenAndSave = true;
+            onEdit = true;
+          };
+        };
+      };
+
       language = [
+        {
+          name = "latex";
+          language-servers = [ "texlab" "ltex-ls-plus" ];
+        }
         {
           name = "nix";
           auto-format = true;
           formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";
         }
-
         {
           name = "svelte";
           auto-format = true;
@@ -88,15 +121,7 @@
             command = "dprint";
             args = [ "fmt" "--stdin" "svelte" ];
           };
-
-          language-servers = [
-            # "emmet-lsp"
-            "svelteserver"
-            # "tailwindcss-ls"
-            "tailwindcss-language-server"
-
-            # "typescript-language-server"
-          ];
+          language-servers = [ "svelteserver" "tailwindcss-language-server" ];
         }
         {
           name = "html";
@@ -108,6 +133,45 @@
         }
       ];
     };
+
+    # languages = {
+
+    #   language-server.rust-analyzer.config.check.command = "clippy";
+
+    #   language = [
+    #     {
+    #       name = "nix";
+    #       auto-format = true;
+    #       formatter.command = "${pkgs.nixfmt-classic}/bin/nixfmt";
+    #     }
+
+    #     {
+    #       name = "svelte";
+    #       auto-format = true;
+    #       formatter = {
+    #         command = "dprint";
+    #         args = [ "fmt" "--stdin" "svelte" ];
+    #       };
+
+    #       language-servers = [
+    #         # "emmet-lsp"
+    #         "svelteserver"
+    #         # "tailwindcss-ls"
+    #         "tailwindcss-language-server"
+
+    #         # "typescript-language-server"
+    #       ];
+    #     }
+    #     {
+    #       name = "html";
+    #       language-servers = [ "vscode-html-language-server" "tailwindcss-ls" ];
+    #     }
+    #     {
+    #       name = "css";
+    #       language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
+    #     }
+    #   ];
+    # };
 
   };
 }
