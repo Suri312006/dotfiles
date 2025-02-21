@@ -11,11 +11,11 @@ function module.apply_to_config(config)
     'HorizontalLcd' -- https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
     config.font = wezterm.font(
         {           -- Normal text
-            -- family = 'Monaspace Krypton',
-            family = 'Monaspace Argon',
+            family = 'Monaspace Krypton',
+            -- family = 'Monaspace Argon',
                 harfbuzz_features = { 'calt', 'clig' ,'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
             stretch = 'UltraCondensed', -- This doesn't seem to do anything
-            weight = 'Medium',
+            weight = 'DemiBold',
         })
 
     config.font_rules = {
@@ -24,9 +24,9 @@ function module.apply_to_config(config)
             intensity = 'Bold',
             italic = true,
             font = wezterm.font({
-                -- family="Monaspace Radon",  -- script style
+                family="Monaspace Radon",  -- script style
                 -- family = 'Monaspace Argon', -- courier-like
-                family = 'Monaspace Krypton', -- courier-like
+                -- family = 'Monaspace Krypton', -- courier-like
                 style = 'Italic',
                 harfbuzz_features = { 'calt', 'clig' ,'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
                 weight = 'Medium'
