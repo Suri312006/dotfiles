@@ -1,4 +1,10 @@
 { pkgs, lib, inputs, ... }: {
+
+  home.file.".config/helix/ignore".text = ''
+    !.notes/
+    !.gitignore
+  '';
+
   programs.helix = {
     enable = true;
     package = inputs.helix.packages.${pkgs.system}.default;
@@ -34,7 +40,6 @@
         inline-diagnostics.cursor-line = "warning";
         end-of-line-diagnostics = "hint";
         color-modes = true;
-        file-picker.hidden = false;
         completion-trigger-len = 1;
         completion-timeout = 5;
 
