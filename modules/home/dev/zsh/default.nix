@@ -88,7 +88,7 @@ in {
           fi
 
           input_file="$1"
-          output_file="$\{input_file%.typ}.pdf"  # Replace .typ with .pdf
+          output_file="''${input_file%.typ}.pdf"  # Replace .typ with .pdf
 
           typst watch "$input_file" "$output_file" &  # Watch and compile Typst file
           sleep 1  # Give Typst some time to generate the PDF
