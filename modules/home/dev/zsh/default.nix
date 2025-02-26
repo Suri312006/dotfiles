@@ -64,22 +64,22 @@ in {
       h = "hx .";
     };
     initExtra = ''
-            eval `ssh-agent` &> /dev/null
-            ssh-add ~/.ssh/github_private &> /dev/null
-            ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
-            ssh-add ~/.ssh/connectify &> /dev/null
+      eval `ssh-agent` &> /dev/null
+      ssh-add ~/.ssh/github_private &> /dev/null
+      ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+      ssh-add ~/.ssh/connectify &> /dev/null
 
-            eval "$(zoxide init zsh)"
-            eval "$(starship init zsh)"
+      eval "$(zoxide init zsh)"
+      eval "$(starship init zsh)"
 
-            function y() {
-                local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-                yazi "$@" --cwd-file="$tmp"
-                if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-                        cd -- "$cwd"
-                fi
-                rm -f -- "$tmp"
-            }
+      function y() {
+          local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+          yazi "$@" --cwd-file="$tmp"
+          if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+                  cd -- "$cwd"
+          fi
+          rm -f -- "$tmp"
+      }
 
       function tz() {
           if [ -z "$1" ]; then
