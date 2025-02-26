@@ -111,6 +111,12 @@
 
       language = [
         {
+          name = "typst";
+          auto-format = true;
+          formatter.command = "typstyle";
+
+        }
+        {
           name = "latex";
           language-servers = [ "texlab" "ltex-ls-plus" ];
         }
