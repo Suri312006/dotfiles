@@ -64,21 +64,35 @@ in {
       h = "hx .";
     };
     initExtra = ''
-      eval `ssh-agent` &> /dev/null
-      ssh-add ~/.ssh/github_private &> /dev/null
-      ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
-      ssh-add ~/.ssh/connectify &> /dev/null
+            eval `ssh-agent` &> /dev/null
+            ssh-add ~/.ssh/github_private &> /dev/null
+            ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+            ssh-add ~/.ssh/connectify &> /dev/null
 
-      eval "$(zoxide init zsh)"
-      eval "$(starship init zsh)"
+            eval "$(zoxide init zsh)"
+            eval "$(starship init zsh)"
 
-      function y() {
-          local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-          yazi "$@" --cwd-file="$tmp"
-          if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-                  cd -- "$cwd"
+            function y() {
+                local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+                yazi "$@" --cwd-file="$tmp"
+                if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+                        cd -- "$cwd"
+                fi
+                rm -f -- "$tmp"
+            }
+
+      function tz() {
+          if [ -z "$1" ]; then
+              echo "Usage: tz <file.typ>"
+              return 1
           fi
-          rm -f -- "$tmp"
+
+          input_file="$1"
+          output_file="$\{input_file%.typ}.pdf"  # Replace .typ with .pdf
+
+          typst watch "$input_file" -o "$output_file" &  # Watch and compile Typst file
+          sleep 1  # Give Typst some time to generate the PDF
+          zathura "$output_file"  # Open the generated PDF
       }
     '';
   };
