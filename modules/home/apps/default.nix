@@ -16,6 +16,7 @@
     # texliveMedium
     texliveFull
     texlivePackages.lastpage
+    typst
     speedtest-cli
     # zed-editor
 
@@ -23,5 +24,6 @@
     tokei
     dust
     eza
+
   ];
 }

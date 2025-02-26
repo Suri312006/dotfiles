@@ -23,6 +23,7 @@
       tailwindcss-language-server
       emmet-language-server
       marksman
+      tinymist
     ];
 
     settings = {
