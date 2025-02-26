@@ -90,7 +90,7 @@ in {
           input_file="$1"
           output_file="$\{input_file%.typ}.pdf"  # Replace .typ with .pdf
 
-          typst watch "$input_file" -o "$output_file" &  # Watch and compile Typst file
+          typst watch "$input_file" "$output_file" &  # Watch and compile Typst file
           sleep 1  # Give Typst some time to generate the PDF
           zathura "$output_file"  # Open the generated PDF
       }
