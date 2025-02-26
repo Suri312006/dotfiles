@@ -17,8 +17,10 @@
     texliveFull
     texlivePackages.lastpage
     typst
-    speedtest-cli
+    tinymist
+
     # zed-editor
+    speedtest-cli
 
     # rust stuff
     tokei
