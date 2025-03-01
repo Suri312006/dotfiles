@@ -23,6 +23,8 @@
       tailwindcss-language-server
       emmet-language-server
       marksman
+      vale-ls
+      tinymist
     ];
 
     settings = {
@@ -114,11 +116,12 @@
           name = "typst";
           auto-format = true;
           formatter.command = "typstyle";
+          language-servers = [ "tinymist" "vale-ls" ];
 
         }
         {
           name = "latex";
-          language-servers = [ "texlab" "ltex-ls-plus" ];
+          language-servers = [ "texlab" "ltex-ls-plus" "vale-ls" ];
         }
         {
           name = "nix";

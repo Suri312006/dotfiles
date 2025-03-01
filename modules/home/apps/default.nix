@@ -17,7 +17,6 @@
     texliveFull
     texlivePackages.lastpage
     typst
-    tinymist
 
     # zed-editor
     speedtest-cli
