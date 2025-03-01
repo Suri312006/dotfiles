@@ -116,7 +116,9 @@
           name = "typst";
           auto-format = true;
           formatter.command = "typstyle";
-          language-servers = [ "tinymist" "vale-ls" ];
+          # idk how to fucking set this shit up
+          # language-servers = [ "tinymist" "vale-ls" ];
+          language-servers = [ "tinymist" ];
 
         }
         {
