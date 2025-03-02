@@ -123,7 +123,8 @@
         }
         {
           name = "latex";
-          language-servers = [ "texlab" "ltex-ls-plus" "vale-ls" ];
+          # language-servers = [ "texlab" "ltex-ls-plus" "vale-ls" ];
+          language-servers = [ "texlab" "ltex-ls-plus" ];
         }
         {
           name = "nix";
