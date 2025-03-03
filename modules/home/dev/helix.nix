@@ -3,6 +3,7 @@
   home.file.".config/helix/ignore".text = ''
     !.notes/
     !.gitignore
+    !.github/
   '';
 
   programs.helix = {
