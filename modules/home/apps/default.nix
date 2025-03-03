@@ -25,6 +25,7 @@
     tokei
     dust
     eza
+    ripgrep
 
   ];
 }
