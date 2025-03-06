@@ -3,6 +3,8 @@
 
   imports = [ ./firefox.nix ./spotify.nix ];
 
+  services.tailscale.enable = true;
+
   home.packages = with pkgs; [
     discord
     webcord

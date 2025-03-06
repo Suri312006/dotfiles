@@ -4,6 +4,7 @@
     !.notes/
     !.gitignore
     !.github/
+    !.devcontainer/
   '';
 
   programs.helix = {
