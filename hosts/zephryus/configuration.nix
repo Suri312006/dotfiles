@@ -42,6 +42,8 @@
     allowedUDPPorts = [ 8080 80 ];
   };
 
+  services.tailscale.enable = true;
+
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
   virtualisation.docker.enable = true;
