@@ -43,12 +43,15 @@
       ];
 
       monitor = [
-        "eDP-1, 1920x1080@165.00, 0x0, 1"
+        # "eDP-1, 1920x1080@165.00, 0x0, 1"
+        "eDP-1, 2560x1440@165.00, 0x0, 1"
         # "DP-3, 1920x1080@74.97, 1920x0, 1"
-        "HDMI-A-1, 1920x1080@74.97, 1920x0, 1"
+        # "HDMI-A-1, 1920x1080@74.97, 1920x0, 1"
+        "HDMI-A-1, 1920x1080@74.97, 2560x0, 1"
         # "HDMI-A-1, 3840x2160@74.99, 1920x0, 1"
         # "DP-1, 1920x1080@74.97, 1920x0, 1"
-        "DP-3, 1920x1080@74.67, 3840x0, 1, transform, 3"
+        # "DP-3, 1920x1080@74.67, 3840x0, 1, transform, 3"
+        "DP-3, 1920x1080@74.67, 4480x0, 1, transform, 3"
       ];
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
@@ -138,8 +141,8 @@
         "$mod, S, exec, zen"
         # "$mod, D, exec, discord"
         "$mod, D, exec, webcord"
-        "$mod, Return, exec, wezterm-gui start --always-new-process"
-        # "$mod, Return, exec, ghostty -e suri_zellij_session_helper"
+        # "$mod, Return, exec, wezterm-gui start --always-new-process"
+        "$mod, Return, exec, ghostty -e suri_zellij_session_helper"
         # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
         "$mod, escape, exec, ~/.config/rofi/launchers/type-5/launcher.sh"
         # "$mod, escape, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"

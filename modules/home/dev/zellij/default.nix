@@ -1,26 +1,26 @@
 { pkgs, ... }:
 let
-  suri_zellij_session_helper = pkgs.writeShellScriptBin "suri_zellij_session_helper" ''
+  suri_zellij_session_helper =
+    pkgs.writeShellScriptBin "suri_zellij_session_helper" ''
 
-  ZELLIJ_SESSIONS=$(zellij ls | sed 's/\x1b\[[0-9;]*m//g' | cut -d ' ' -f 1)
-  NUM_SESSIONS=$(echo "''${ZELLIJ_SESSIONS}" | wc -l )
-  
-  if [ "''${NUM_SESSIONS}" -ge 1 ]; then
-    SESSION="$(echo "''${ZELLIJ_SESSIONS}" | fzf)"
+      ZELLIJ_SESSIONS=$(zellij ls | sed 's/\x1b\[[0-9;]*m//g' | cut -d ' ' -f 1)
+      NUM_SESSIONS=$(echo "''${ZELLIJ_SESSIONS}" | wc -l )
 
-    zellij a ''${SESSION}
+      if [ "''${NUM_SESSIONS}" -ge 1 ]; then
+        SESSION="$(echo "''${ZELLIJ_SESSIONS}" | fzf)"
 
-  else 
-    zellij attach -c
-  fi
+        zellij a ''${SESSION}
 
-  '';
-in
-{
+      else 
+        zellij attach -c
+      fi
+
+    '';
+in {
 
   home = {
     packages = [ pkgs.zellij suri_zellij_session_helper ];
-    file.".config/zellij/config.kdl".source = ./config.kdl;
+    # file.".config/zellij/config.kdl".source = ./config.kdl;
   };
 }
 
