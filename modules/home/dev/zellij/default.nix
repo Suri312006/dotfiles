@@ -20,7 +20,7 @@ in {
 
   home = {
     packages = [ pkgs.zellij suri_zellij_session_helper ];
-    # file.".config/zellij/config.kdl".source = ./config.kdl;
+    file.".config/zellij/config.kdl".source = ./config.kdl;
   };
 }
 
