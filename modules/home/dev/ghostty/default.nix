@@ -7,7 +7,7 @@
      font-size = "11"
      window-padding-x = 4
      window-padding-y = 3,1
-     theme = "GruvboxDark"
+     theme = "gruvbox-material"
     # initial-command = "zellij"
   '';
 }
