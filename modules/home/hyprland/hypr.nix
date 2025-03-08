@@ -6,7 +6,7 @@
   home.packages = with pkgs;
     [
 
-      kdePackages.xwaylandvideobridg
+      kdePackages.xwaylandvideobridge
     ];
 
   wayland.windowManager.hyprland = {
