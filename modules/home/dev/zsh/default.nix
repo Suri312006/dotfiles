@@ -61,7 +61,7 @@ in {
 
       l = "exa";
 
-      h = "hx .";
+      lg = "lazygit";
     };
     initExtra = ''
       eval `ssh-agent` &> /dev/null
