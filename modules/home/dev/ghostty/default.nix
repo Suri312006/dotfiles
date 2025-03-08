@@ -6,7 +6,7 @@
      font-family = "Monaspace Krypton SemiBold"
      font-size = "11"
      window-padding-x = 4
-     window-padding-y = 1
+     window-padding-y = 3,1
      theme = "GruvboxDark"
     # initial-command = "zellij"
   '';
