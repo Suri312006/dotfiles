@@ -84,6 +84,8 @@
       language-server.ltex = {
         command = "ltex-ls-plus";
         config.ltex.dictionary."en-US" = [ "ewwe" "flaberrasted" ];
+        config.ltex.disabledRules."en-US" = [ "WHITESPACE_RULE" ];
+
       };
 
       language-server.rust-analyzer.config.check.command = "clippy";
