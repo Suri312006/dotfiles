@@ -7,7 +7,7 @@
      font-size = "11"
      window-padding-x = 4
      window-padding-y = 1
-     theme = "Monokai Soda"
+     theme = "GruvboxDark"
     # initial-command = "zellij"
   '';
 }
