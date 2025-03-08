@@ -3,7 +3,8 @@
     ./kitty
     ./zsh
     ./nvim.nix
-    ./nixvim
+    # #killnixvim
+    # ./nixvim
     ./zellij
     ./starship
     ./ghostty
