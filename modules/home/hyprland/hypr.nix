@@ -3,7 +3,11 @@
   #   inputs.hyprland.homeManagerModules.default
   # ];
 
-  home.packages = with pkgs; [ xwaylandvideobridge ];
+  home.packages = with pkgs;
+    [
+
+      kdePackages.xwaylandvideobridg
+    ];
 
   wayland.windowManager.hyprland = {
     enable = true;
