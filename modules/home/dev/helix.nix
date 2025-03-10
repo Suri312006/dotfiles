@@ -31,7 +31,8 @@
     ];
 
     settings = {
-      theme = lib.mkForce "gruvbox_dark_hard";
+      # theme = lib.mkForce "gruvbox_dark_hard";
+      theme = lib.mkForce "ayu_dark";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
