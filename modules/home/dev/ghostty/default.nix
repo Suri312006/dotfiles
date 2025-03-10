@@ -33,6 +33,7 @@
 
     window-padding-y = 3,1
 
-    theme = "gruvbox-material"
+    # theme = "gruvbox-material"
+    theme = "ayu"
   '';
 }
