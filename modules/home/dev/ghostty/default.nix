@@ -1,9 +1,6 @@
 { inputs, ... }: {
   home.packages = [ inputs.ghostty.packages.x86_64-linux.default ];
 
-  # what
-  # === != <= ->
-
   home.file.".config/ghostty/config".text = ''
 
     font-family = ""
@@ -12,9 +9,9 @@
 
     font-family-bold = "Monaspace Neon SemiBold"
 
-    font-family-italic = "Monaspace Xenon SemiBold"
+    font-family-italic = "Monaspace Radon SemiBold"
 
-    font-family-bold-italic = "Monaspace Radon SemiBold"
+    font-family-bold-italic = "Monaspace Argon SemiBold"
 
 
     font-feature = "calt"
