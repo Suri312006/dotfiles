@@ -7,7 +7,7 @@
     !.devcontainer/
   '';
 
-  home.file.".config/helix/helix-ayu".source = ./helix-ayu.toml;
+  home.file.".config/helix/themes/helix-ayu.toml".source = ./helix-ayu.toml;
 
   programs.helix = {
     enable = true;
