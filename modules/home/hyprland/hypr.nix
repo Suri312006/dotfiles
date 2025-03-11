@@ -89,7 +89,7 @@
 
         # opacity (transparent) #enable as desired
         "opacity 0.9 0.9, class:^([Rr]ofi)$"
-        "opacity 0.9 1, class:^(zen)$"
+        "opacity 0.9 0.95, class:^(zen)$"
         "opacity 0.9 0.9, class:^([Gg]oogle-chrome)$"
         "opacity 0.9 0.9, class:^([Tt]hunar)$"
         "opacity 0.8 0.9, class:^(pcmanfm-qt)$"
