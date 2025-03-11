@@ -35,7 +35,7 @@
     settings = {
       # theme = lib.mkForce "gruvbox_dark_hard";
       # theme = lib.mkForce "stylix";
-      theme = lib.mkForce "helix-ayu";
+      theme = lib.mkForce "monokai_soda";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
