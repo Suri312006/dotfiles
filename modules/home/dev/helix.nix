@@ -7,6 +7,8 @@
     !.devcontainer/
   '';
 
+  home.file.".config/helix/helix-ayu".source = ../helix-ayu.toml;
+
   programs.helix = {
     enable = true;
     package = inputs.helix.packages.${pkgs.system}.default;
@@ -32,7 +34,8 @@
 
     settings = {
       # theme = lib.mkForce "gruvbox_dark_hard";
-      theme = lib.mkForce "ayu_dark";
+      # theme = lib.mkForce "stylix";
+      theme = lib.mkForce "helix-ayu";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
