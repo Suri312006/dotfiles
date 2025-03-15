@@ -128,9 +128,9 @@
           formatter.command = "typstyle";
           # idk how to fucking set this shit up
           # language-servers = [ "tinymist" "vale-ls" ];
-          language-servers = [ "tinymist" "ltex-ls" ];
+          # language-servers = [ "tinymist" "ltex-ls" ];
 
-          # language-servers = [ "tinymist" ];
+          language-servers = [ "tinymist" ];
         }
         {
           name = "latex";
