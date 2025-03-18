@@ -29,6 +29,7 @@
     nixd
     nil
     python3
+    awscli2
 
     # gnumake42
     # llvmPackages_18.libcxxClang
