@@ -2,7 +2,7 @@
 
   programs.starship = {
     enable = true;
-    settings = {
+    settings = lib.MkForce {
       "$schema" = "https://starship.rs/config-schema.json";
 
       format =
