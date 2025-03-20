@@ -2,6 +2,8 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 { inputs, lib, config, pkgs, outputs, ... }: {
   # You can import other NixOS modules here
+  nixpkgs.config.permittedInsecurePackages = [ "electron-32.3.3" ];
+
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
@@ -43,8 +45,6 @@
   };
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
-
-  nixpkgs.config.permittedInsecurePackages = [ "electron-32.3.3" ];
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
