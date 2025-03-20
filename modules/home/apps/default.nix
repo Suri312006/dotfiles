@@ -26,6 +26,7 @@
     dust
     eza
     ripgrep
+    electron
 
   ];
 }
