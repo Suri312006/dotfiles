@@ -2,7 +2,6 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 { inputs, lib, config, pkgs, outputs, ... }: {
   # You can import other NixOS modules here
-  nixpkgs.config.permittedInsecurePackages = [ "electron-32.3.3" ];
 
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):

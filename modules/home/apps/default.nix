@@ -3,10 +3,9 @@
 
   imports = [ ./firefox.nix ./spotify.nix ];
 
-
   home.packages = with pkgs; [
     discord
-    webcord
+    # webcord
     google-chrome
     slack
     zulip
