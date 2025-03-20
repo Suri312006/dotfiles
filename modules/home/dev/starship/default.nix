@@ -1,7 +1,7 @@
-{
+{ lib, ... }: {
   programs.starship.enable = true;
   # star
-  programs.starship.settings = ''
+  programs.starship.settings = lib.mkForce ''
     "$schema" = 'https://starship.rs/config-schema.json'
 
     format = """
