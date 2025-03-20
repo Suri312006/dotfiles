@@ -44,6 +44,8 @@
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
+  nixpkgs.config.permittedInsecurePackages = [ "electron-32.3.3" ];
+
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
     enable = true;
