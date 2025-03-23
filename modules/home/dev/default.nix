@@ -1,16 +1,11 @@
 { pkgs, ... }: {
   imports = [
-    ./kitty
     ./zsh
-    ./nvim.nix
-    # #killnixvim
-    # ./nixvim
     ./zellij
     ./starship
     ./ghostty
 
     ./git.nix
-    ./wezterm
     ./helix.nix
     ./langs
   ];

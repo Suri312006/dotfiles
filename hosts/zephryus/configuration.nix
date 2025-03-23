@@ -22,21 +22,11 @@
 
   programs.rog-control-center.enable = true;
 
-  # nix.settings = {
-  #   substituters = [ "https://hyprland.cachix.org" ];
-  #   trusted-public-keys =
-  #     [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  # };
-
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
     trusted-public-keys =
       [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
-
-  # valgrant
-  # Minimal configuration for NFS support with Vagrant.
-  #services.nfs.server.enable = true;
 
   # Add firewall exception for VirtualBox provider
   networking.firewall.extraCommands = ''
@@ -151,11 +141,6 @@
   #     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   #   };
 
-  # FIXME: Add the rest of your current configuration
-
-  # TODO: Set your hostname
-  # networking.hostName = "your-hostname";
-
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
@@ -176,18 +161,6 @@
   boot.extraModprobeConfig = ''
     options snd-hda-intel dmic_detect=0
   '';
-  # This setups a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  # services.openssh = {
-  #   enable = true;
-  #   settings = {
-  #     # Opinionated: forbid root login through SSH.
-  #     PermitRootLogin = "no";
-  #     # Opinionated: use keys only.
-  #     # Remove if you want to SSH using passwords
-  #     PasswordAuthentication = false;
-  #   };
-  # };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
