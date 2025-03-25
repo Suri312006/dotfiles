@@ -1,10 +1,1 @@
-{
-  imports = [
-    ./btop.nix
-    ./dev
-    ./apps
-    ./rice
-    ./hyprland
-    ./bspwm
-  ];
-}
+{ imports = [ ./btop.nix ./dev ./apps ./rice ./hyprland ]; }

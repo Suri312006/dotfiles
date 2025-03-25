@@ -1,14 +1,5 @@
 { pkgs, ... }: {
-  imports = [
-    ./zsh
-    ./zellij
-    ./starship
-    ./ghostty
-
-    ./git.nix
-    ./helix.nix
-    ./langs
-  ];
+  imports = [ ./zsh ./zellij ./starship ./ghostty ./helix ./langs ];
 
   programs.git.enable = true;
   home.packages = with pkgs; [
@@ -18,18 +9,12 @@
     nodejs
     valgrind
     gdb
+
     postman
     glow
 
-    nixd
-    nil
     python3
     awscli2
-
-    # gnumake42
-    # llvmPackages_18.libcxxClang
-
-    # c stuff
 
     cmake
     ninja
@@ -53,10 +38,6 @@
     # NOTE: make sure mason.nvim don't install clangd
     clang-tools
 
-    # required by codelldb (debugger)
-    # lldb # libraries conflicts with clang-tools
-    gdb
-
     # libs
     gpp # c++ module?, decrypt
     gecode # c++ module
@@ -70,6 +51,5 @@
     flyctl
 
     just
-    # rust-analyzer
   ];
 }

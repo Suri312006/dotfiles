@@ -30,6 +30,8 @@
       vale-ls
       tinymist
       ltex-ls
+      nixd
+      nil
     ];
 
     settings = {
