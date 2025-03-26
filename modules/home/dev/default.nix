@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./zsh ./zellij ./starship ./ghostty ./helix ./langs ];
+  imports = [ ./fish.nix ./zellij ./starship ./ghostty ./helix ./langs ];
 
   programs.git.enable = true;
   home.packages = with pkgs; [
