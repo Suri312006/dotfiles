@@ -19,6 +19,7 @@
     texlivePackages.lastpage
     typst
     yazi
+    zoxide
 
     protonmail-desktop
 
