@@ -12,8 +12,9 @@
       ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
       ssh-add ~/.ssh/connectify &> /dev/null
 
-      eval "$(zoxide init zsh)"
-      eval "$(starship init zsh)"
+      eval "$(zoxide init fish)"
+      eval "$(starship init fish)"
+
     '';
 
     shellAliases = {
