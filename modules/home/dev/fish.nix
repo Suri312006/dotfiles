@@ -7,6 +7,15 @@
 
     enable = true;
 
+    interactiveShellInit = ''
+      ssh-add ~/.ssh/github_private &> /dev/null
+      ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
+      ssh-add ~/.ssh/connectify &> /dev/null
+
+      eval "$(zoxide init zsh)"
+      eval "$(starship init zsh)"
+    '';
+
     shellAliases = {
       ".." = "cd ..";
       "..." = "cd ../..";
@@ -86,6 +95,36 @@
             git commit -m "Generation: $VERSION"
             sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus
             git push
+        end
+      '';
+
+      y = ''
+        function y
+            set tmp (mktemp -t "yazi-cwd.XXXXXX")
+            yazi $argv --cwd-file="$tmp"
+            if test -s "$tmp"
+                set cwd (cat -- "$tmp")
+                if test -n "$cwd" -a "$cwd" != "$PWD"
+                    cd -- "$cwd"
+                end
+            end
+            rm -f -- "$tmp"
+        end
+      '';
+
+      tz = ''
+        function tz
+            if test (count $argv) -eq 0
+                echo "Usage: tz <file.typ>"
+                return 1
+            end
+
+            set input_file $argv[1]
+            set output_file (string replace ".typ" ".pdf" -- $input_file)
+
+            typst watch "$input_file" "$output_file" &  # Watch and compile Typst file
+            sleep 1  # Give Typst some time to generate the PDF
+            zathura "$output_file"  # Open the generated PDF
         end
       '';
     };
