@@ -41,7 +41,6 @@
     username = "suri";
     homeDirectory = "/home/suri";
     sessionPath = [ "$HOME/bin" "$HOME/.local/bin" "$HOME/.cargo/bin" ];
-
   };
 
   # Add stuff for your user as you see fit:
