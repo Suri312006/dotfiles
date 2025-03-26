@@ -1,10 +1,8 @@
 { pkgs, inputs, ... }: {
   imports = [
     ./gtk.nix
-    ./pywal.nix
     ./mako.nix
     # ./eww
-    ./ags.nix
     ./waybar
     ./rofi
   ];
