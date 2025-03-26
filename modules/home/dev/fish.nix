@@ -33,7 +33,7 @@
       "lltr" = "eza -lhr -s time --no-quotes --time-style long-iso";
 
       "re" = ''
-        VERSION=$(($(readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)) 
+        set VERSION $(($(readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)) 
         z ~/dots/nixdots && git add -A && git commit -m "Generation: '$VERSION'" && sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus && git push'';
 
       "ree" =
