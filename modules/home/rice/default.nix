@@ -1,10 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   imports = [
-    ./qt.nix
     ./gtk.nix
     ./pywal.nix
     ./mako.nix
@@ -16,11 +11,7 @@
 
   pywal.enable = false;
 
-  home.packages = with pkgs; [
-    wofi
-    nwg-look
-    fastfetch
-  ];
+  home.packages = with pkgs; [ wofi nwg-look fastfetch ];
 
   # home.file."Pictures/Wallpapers" = {
   # source = builtins.fetchGit {
