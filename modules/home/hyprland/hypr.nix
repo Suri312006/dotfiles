@@ -60,20 +60,19 @@
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
-      windowrule = [
-        "float, org.kde.polkit-kde-authentication-agent-1"
-        "float, nm-connection-editor|blueman-manager"
-        "float, pavucontrol"
-        "float, nwg-look|qt5ct|mpv"
-        "float, onedriver|onedriver-launcher"
-        "float, eog"
-        "float, zoom"
-        "float, rofi"
-        "float, gnome-system-monitor"
-        "float, CoupledCats"
-
-        "center = ^(pavucontrol)"
-      ];
+      # windowrule = [
+      #   "float, org.kde.polkit-kde-authentication-agent-1"
+      #   "float, nm-connection-editor|blueman-manager"
+      #   "float, pavucontrol"
+      #   "float, nwg-look|qt5ct|mpv"
+      #   "float, onedriver|onedriver-launcher"
+      #   "float, eog"
+      #   "float, zoom"
+      #   "float, rofi"
+      #   "float, gnome-system-monitor"
+      #   "float, CoupledCats"
+      #   "center = ^(pavucontrol)"
+      # ];
       windowrulev2 = [
         # windowrule v2
         "workspace 1 silent,  class:^(dev.zed.Zed)$"
