@@ -18,6 +18,9 @@
     texliveFull
     texlivePackages.lastpage
     typst
+    yazi
+
+    protonmail-desktop
 
     # zed-editor
     speedtest-cli
