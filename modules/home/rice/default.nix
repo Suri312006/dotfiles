@@ -7,7 +7,7 @@
     ./rofi
   ];
 
-  pywal.enable = false;
+  # pywal.enable = false;
 
   home.packages = with pkgs; [ wofi nwg-look fastfetch ];
 
