@@ -60,7 +60,7 @@ right_format = """
 add_newline = true
 
 # Color Palette
-palette = "Power10"
+palette = "Power10Gruv"
 
 [palettes.Power10]
 # only lowercase names
@@ -97,6 +97,40 @@ status = 'red'
 localip = 'green'
 shell = '#424242' # greydimmed
 
+[palettes.Power10Gruv]
+# only lowercase names
+greydimmed = '#32302f' # Gruvbox dark gray
+greydarker = '#1d2021' # Gruvbox darkest gray
+ossymbol = '#a89984' # Gruvbox light gray
+user = '#b8bb26' # Gruvbox green
+userroot = '#fb4934' # Gruvbox red
+sshsymbol = '#b8bb26' # Gruvbox green
+hostname = '#b8bb26' # Gruvbox green
+sudo = '#fb4934' # Gruvbox red
+directory = '#83a598' # Gruvbox blue
+php = '#d3869b' # Gruvbox purple
+python = '#fabd2f' # Gruvbox yellow
+# git start ---
+orangegit = '#fe8019' # Gruvbox orange
+conflicted = '#fb4934' # Gruvbox red
+ahead = '#fabd2f' # Gruvbox yellow
+behind = '#fabd2f' # Gruvbox yellow
+diverged = '#fabd2f' # Gruvbox yellow
+uptodate = '#b8bb26' # Gruvbox green
+untracked = '#fb4934' # Gruvbox red
+stashed = '#d65d0e' # Gruvbox dark orange
+modified = '#d79921' # Gruvbox dark yellow
+staged = '#b8bb26' # Gruvbox green
+renamed = '#fabd2f' # Gruvbox yellow
+deleted = '#fe8019' # Gruvbox orange
+# git end ---
+jobs = '#458588' # Gruvbox blue
+memory = '#d3869b' # Gruvbox purple
+duration = '#fabd2f' # Gruvbox yellow
+fill = '#32302f' # Gruvbox dark gray
+status = '#fb4934' # Gruvbox red
+localip = '#b8bb26' # Gruvbox green
+shell = '#32302f' # Gruvbox dark gray
 # Customization and activation of some modules:
 # Listed in the order of their position in the module rows above
 [os]
@@ -303,7 +337,7 @@ style = 'fg:greydimmed'
 [time]
 format = "[ \ueab5 $time]($style)"
 style = 'fg:greydimmed'
-disabled = true # set to 'false', if you want to see the time
+disabled = false # set to 'false', if you want to see the time
 
 [localip]
 format = '[$localipv4](fg:localip bold)'
