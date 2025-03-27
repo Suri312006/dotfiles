@@ -84,6 +84,8 @@
 
     functions = {
 
+      # TODO: figure out how this is supposed to work, rn need to call it twice for it to
+      # use argument
       mkcd = ''
         function mkcd --argument name
         	mkdir -p $name
@@ -108,7 +110,7 @@
                 cd -- "$cwd"
             end
         end
-        rm -f -- "$tmp"
+        rm -f -- "$tmp" &> /dev/null
 
       '';
 
