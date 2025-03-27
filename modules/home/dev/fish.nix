@@ -8,6 +8,7 @@
     enable = true;
 
     interactiveShellInit = ''
+      set fish_greeting
       eval (ssh-agent -c) &> /dev/null
       ssh-add ~/.ssh/github_private &> /dev/null
       ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
