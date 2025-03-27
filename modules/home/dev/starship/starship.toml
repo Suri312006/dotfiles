@@ -99,8 +99,10 @@ shell = '#424242' # greydimmed
 
 [palettes.Power10Gruv]
 # only lowercase names
-greydimmed = '#32302f' # Gruvbox dark gray
-greydarker = '#1d2021' # Gruvbox darkest gray
+# greydimmed = '#32302f' # Gruvbox dark gray
+# greydarker = '#1d2021' # Gruvbox darkest gray
+greydimmed = '#2e2d2d'
+greydarker = '#1a1919'
 ossymbol = '#a89984' # Gruvbox light gray
 user = '#b8bb26' # Gruvbox green
 userroot = '#fb4934' # Gruvbox red
