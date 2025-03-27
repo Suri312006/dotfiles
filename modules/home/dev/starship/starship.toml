@@ -64,8 +64,8 @@ palette = "Power10Gruv"
 
 [palettes.Power10]
 # only lowercase names
-greydimmed = '#2e2d2d'
-greydarker = '#1a1919'
+greydimmed = '#424242'
+greydarker = '#242424'
 ossymbol = '#AAAAAA' # dimmed white
 user = 'green'
 userroot = 'red'
@@ -98,11 +98,11 @@ localip = 'green'
 shell = '#424242' # greydimmed
 
 [palettes.Power10Gruv]
+greydimmed = '#424242'
+greydarker = '#242424'
 # only lowercase names
 # greydimmed = '#32302f' # Gruvbox dark gray
 # greydarker = '#1d2021' # Gruvbox darkest gray
-greydimmed = '#2e2d2d'
-greydarker = '#1a1919'
 ossymbol = '#a89984' # Gruvbox light gray
 user = '#b8bb26' # Gruvbox green
 userroot = '#fb4934' # Gruvbox red
@@ -338,7 +338,7 @@ style = 'fg:greydimmed'
 
 [time]
 format = "[ \ueab5 $time]($style)"
-style = 'fg:greydarker'
+style = 'fg:greydimmed'
 disabled = false # set to 'false', if you want to see the time
 
 [localip]
