@@ -64,8 +64,8 @@ palette = "Power10Gruv"
 
 [palettes.Power10]
 # only lowercase names
-greydimmed = '#424242'
-greydarker = '#242424'
+greydimmed = '#2e2d2d'
+greydarker = '#1a1919'
 ossymbol = '#AAAAAA' # dimmed white
 user = 'green'
 userroot = 'red'
