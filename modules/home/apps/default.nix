@@ -9,7 +9,7 @@
     # 
     google-chrome
     slack
-    # zulip
+    zulip
     kdePackages.filelight
     zathura
     # gimp-with-plugins
