@@ -338,7 +338,7 @@ style = 'fg:greydimmed'
 
 [time]
 format = "[ \ueab5 $time]($style)"
-style = 'fg:greydimmed'
+style = 'fg:greydarker'
 disabled = false # set to 'false', if you want to see the time
 
 [localip]
