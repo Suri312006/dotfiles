@@ -8,7 +8,7 @@
     enable = true;
 
     interactiveShellInit = ''
-      eval `(ssh-agent)`
+      eval (ssh-agent -c)
       ssh-add ~/.ssh/github_private &> /dev/null
       ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
       ssh-add ~/.ssh/connectify &> /dev/null
