@@ -8,7 +8,7 @@
     enable = true;
 
     interactiveShellInit = ''
-      eval (ssh-agent -c)
+      eval (ssh-agent -c) &> /dev/null
       ssh-add ~/.ssh/github_private &> /dev/null
       ssh-add ~/.ssh/ucsc_gitlab &> /dev/null
       ssh-add ~/.ssh/connectify &> /dev/null
@@ -89,16 +89,47 @@
         	cd $name
         end
       '';
+      # function re
+      #     set VERSION (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)
+      #     z ~/dots/nixdots
+      #     git add -A
+      #     git commit -m "Generation: $VERSION"
+      #     sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus
+      #     git push
+      # end
       re = ''
+
         function re
-            set VERSION (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)
-            z ~/dots/nixdots
-            git add -A
-            git commit -m "Generation: $VERSION"
-            sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus
-            git push
-        end
-      '';
+            # Add error checking and continue-on-error logic
+            set -l version (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*" ^/dev/null; or echo 0) + 1)
+            
+            # Use command to suppress function/alias behavior and get full error info
+            command z ~/dots/nixdots; or begin
+                echo "Failed to change directory to ~/dots/nixdots"
+                return 1
+            end
+            
+            # Check for clean working directory before git operations
+            if not git diff-index --quiet HEAD --
+                git add -A
+                git commit -m "Generation: $version"; or begin
+                    echo "Git commit failed"
+                    return 1
+                end
+            end
+            
+            # Use full path for sudo and add -v for verbose output
+            sudo -v; and sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus; or begin
+                echo "NixOS rebuild failed"
+                return 1
+            end
+            
+            # Separate git push to allow previous steps to complete
+            git push; or begin
+                echo "Git push failed"
+                return 1
+            end
+        end      '';
 
       y = ''
         function y
