@@ -131,19 +131,36 @@
             end
         end        '';
 
+      # function y
+      #     set tmp (mktemp -t "yazi-cwd.XXXXXX")
+      #     yazi $argv --cwd-file="$tmp"
+      #     if test -s "$tmp"
+      #         set cwd (cat -- "$tmp")
+      #         if test -n "$cwd" -a "$cwd" != "$PWD"
+      #             cd -- "$cwd"
+      #         end
+      #     end
+      #     rm -f -- "$tmp"
+      # end
       y = ''
+
         function y
-            set tmp (mktemp -t "yazi-cwd.XXXXXX")
+            set -l tmp (mktemp -t "yazi-cwd.XXXXXX")
             yazi $argv --cwd-file="$tmp"
-            if test -s "$tmp"
-                set cwd (cat -- "$tmp")
+            
+            # Add a small delay to ensure file is written
+            sleep 0.1
+            
+            # More robust file checking
+            if test -s "$tmp" && set -l cwd (cat -- "$tmp")
                 if test -n "$cwd" -a "$cwd" != "$PWD"
                     cd -- "$cwd"
                 end
             end
-            rm -f -- "$tmp"
-        end
-      '';
+            
+            # Ensure cleanup even if something goes wrong
+            command rm -f -- "$tmp"
+        end      '';
 
       tz = ''
         function tz
