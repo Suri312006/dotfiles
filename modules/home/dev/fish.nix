@@ -90,85 +90,40 @@
         	cd $name
         end
       '';
-      # function re
-      #     set VERSION (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)
-      #     z ~/dots/nixdots
-      #     git add -A
-      #     git commit -m "Generation: $VERSION"
-      #     sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus
-      #     git push
-      # end
       re = ''
-        function re
-            # Safely get version number
-            set -l ver (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*" 2>/dev/null; or echo 0) + 1)
-            
-            # Change directory with error handling
-            cd ~/dots/nixdots; or begin
-                echo "Failed to change directory to ~/dots/nixdots"
-                return 1
-            end
-            
-            # Check for changes before git operations
-            if not git diff-index --quiet HEAD --
-                git add -A
-                git commit -m "Generation: $ver"; or begin
-                    echo "Git commit failed"
-                    return 1
-                end
-            end
-            
-            # NixOS rebuild with verbose output
-            sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus; or begin
-                echo "NixOS rebuild failed"
-                return 1
-            end
-            
-            # Push changes
-            git push; or begin
-                echo "Git push failed"
-                return 1
-            end
-        end        '';
+        set VERSION (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*") + 1)
+        z ~/dots/nixdots
+        git add -A
+        git commit -m "Generation: $VERSION"
+        sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus
+        git push
+      '';
 
       y = ''
-        function y
-            echo "1"
-            set tmp (mktemp -t "yazi-cwd.XXXXXX")
-            echo "2"
-            yazi $argv --cwd-file="$tmp"
-            echo "3"
-            if test -s "$tmp"
-            echo "4"
-                set cwd (cat -- "$tmp")
-            echo "5"
-                if test -n "$cwd" -a "$cwd" != "$PWD"
-            echo "6"
-                    cd -- "$cwd"
-            echo "7"
-                end
-            echo "8"
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if test -s "$tmp"
+            set cwd (cat -- "$tmp")
+            if test -n "$cwd" -a "$cwd" != "$PWD"
+                cd -- "$cwd"
             end
-            echo "9"
-            rm -f -- "$tmp"
         end
+        rm -f -- "$tmp"
 
       '';
 
       tz = ''
-        function tz
-            if test (count $argv) -eq 0
-                echo "Usage: tz <file.typ>"
-                return 1
-            end
-
-            set input_file $argv[1]
-            set output_file (string replace ".typ" ".pdf" -- $input_file)
-
-            typst watch "$input_file" "$output_file" &  # Watch and compile Typst file
-            sleep 1  # Give Typst some time to generate the PDF
-            zathura "$output_file"  # Open the generated PDF
+        if test (count $argv) -eq 0
+            echo "Usage: tz <file.typ>"
+            return 1
         end
+
+        set input_file $argv[1]
+        set output_file (string replace ".typ" ".pdf" -- $input_file)
+
+        typst watch "$input_file" "$output_file" &  # Watch and compile Typst file
+        sleep 1  # Give Typst some time to generate the PDF
+        zathura "$output_file"  # Open the generated PDF
       '';
     };
   };
