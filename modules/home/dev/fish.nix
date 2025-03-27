@@ -98,38 +98,37 @@
       #     git push
       # end
       re = ''
-
         function re
-            # Add error checking and continue-on-error logic
-            set -l version (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*" ^/dev/null; or echo 0) + 1)
+            # Safely get version number
+            set -l ver (math (readlink /nix/var/nix/profiles/system | grep -o "[0-9]*" 2>/dev/null; or echo 0) + 1)
             
-            # Use command to suppress function/alias behavior and get full error info
-            command z ~/dots/nixdots; or begin
+            # Change directory with error handling
+            cd ~/dots/nixdots; or begin
                 echo "Failed to change directory to ~/dots/nixdots"
                 return 1
             end
             
-            # Check for clean working directory before git operations
+            # Check for changes before git operations
             if not git diff-index --quiet HEAD --
                 git add -A
-                git commit -m "Generation: $version"; or begin
+                git commit -m "Generation: $ver"; or begin
                     echo "Git commit failed"
                     return 1
                 end
             end
             
-            # Use full path for sudo and add -v for verbose output
-            sudo -v; and sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus; or begin
+            # NixOS rebuild with verbose output
+            sudo nixos-rebuild switch --flake /home/suri/dots/nixdots#zephryus; or begin
                 echo "NixOS rebuild failed"
                 return 1
             end
             
-            # Separate git push to allow previous steps to complete
+            # Push changes
             git push; or begin
                 echo "Git push failed"
                 return 1
             end
-        end      '';
+        end        '';
 
       y = ''
         function y
