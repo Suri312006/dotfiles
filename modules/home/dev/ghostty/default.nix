@@ -13,6 +13,8 @@
 
     font-family-bold-italic = "Monaspace Neon SemiBold"
 
+    cursor-style = "bar"
+
 
     font-feature = "calt"
     font-feature = "clig"

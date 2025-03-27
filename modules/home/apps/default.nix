@@ -5,18 +5,20 @@
 
   home.packages = with pkgs; [
     discord
-    # webcord
-    # 
     google-chrome
     slack
-    zulip
+    # zulip
+
     kdePackages.filelight
+
     zathura
+
     # gimp-with-plugins
     # texlive.combined.scheme-small
     # texliveMedium
     texliveFull
     texlivePackages.lastpage
+
     typst
     yazi
     zoxide

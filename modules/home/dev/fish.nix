@@ -25,8 +25,7 @@
       "...." = "cd ../../../";
       "....." = "cd ../../../../";
 
-      "dot" = "cd ~/.dotfiles";
-      "stor" = "cd /storage/FTP/";
+      "dots" = "cd ~/dots/nixdots";
 
       "cp" = "cp -v";
       "ddf" = "df -h";
@@ -47,7 +46,6 @@
       "ree" =
         "sudo nixos-rebuild switch --flake ~/dots/nixdots#zephryus && git push";
 
-      "dots" = "z ~/dots";
       "fcd" = ''
         cd "$(find ~/coding/ ~/storage/ -type d -not \( -path "*/.git/*" -o -path "*/target/*" -o -path "*/.venv/*" -o -path "*/node_modules/*" -o -path "*/venv/*" -o -path "*/build/*" -o -path "*/.*/*" \) -print 2>/dev/null | fzf)" '';
 
