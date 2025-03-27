@@ -10,6 +10,8 @@
     valgrind
     gdb
 
+    lazygit
+
     postman
     glow
 
