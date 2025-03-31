@@ -34,8 +34,6 @@
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
 
-      # remove when zulip is 5.20
-      permittedInsecurePackages = [ "electron-32.33" ];
 
     };
   };
