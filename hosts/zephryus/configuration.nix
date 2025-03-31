@@ -75,6 +75,8 @@
 
   home-manager.backupFileExtension = "backup";
 
+  nixpkgs.config.permittedInsecurePackages = [ "electron-32.3.3" ];
+
   services.udev.extraRules = ''
     ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="664", GROUP="users"    
   '';
