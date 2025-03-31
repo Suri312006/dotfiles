@@ -7,7 +7,7 @@
     discord
     google-chrome
     slack
-    # zulip
+    zulip
 
     kdePackages.filelight
 
