@@ -23,6 +23,8 @@
     yazi
     zoxide
 
+    steam
+
     protonmail-desktop
 
     # zed-editor
