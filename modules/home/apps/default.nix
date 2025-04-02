@@ -23,7 +23,7 @@
     yazi
     zoxide
 
-    steam
+    # steam
 
     protonmail-desktop
 
