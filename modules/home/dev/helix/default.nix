@@ -5,6 +5,8 @@
     !.gitignore
     !.github/
     !.devcontainer/
+    !.env*
+    !.sqlx/
   '';
 
   home.file.".config/helix/themes/helix-ayu.toml".source = ./helix-ayu.toml;
