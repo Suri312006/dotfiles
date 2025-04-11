@@ -19,6 +19,7 @@
     awscli2
 
     cmake
+    clang
     ninja
     clang13Stdenv
 
