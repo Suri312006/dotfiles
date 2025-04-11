@@ -27,7 +27,7 @@
 
     # build tools
     cmake
-    gcc
+    # gcc
     gnumake
     ninja
     pkg-config
