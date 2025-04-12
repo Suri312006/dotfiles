@@ -45,7 +45,7 @@
       # test utilities
       mesa-demos
       nvtopPackages.full
-      inputs.zen-browser.packages."${system}".default
+      # inputs.zen-browser.packages."${system}".default
     ];
     variables = {
       # for compiling openssl for nixos, should refactor into a diff file later
