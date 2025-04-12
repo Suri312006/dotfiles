@@ -145,8 +145,8 @@
 
         # "$mod, S, exec, zen"
         "$mod, S, exec, firefox"
-        # "$mod, D, exec, discord"
-        "$mod, D, exec, webcord"
+        "$mod, D, exec, discord"
+        # "$mod, D, exec, webcord"
         # "$mod, Return, exec, wezterm-gui start --always-new-process"
         "$mod, Return, exec, ghostty -e suri_zellij_session_helper"
         # "$mod, escape, exec, pkill wofi || wofi --show drun -modi drun,filebrowser,run,window"
