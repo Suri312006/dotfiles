@@ -13,6 +13,7 @@
       libnotify
       gnupg
       xfce.thunar
+      vulkan-tools
 
       lm_sensors
 
