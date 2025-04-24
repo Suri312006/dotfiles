@@ -7,6 +7,7 @@
     !.devcontainer/
     !.env*
     !.sqlx/
+    !.cargo/
   '';
 
   home.file.".config/helix/themes/helix-ayu.toml".source = ./helix-ayu.toml;
