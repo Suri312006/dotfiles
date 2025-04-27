@@ -322,6 +322,8 @@
         left_handed = 0;
         follow_mouse = 1;
         float_switch_override_focus = 0;
+        accel_profile = "flat";
+        # force_no_accel = 1;
 
         touchpad = {
           disable_while_typing = 1;
@@ -331,6 +333,7 @@
           tap-to-click = 1;
           drag_lock = 0;
         };
+
       };
 
       gestures = {
