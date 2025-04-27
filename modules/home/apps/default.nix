@@ -8,6 +8,7 @@
     google-chrome
     slack
     zulip
+    osu-lazer-bin
 
     kdePackages.filelight
 
