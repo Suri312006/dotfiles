@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
-let
-  tokyo-night-sddm = pkgs.libsForQt5.callPackage ./sddm-theme.nix { };
-in
-{
+let tokyo-night-sddm = pkgs.libsForQt5.callPackage ./sddm-theme.nix { };
+in {
 
   services.displayManager.sddm = {
     enable = true;
@@ -14,9 +12,9 @@ in
   environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
 
   services.xserver.enable = true;
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  # };
 
 }
