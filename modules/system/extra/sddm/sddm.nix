@@ -12,9 +12,5 @@ in {
   environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
 
   services.xserver.enable = true;
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  # };
 
 }

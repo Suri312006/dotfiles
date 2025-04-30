@@ -47,18 +47,7 @@
     setSocketVariable = true;
   };
 
-  services.flatpak.enable = true;
-
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true; # Enable the wlr portal
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland # Specific for Hyprland
-    ];
-    config.common.default = "*"; # Use any available portal implementation
-  };
-
+  # 
   # just for cse150
   boot.blacklistedKernelModules = [ "kvm" "kvm_amd" ];
   # virtualisation.libvirtd = {
