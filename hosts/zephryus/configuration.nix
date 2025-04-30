@@ -47,6 +47,8 @@
     setSocketVariable = true;
   };
 
+  services.flatpak.enable = true;
+
   # just for cse150
   boot.blacklistedKernelModules = [ "kvm" "kvm_amd" ];
   # virtualisation.libvirtd = {
