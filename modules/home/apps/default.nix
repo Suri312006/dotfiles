@@ -25,7 +25,6 @@
     zoxide
 
     # unityhub
-    flatpak
 
     # steam
 
