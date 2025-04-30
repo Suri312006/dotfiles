@@ -24,11 +24,10 @@
     yazi
     zoxide
 
+    protonmail-desktop
     # unityhub
 
     # steam
-
-    protonmail-desktop
 
     # zed-editor
     speedtest-cli
