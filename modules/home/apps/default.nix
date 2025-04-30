@@ -24,7 +24,8 @@
     yazi
     zoxide
 
-    unityhub
+    # unityhub
+    flatpak
 
     # steam
 
