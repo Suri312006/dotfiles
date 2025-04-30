@@ -24,6 +24,8 @@
     yazi
     zoxide
 
+    unityhub
+
     # steam
 
     protonmail-desktop
