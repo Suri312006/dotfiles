@@ -14,6 +14,8 @@
 
     zathura
 
+    blender
+
     # gimp-with-plugins
     # texlive.combined.scheme-small
     # texliveMedium
