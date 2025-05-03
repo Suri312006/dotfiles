@@ -15,6 +15,7 @@
     zathura
 
     blender
+    obsidian
 
     # gimp-with-plugins
     # texlive.combined.scheme-small
