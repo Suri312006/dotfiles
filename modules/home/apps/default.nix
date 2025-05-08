@@ -42,5 +42,7 @@
     ripgrep
     electron
 
+    godot_4
+
   ];
 }
