@@ -15,25 +15,20 @@ let
       echo "false" >> $NOTIF_FILE
     fi
   '';
-in
-{
+in {
   # nix-colors
   services.mako = {
     enable = true;
     defaultTimeout = 5000;
     borderRadius = 5;
 
-    extraConfig = ''
-      [mode=dnd]
-      invisible=1
-    '';
+    # extraConfig = ''
+    #   [mode=dnd]
+    #   invisible=1
+    # '';
 
   };
 
-  home.packages = [
-    suri_toggle_dnd
-  ];
+  home.packages = [ suri_toggle_dnd ];
 
-
-
-    }
+}
