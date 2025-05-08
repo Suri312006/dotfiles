@@ -77,9 +77,11 @@
       windowrulev2 = [
         # windowrule v2
         "workspace 1 silent,  class:^(dev.zed.Zed)$"
+        "workspace 1 silent,  class:^(Godot)$"
         "workspace 4 silent,  class:^([Gg]oogle-chrome)$"
         "workspace 3 silent, class:^(zen)$"
         "workspace 3 silent, class:^(firefox)$"
+        "workspace 5 silent,  class:^(blender)$"
         "workspace 6 silent, class:^(obsidian)$"
         "workspace 7 silent, class:^(discord)$"
         "workspace 9 silent, class:^(WebCord)$"
