@@ -126,6 +126,11 @@
         };
       };
 
+      language-server.gdscript = {
+        command = "nc";
+        args = [ "127.0.0.1" "6005" ];
+      };
+
       language = [
         {
           name = "typst";
@@ -163,6 +168,12 @@
         {
           name = "css";
           language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
+        }
+
+        {
+          name = "gdscript";
+          language-servers = [ "gdscript" ];
+          language-id = "gdscript";
         }
       ];
     };
