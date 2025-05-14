@@ -29,7 +29,7 @@
         "suri_polkit_init &"
         # starup apps
         "nm-applet --indicator &"
-        "rog-control-center &"
+        # "rog-control-center &"
         "blueman-applet & "
         # "webcord &"
         # "zen &"
