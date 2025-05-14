@@ -31,6 +31,8 @@
     pureref
     # unityhub
 
+    libqalculate
+
     # steam
 
     # zed-editor
