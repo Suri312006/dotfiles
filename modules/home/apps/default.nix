@@ -28,6 +28,7 @@
     zoxide
 
     protonmail-desktop
+    pureref
     # unityhub
 
     # steam
