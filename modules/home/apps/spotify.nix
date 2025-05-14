@@ -9,7 +9,7 @@
         hidePodcasts
         shuffle # shuffle+ (special characters are sanitized out of extension names)
       ];
-      theme = spicePkgs.themes.catppuccin;
+      theme = lib.mkForce spicePkgs.themes.catppuccin;
       #colorScheme = "mocha";
     };
 }
