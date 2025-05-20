@@ -17,7 +17,7 @@
 @define-color white           #F5E391; /* Template color15 (lightest) */
 @define-color black           #1C1D1C; /* Match bg (darkest tone) */
 /* Module Colors */
-@define-color module-fg       #CC18C1; /* Template color1 (purple) */
+@define-color module-fg       #20EDD0; /* Template color5 (turquoise) */
 @define-color workspaces      #1C1D1C; /* Match bg */
 @define-color cpuinfo         #1C1D1C; /* Match bg */
 @define-color memory          #434442; /* Template color0 (dark gray) */
