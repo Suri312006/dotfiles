@@ -1,50 +1,91 @@
+
+  /* bg - background */
+  /* fg - foreground */
+  /* br - border */
+/* */ */
+
+/* Main Colors */
+
+/* @define-color main-fg         #ebdbb2; /* Gruvbox fg */ */
+/* @define-color main-bg         #282828; /* Gruvbox bg */ */
+/* @define-color main-br         #ebdbb2; /* Match fg */ */
+
+/* Active Colors */
+/* @define-color active-bg       #b8bb26; /* Gruvbox green */ */
+/* @define-color active-fg       #282828; /* Match bg */ */
+
+/* Hover Colors */
+/* @define-color hover-bg        #504945; /* Gruvbox gray */ */
+/* @define-color hover-fg        rgba(235, 219, 178, 0.75); /* Transparent fg */ */
+
+/* Basic Colors */
+/* @define-color white           #fbf1c7; /* Gruvbox lightest tone */ */
+/* @define-color black           #1d2021; /* Gruvbox darkest tone */ */
+
+/* Module Colors */
+
+/* @define-color module-fg       #95971a; /* Gruvbox tark green */ */
+/* @define-color workspaces      #282828; /* Match bg */ */
+
+/* @define-color cpuinfo         #282828; /* Match bg */ */
+/* @define-color memory          #3c3836; /* Gruvbox darker gray */ */
+/* @define-color cpu             #504945; /* Gruvbox gray */ */
+/* @define-color distro-fg       #1d2021; /* Match darkest tone */ */
+/* @define-color distro-bg       #458588; /* Gruvbox blue */ */
+/* @define-color time            #504945; /* Match gray */ */
+/* @define-color date            #3c3836; /* Match darker gray */ */
+/* @define-color tray            #282828; /* Match bg */ */
+
+/* @define-color pulseaudio      #282828; /* Match bg */ */
+/* @define-color backlight       #3c3836; /* Match darker gray */ */
+/* @define-color battery         #504945; /* Match gray */ */
+/* @define-color power           #fe8019; /* Match yellow */ */
+
+/* State Colors */
+
+/* @define-color good            #b8bb26; /* Gruvbox green */ */
+/* @define-color warning         #fabd2f; /* Gruvbox orange */ */
+/* @define-color critical        #fb4934; /* Gruvbox red */ */
+/* @define-color full            #b8bb26; /* Match green */ */
+/* @define-color charging        #ebdbb2; /* Match fg */
+
+
 /* 
   bg - background
   fg - foreground
   br - border
 */
-
 /* Main Colors */
-
-@define-color main-fg         #ebdbb2; /* Gruvbox fg */
-@define-color main-bg         #282828; /* Gruvbox bg */
-@define-color main-br         #ebdbb2; /* Match fg */
-
+@define-color main-fg         #FEF1B8; /* Template foreground */
+@define-color main-bg         #1C1D1C; /* Template background */
+@define-color main-br         #FEF1B8; /* Match fg */
 /* Active Colors */
-@define-color active-bg       #b8bb26; /* Gruvbox green */
-@define-color active-fg       #282828; /* Match bg */
-
+@define-color active-bg       #1EAB1E; /* Template color3 (green) */
+@define-color active-fg       #1C1D1C; /* Match bg */
 /* Hover Colors */
-@define-color hover-bg        #504945; /* Gruvbox gray */
-@define-color hover-fg        rgba(235, 219, 178, 0.75); /* Transparent fg */
-
+@define-color hover-bg        #434442; /* Template color0 (dark gray) */
+@define-color hover-fg        rgba(254, 241, 184, 0.75); /* Transparent fg */
 /* Basic Colors */
-@define-color white           #fbf1c7; /* Gruvbox lightest tone */
-@define-color black           #1d2021; /* Gruvbox darkest tone */
-
+@define-color white           #F5E391; /* Template color15 (lightest) */
+@define-color black           #1C1D1C; /* Match bg (darkest tone) */
 /* Module Colors */
-
-@define-color module-fg       #95971a; /* Gruvbox tark green */
-@define-color workspaces      #282828; /* Match bg */
-
-@define-color cpuinfo         #282828; /* Match bg */
-@define-color memory          #3c3836; /* Gruvbox darker gray */
-@define-color cpu             #504945; /* Gruvbox gray */
-@define-color distro-fg       #1d2021; /* Match darkest tone */
-@define-color distro-bg       #458588; /* Gruvbox blue */
-@define-color time            #504945; /* Match gray */
-@define-color date            #3c3836; /* Match darker gray */
-@define-color tray            #282828; /* Match bg */
-
-@define-color pulseaudio      #282828; /* Match bg */
-@define-color backlight       #3c3836; /* Match darker gray */
-@define-color battery         #504945; /* Match gray */
-@define-color power           #fe8019; /* Match yellow */
-
+@define-color module-fg       #1EAB1E; /* Template color3 (green) */
+@define-color workspaces      #1C1D1C; /* Match bg */
+@define-color cpuinfo         #1C1D1C; /* Match bg */
+@define-color memory          #434442; /* Template color0 (dark gray) */
+@define-color cpu             #434442; /* Template color0 (dark gray) */
+@define-color distro-fg       #1C1D1C; /* Match darkest tone */
+@define-color distro-bg       #1AAFD7; /* Template color4 (blue) */
+@define-color time            #434442; /* Match dark gray */
+@define-color date            #434442; /* Match dark gray */
+@define-color tray            #1C1D1C; /* Match bg */
+@define-color pulseaudio      #1C1D1C; /* Match bg */
+@define-color backlight       #434442; /* Match dark gray */
+@define-color battery         #434442; /* Match dark gray */
+@define-color power           #FBD834; /* Template color14 (yellow) */
 /* State Colors */
-
-@define-color good            #b8bb26; /* Gruvbox green */
-@define-color warning         #fabd2f; /* Gruvbox orange */
-@define-color critical        #fb4934; /* Gruvbox red */
-@define-color full            #b8bb26; /* Match green */
-@define-color charging        #ebdbb2; /* Match fg */
+@define-color good            #1EAB1E; /* Template color3 (green) */
+@define-color warning         #E86516; /* Template color10 (orange) */
+@define-color critical        #CC18C1; /* Template color9 (red/purple) */
+@define-color full            #1EAB1E; /* Match green */
+@define-color charging        #FEF1B8; /* Match fg */
