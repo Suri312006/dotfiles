@@ -12,7 +12,7 @@
 @define-color active-fg       #282828; /* Match bg */
 /* Hover Colors */
 @define-color hover-bg        #504945; /* Gruvbox gray */
-@define-color hover-fg        rgba(235, *219, 178, 0.75); / Transparent fg */
+@define-color hover-fg        rgba(235, *219, 178, 0.75); /* Transparent fg */
 /* Basic Colors */
 @define-color white           #fbf1c7; /* Gruvbox lightest tone */
 @define-color black           #1d2021; /* Gruvbox darkest tone */
