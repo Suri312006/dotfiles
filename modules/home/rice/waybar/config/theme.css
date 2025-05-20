@@ -2,7 +2,7 @@
   bg - background
   fg - foreground
   br - border
-/*
+*/
 /*  Main Colors  */
 @define-color main-fg         #ebdbb2; /* Gruvbox fg */
 @define-color main-bg         #282828; /* Gruvbox bg */
