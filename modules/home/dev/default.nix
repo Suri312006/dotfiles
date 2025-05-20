@@ -12,7 +12,7 @@
 
     lazygit
 
-    postman
+    # postman
     glow
 
     python3
