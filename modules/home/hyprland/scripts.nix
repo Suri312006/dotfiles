@@ -1,49 +1,45 @@
 # can write scripts in here
 { pkgs, ... }:
 let
-  suri_toggle_battery_mode = pkgs.writeShellScriptBin "suri_toggle_battery_mode" ''
-    BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
-    if [ "$BATTERYON" = "1" ] ; then
+  suri_toggle_battery_mode =
+    pkgs.writeShellScriptBin "suri_toggle_battery_mode" ''
+      BATTERYON=$(hyprctl getoption animations:enabled | awk -F 'int: ' '{print $2}')
+      if [ "$BATTERYON" = "1" ] ; then
 
-            hyprctl --batch "\
-                keyword animations:enabled 0;\
-                keyword decoration:drop_shadow 0;\
-                keyword decoration:blur:passes 0;\
-                keyword general:gaps_in 0;\
-                keyword general:gaps_out 0;\
-                keyword general:border_size 1;\
-                keyword decoration:rounding 0;\
-                misc:vfr true;\
-                keyword monitor eDP-1, 1920x1080@165.00, 0x0, 1;"
+              hyprctl --batch "\
+                  keyword animations:enabled 0;\
+                  keyword decoration:drop_shadow 0;\
+                  keyword decoration:blur:passes 0;\
+                  keyword general:gaps_in 0;\
+                  keyword general:gaps_out 0;\
+                  keyword general:border_size 1;\
+                  keyword decoration:rounding 0;\
+                  misc:vfr true;\
+                  keyword monitor eDP-1, 1920x1080@165.00, 0x0, 1;"
 
-            swww kill 
-            notify-send -e -u low -i "Battery Mode Enabled"
-            brightnessctl s 10%
-            exit
-        else
-            # FIXME: need to make wallpapers a global var
-            # swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/.png" &
-            swww-daemon --format xrgb && swww img "$HOME/Pictures/curr_wall.png" &
-            sleep 0.1
-            hyprctl reload
-            brightnessctl s 50%
+              swww kill 
+              notify-send -e -u low -i "Battery Mode Enabled"
+              brightnessctl s 10%
+              exit
+          else
+              # FIXME: need to make wallpapers a global var
+              # swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/.png" &
+              swww-daemon --format xrgb && swww img "$HOME/Pictures/curr_wall.jpg" &
+              sleep 0.1
+              hyprctl reload
+              brightnessctl s 50%
 
-            # need to get pywall
-            #{SCRIPTSDIR}/PywalSwww.sh
-            sleep 0.5
-            suri_refresh
-            notify-send -e -u normal -i  "Battery Mode Disabled."
-            exit
-        fi
-  '';
+              # need to get pywall
+              #{SCRIPTSDIR}/PywalSwww.sh
+              sleep 0.5
+              suri_refresh
+              notify-send -e -u normal -i  "Battery Mode Disabled."
+              exit
+          fi
+    '';
 
-#TODO: need to work on this later
-  suri_refresh = pkgs.whiteShellScriptBin "suri_refresh" ''
-        
-
-
-
-  '';
+  #TODO: need to work on this later
+  suri_refresh = pkgs.whiteShellScriptBin "suri_refresh" "\n\n\n\n";
 
   suri_screenlock = pkgs.writeShellScriptBin "suri_screenlock" ''
     /home/suri312006/.config/hypr/scripts/MediaCtrl.sh --stop
@@ -278,8 +274,7 @@ let
     esac
   '';
 
-in
-{
+in {
   home = {
     packages = [
       #TODO: write this script

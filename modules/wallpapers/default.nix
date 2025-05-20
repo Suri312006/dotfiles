@@ -1,4 +1,4 @@
 { ... }: {
 
-  home.file."Pictures/curr_wall.png".source = ./antireal6.png;
+  home.file."Pictures/curr_wall.jpg".source = ./antireal6.jpg;
 }
