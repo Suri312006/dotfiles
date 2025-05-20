@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }: {
   # stylix.image = ../../wallpapers/curr_wall.png;
-  stylix.image = ../../wallpapers/a_drawing_of_an_astronaut_in_space.png;
+  stylix.image = ../../wallpapers/antireal6.jpg;
   # https://stylix.danth.me/
 
   stylix = {

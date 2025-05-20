@@ -10,6 +10,8 @@
     zulip
     osu-lazer-bin
 
+    wallust
+
     kdePackages.filelight
 
     zathura
