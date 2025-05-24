@@ -35,6 +35,7 @@
       ltex-ls
       nixd
       nil
+      ruff
     ];
 
     settings = {
