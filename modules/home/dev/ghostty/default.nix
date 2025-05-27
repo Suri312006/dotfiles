@@ -5,8 +5,7 @@
 
     font-family = ""
 
-    # font-family = "Monaspace Krypton SemiBold"
-    font-family = "Monaspace Argon SemiBold"
+    font-family = "Monaspace Krypton SemiBold"
 
     font-family-bold = "Monaspace Neon SemiBold"
 
@@ -30,11 +29,11 @@
     font-feature = "ss07"
     font-feature = "ss08"
 
-    font-size = "10.5"
+    font-size = "10.1"
 
-    window-padding-x = 4
+    window-padding-x = 1
 
-    window-padding-y = 3,1
+    window-padding-y = 1,1
 
     # theme = "gruvbox-material"
     theme = GruvboxDark
