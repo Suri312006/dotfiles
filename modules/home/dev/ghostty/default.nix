@@ -31,12 +31,12 @@
 
     font-size = "10.1"
 
-    window-padding-x = 1
+    window-padding-x = 5,5
 
-    window-padding-y = 1,1
+    window-padding-y = 5,5
 
     # theme = "gruvbox-material"
-    theme = GruvboxDark
+    theme = GruvboxDarkHard
     # theme = ayu
   '';
 }
