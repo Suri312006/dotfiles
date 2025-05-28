@@ -29,7 +29,7 @@
     font-feature = "ss07"
     font-feature = "ss08"
 
-    font-size = "10.1"
+    font-size = "11"
 
     window-padding-x = 1
 
