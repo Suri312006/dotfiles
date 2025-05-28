@@ -5,13 +5,13 @@
 
     font-family = ""
 
-    font-family = "Monaspace Krypton SemiBold"
+    font-family = "Monaspace Krypton Medium"
 
-    font-family-bold = "Monaspace Neon SemiBold"
+    font-family-bold = "Monaspace Neon Bold"
 
-    font-family-italic = "Monaspace Argon SemiBold"
+    font-family-italic = "Monaspace Argon SemiBold Italic"
 
-    font-family-bold-italic = "Monaspace Neon SemiBold"
+    font-family-bold-italic = "Monaspace Neon Bold Italic"
 
     cursor-style = "bar"
 
