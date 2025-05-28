@@ -5,9 +5,9 @@
 
     font-family = ""
 
-    font-family = "Monaspace Krypton Medium"
+    font-family = "Monaspace Krypton SemiBold"
 
-    font-family-bold = "Monaspace Neon Bold"
+    font-family-bold = "Monaspace Neon SemiBold"
 
     font-family-italic = "Monaspace Argon SemiBold Italic"
 
