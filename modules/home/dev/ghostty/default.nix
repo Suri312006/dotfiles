@@ -5,7 +5,7 @@
 
     font-family = ""
 
-    font-family = "Monaspace Krypton Regular"
+    font-family = "Monaspace Krypton SemiBold"
 
     font-family-bold = "Monaspace Neon Bold"
 
@@ -29,7 +29,7 @@
     font-feature = "ss07"
     font-feature = "ss08"
 
-    font-size = "11"
+    font-size = "10.3"
 
     window-padding-x = 1
 
