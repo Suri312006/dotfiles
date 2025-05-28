@@ -9,7 +9,7 @@
 
     font-family-bold = "Monaspace Neon SemiBold"
 
-    font-family-italic = "Monaspace Argon SemiBold Italic"
+    font-family-italic = "Monaspace Argon Bold Italic"
 
     font-family-bold-italic = "Monaspace Neon Bold Italic"
 
