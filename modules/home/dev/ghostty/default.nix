@@ -5,13 +5,13 @@
 
     font-family = ""
 
-    font-family = "Monaspace Krypton SemiBold"
+    font-family = "Monaspace Krypton Regular"
 
-    font-family-bold = "Monaspace Neon SemiBold"
+    font-family-bold = "Monaspace Neon Bold"
 
-    font-family-italic = "Monaspace Argon Bold Italic"
+    font-family-italic = "Monaspace Argon SemiBold Italic"
 
-    font-family-bold-italic = "Monaspace Neon Bold Italic"
+    font-family-bold-italic = "Monaspace Neon SemiBold"
 
     cursor-style = "bar"
 
@@ -29,14 +29,14 @@
     font-feature = "ss07"
     font-feature = "ss08"
 
-    font-size = "10.2"
+    font-size = "10.1"
 
-    window-padding-x = 5,5
+    window-padding-x = 1
 
-    window-padding-y = 5,5
+    window-padding-y = 1,1
 
     # theme = "gruvbox-material"
-    theme = GruvboxDarkHard
+    theme = GruvboxDark
     # theme = ayu
   '';
 }
